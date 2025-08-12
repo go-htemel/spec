@@ -142,6 +142,7 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 // Attribute defines the interface that all attributes must conform to.
 type Attribute interface {
 	isAttr()
+	GetName() string
 }
 
 // AttributeTypeString allows for setting string values on an attribute.
@@ -151,6 +152,10 @@ type AttributeTypeString struct {
 }
 
 func (a AttributeTypeString) isAttr() {}
+
+func (a AttributeTypeString) GetName() string {
+	return a.Name
+}
 
 func (a AttributeTypeString) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
@@ -172,6 +177,10 @@ type AttributeTypeChar struct {
 
 func (a AttributeTypeChar) isAttr() {}
 
+func (a AttributeTypeChar) GetName() string {
+	return a.Name
+}
+
 func (a AttributeTypeChar) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
 		Name          string `json:"name"`
@@ -191,6 +200,10 @@ type AttributeTypeNumber struct {
 }
 
 func (a AttributeTypeNumber) isAttr() {}
+
+func (a AttributeTypeNumber) GetName() string {
+	return a.Name
+}
 
 func (a AttributeTypeNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
@@ -212,6 +225,10 @@ type AttributeTypeFloat struct {
 
 func (a AttributeTypeFloat) isAttr() {}
 
+func (a AttributeTypeFloat) GetName() string {
+	return a.Name
+}
+
 func (a AttributeTypeFloat) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
 		Name          string `json:"name"`
@@ -231,6 +248,10 @@ type AttributeTypeBool struct {
 }
 
 func (a AttributeTypeBool) isAttr() {}
+
+func (a AttributeTypeBool) GetName() string {
+	return a.Name
+}
 
 func (a AttributeTypeBool) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
@@ -258,6 +279,10 @@ type AttributeTypeEnum struct {
 
 func (a AttributeTypeEnum) isAttr() {}
 
+func (a AttributeTypeEnum) GetName() string {
+	return a.Name
+}
+
 func (a AttributeTypeEnum) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
 		Name          string              `json:"name"`
@@ -284,6 +309,10 @@ type AttributeTypeSST struct {
 
 func (a AttributeTypeSST) isAttr() {}
 
+func (a AttributeTypeSST) GetName() string {
+	return a.Name
+}
+
 func (a AttributeTypeSST) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
 		Name          string `json:"name"`
@@ -303,6 +332,10 @@ type AttributeTypePrefixedCustom struct {
 }
 
 func (a AttributeTypePrefixedCustom) isAttr() {}
+
+func (a AttributeTypePrefixedCustom) GetName() string {
+	return a.Name
+}
 
 func (a AttributeTypePrefixedCustom) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
