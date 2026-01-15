@@ -17,6 +17,10 @@ func GlobalAttributes() []Attribute {
 			Name:        "accesskey",
 			Description: "The accesskey attribute's value is used by the user agent as a guide for creating a keyboard shortcut that activates or focuses the element.",
 		},
+		&AttributeTypePrefixedCustom{
+			Name:        "aria",
+			Description: "The aria attribute is a custom attribute whose name starts with the string \"aria-\", has at least one character after the hyphen, is a valid attribute local name, and contains no ASCII upper alphas.",
+		},
 		&AttributeTypeEnum{
 			Name:        "autocapitalize",
 			Description: "The autocapitalize attribute is an enumerated attribute whose states are the possible autocapitalization hints. The autocapitalization hint specified by the attribute's state combines with other considerations to form the used autocapitalization hint, which informs the behavior of the user agent.",
@@ -152,6 +156,10 @@ func GlobalAttributes() []Attribute {
 		&AttributeTypeString{
 			Name:        "popover",
 			Description: "All HTML elements may have the popover content attribute set. When specified, the element won't be rendered until it becomes shown, at which point it will be rendered on top of other page content.",
+		},
+		&AttributeTypeString{
+			Name:        "role",
+			Description: "The role attribute, if specified, must have a value that is a valid BCP 47 language tag, or the empty string. The attribute's value must conform to the ARIA in HTML specification.",
 		},
 		&AttributeTypeString{
 			Name:        "slot",

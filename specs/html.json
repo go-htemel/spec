@@ -2110,6 +2110,11 @@
       "attribute_type": "AttributeTypeChar"
     },
     {
+      "name": "aria",
+      "description": "The aria attribute is a custom attribute whose name starts with the string \"aria-\", has at least one character after the hyphen, is a valid attribute local name, and contains no ASCII upper alphas.",
+      "attribute_type": "AttributeTypePrefixedCustom"
+    },
+    {
       "name": "autocapitalize",
       "description": "The autocapitalize attribute is an enumerated attribute whose states are the possible autocapitalization hints. The autocapitalization hint specified by the attribute's state combines with other considerations to form the used autocapitalization hint, which informs the behavior of the user agent.",
       "allowed": {
@@ -2275,6 +2280,11 @@
     {
       "name": "popover",
       "description": "All HTML elements may have the popover content attribute set. When specified, the element won't be rendered until it becomes shown, at which point it will be rendered on top of other page content.",
+      "attribute_type": "AttributeTypeString"
+    },
+    {
+      "name": "role",
+      "description": "The role attribute, if specified, must have a value that is a valid BCP 47 language tag, or the empty string. The attribute's value must conform to the ARIA in HTML specification.",
       "attribute_type": "AttributeTypeString"
     },
     {
