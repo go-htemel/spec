@@ -112,6 +112,7 @@ type Element struct {
 
 	// A Void element has no children
 	Void bool `json:"void,omitempty"`
+	Text bool `json:"text,omitempty"`
 }
 
 // UnmarshalJSON handles converting the marshaled json back into an Element struct.
@@ -121,6 +122,7 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 		Description string            `json:"description,omitempty"`
 		Attributes  []json.RawMessage `json:"attributes,omitempty"`
 		Void        bool              `json:"void,omitempty"`
+		Text        bool              `json:"text,omitempty"`
 	}
 
 	if err := json.Unmarshal(b, &tmp); err != nil {
@@ -130,6 +132,7 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 	e.Tag = tmp.Tag
 	e.Description = tmp.Description
 	e.Void = tmp.Void
+	e.Text = tmp.Text
 	attrs, err := attrUnmarshal(tmp.Attributes)
 	if err != nil {
 		return err

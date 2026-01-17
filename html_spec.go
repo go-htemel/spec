@@ -1626,12 +1626,48 @@ func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
 		"wbr",
 	}
 
+	disallowText := []string{
+		"picture",
+		"source",
+		"img",
+		"iframe",
+		"embed",
+		"object",
+		"video",
+		"audio",
+		"track",
+		"map",
+		"area",
+		"table",
+		"thead",
+		"tbody",
+		"tfoot",
+		"tr",
+		"head",
+		"ul",
+		"ol",
+		"menu",
+		"select",
+		"optgroup",
+		"dl",
+		"ruby",
+		"details",
+		"fieldset",
+		"form",
+		"head",
+		"html",
+	}
+
 	for _, e := range p.Spec.Elements {
 		if fn, ok := attrFuncs[e.Tag]; ok {
 			e.Attributes = append(e.Attributes, fn()...)
 		}
 		if slices.Contains(isVoid, e.Tag) {
 			e.Void = true
+		} else {
+			if !slices.Contains(disallowText, e.Tag) {
+				e.Text = true
+			}
 		}
 	}
 
