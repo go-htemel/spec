@@ -8,7 +8,7 @@
 //	specgen2 vendor -data data -elements elements.tgz -idl idl.tgz -bcd bcd.tgz
 //	    Refresh data/webref and data/bcd from npm tarballs and record them in data/SOURCES.json.
 //	    Get the tarballs with e.g. `npm pack @webref/elements@2.9.2 @webref/idl@3.86.0 @mdn/browser-compat-data@8.1.7`.
-//	specgen2 fetch -data data -sha <whatwg/html commit>
+//	specgen2 fetch -data data [-sha <whatwg/html commit>]   (no -sha: live page, pins its deployed commit)
 //	    Download https://html.spec.whatwg.org/commit-snapshots/<sha>/multipage/indices.html into
 //	    data/whatwg/indices.html and record it in data/SOURCES.json.
 //	specgen2 diff [-old specs/html.json] [-new specs/candidates/html.json] [-provenance ...]

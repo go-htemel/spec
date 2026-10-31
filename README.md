@@ -32,7 +32,7 @@ go run ./cmd/specgen2 generate            # writes specs/candidates/{html,svg,ma
 go run ./cmd/specgen2 report              # writes docs/webref-coverage.md (candidates vs specs/*.json)
 go run ./cmd/specgen2 diff -old specs/svg.json -new specs/candidates/svg.json
 go run ./cmd/specgen2 vendor -elements elements.tgz -idl idl.tgz -bcd bcd.tgz   # tarballs from `npm pack`
-go run ./cmd/specgen2 fetch -sha <whatwg/html commit>                          # needs network access
+go run ./cmd/specgen2 fetch                     # live page, pins the deployed commit; or -sha <whatwg/html commit>
 ```
 
 The candidates are not yet used in place of `specs/html.json` and `specs/svg.json`; see

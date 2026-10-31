@@ -337,18 +337,32 @@ func trimBCD(dataDir string, trees []string, data []byte) ([]string, error) {
 
 var shaRE = regexp.MustCompile(`^[0-9a-f]{40}$`)
 
-// WHATWGSnapshotURL is the commit-snapshot URL of the HTML standard's index page for sha.
+// WHATWGLiveURL is the single-page HTML standard. Commit snapshots exist only in this single-page
+// form (there is no /multipage/ under commit-snapshots/).
+const WHATWGLiveURL = "https://html.spec.whatwg.org/"
+
+// WHATWGSnapshotURL is the commit-snapshot URL of the single-page HTML standard for sha.
 func WHATWGSnapshotURL(sha string) string {
-	return "https://html.spec.whatwg.org/commit-snapshots/" + sha + "/multipage/indices.html"
+	return "https://html.spec.whatwg.org/commit-snapshots/" + sha + "/"
 }
 
-// FetchWHATWG downloads the pinned commit snapshot of indices.html into data/whatwg/indices.html,
-// checks that it parses, and records it in SOURCES.json.
+var commitLinkRE = regexp.MustCompile(`github\.com/whatwg/html/commit/([0-9a-f]{40})`)
+
+// FetchWHATWG downloads the HTML standard, extracts its element and attribute index tables into
+// data/whatwg/indices.html, and records the pinned commit in SOURCES.json.
+//
+// With a full commit hash it fetches that commit snapshot. With an empty sha it fetches the live
+// page and pins the commit the page itself reports (the most recently deployed one), which avoids
+// asking for a snapshot that has not been built yet. Only the two index tables are vendored, not
+// the ~14 MB page, so the module stays small; the integrity recorded is that of the full page.
 func FetchWHATWG(client *http.Client, dataDir, sha string, today time.Time) error {
-	if !shaRE.MatchString(sha) {
-		return fmt.Errorf("-sha must be a full 40-character lower-case commit hash of whatwg/html, got %q", sha)
+	url := WHATWGLiveURL
+	if sha != "" {
+		if !shaRE.MatchString(sha) {
+			return fmt.Errorf("-sha must be empty or a full 40-character lower-case commit hash of whatwg/html, got %q", sha)
+		}
+		url = WHATWGSnapshotURL(sha)
 	}
-	url := WHATWGSnapshotURL(sha)
 	resp, err := client.Get(url)
 	if err != nil {
 		return err
@@ -361,9 +375,20 @@ func FetchWHATWG(client *http.Client, dataDir, sha string, today time.Time) erro
 	if err != nil {
 		return err
 	}
-	idx, err := ParseIndices(bytes.NewReader(b))
+	if sha == "" {
+		m := commitLinkRE.FindSubmatch(b)
+		if m == nil {
+			return fmt.Errorf("%s: could not find the whatwg/html commit link in the page; pass -sha explicitly", url)
+		}
+		sha = string(m[1])
+	}
+	tables, err := ExtractIndexTables(bytes.NewReader(b))
 	if err != nil {
-		return fmt.Errorf("%s does not look like the HTML index page: %w", url, err)
+		return fmt.Errorf("%s does not look like the HTML standard: %w", url, err)
+	}
+	idx, err := ParseIndices(bytes.NewReader(tables))
+	if err != nil {
+		return fmt.Errorf("%s: extracted index tables do not parse: %w", url, err)
 	}
 	if len(idx.Elements) == 0 || len(idx.Attributes) == 0 {
 		return fmt.Errorf("%s: parsed %d elements and %d attributes; refusing to vendor", url, len(idx.Elements), len(idx.Attributes))
@@ -371,7 +396,7 @@ func FetchWHATWG(client *http.Client, dataDir, sha string, today time.Time) erro
 	if err := os.MkdirAll(filepath.Join(dataDir, filepath.Dir(WHATWGFile)), 0o755); err != nil {
 		return err
 	}
-	if err := os.WriteFile(filepath.Join(dataDir, WHATWGFile), b, 0o644); err != nil {
+	if err := os.WriteFile(filepath.Join(dataDir, WHATWGFile), tables, 0o644); err != nil {
 		return err
 	}
 	m, err := ReadManifest(dataDir)

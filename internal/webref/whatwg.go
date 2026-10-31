@@ -1,6 +1,7 @@
 package webref
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"sort"
@@ -148,6 +149,30 @@ func ClassifyValue(v string) (kind string, url bool, allowed []string, allowEmpt
 	}
 
 	return KindString, false, nil, false
+}
+
+// ExtractIndexTables returns a minimal HTML document containing only the "List of elements" and
+// "List of attributes" tables from the HTML standard, so that just those tables can be vendored
+// instead of the whole page. The result parses with ParseIndices.
+func ExtractIndexTables(r io.Reader) ([]byte, error) {
+	doc, err := html.Parse(r)
+	if err != nil {
+		return nil, err
+	}
+	var buf bytes.Buffer
+	buf.WriteString("<!DOCTYPE html>\n<meta charset=\"utf-8\">\n<title>HTML Standard index tables (extract)</title>\n")
+	for _, caption := range []string{"List of elements", "List of attributes"} {
+		t := findTable(doc, caption)
+		if t == nil {
+			return nil, fmt.Errorf("no table captioned %q", caption)
+		}
+		if err := html.Render(&buf, t); err != nil {
+			return nil, err
+		}
+		buf.WriteByte('\n')
+	}
+
+	return buf.Bytes(), nil
 }
 
 func findTable(n *html.Node, caption string) *html.Node {
