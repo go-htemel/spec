@@ -17,10 +17,10 @@ const (
 
 // Parser holds the state for document parsing.
 type Parser struct {
-	active      bool
-	currElement *Element
-	descParsed  bool
-	Spec        *Spec
+	active       bool
+	currElements []*Element
+	descParsed   bool
+	Spec         *Spec
 }
 
 // NewSpecParser returns an instantiated parser for document parsing.
@@ -33,18 +33,35 @@ func NewSpecParser(name NameType) *Parser {
 }
 
 // Activate enables the parser to begin collecting data for an element.
-func (p *Parser) Activate(element string) {
+// Several tags may be given when one heading documents multiple elements
+// (e.g. "the sub and sup elements"); duplicates are ignored.
+func (p *Parser) Activate(elements ...string) {
 	p.active = true
-	p.currElement = &Element{
-		Tag: element,
+	p.currElements = nil
+	for _, tag := range elements {
+		if slices.ContainsFunc(p.currElements, func(e *Element) bool { return e.Tag == tag }) {
+			continue
+		}
+		p.currElements = append(p.currElements, &Element{Tag: tag})
+	}
+}
+
+// setDescription applies the description to every element currently being collected.
+func (p *Parser) setDescription(desc string) {
+	for _, e := range p.currElements {
+		e.Description = desc
 	}
 }
 
 // Reset disables and resets the parsers state to begin parsing for new elements again.
 func (p *Parser) Reset() {
-	p.Spec.Elements = append(p.Spec.Elements, p.currElement)
+	for _, e := range p.currElements {
+		if !slices.ContainsFunc(p.Spec.Elements, func(x *Element) bool { return x.Tag == e.Tag }) {
+			p.Spec.Elements = append(p.Spec.Elements, e)
+		}
+	}
 	p.active = false
-	p.currElement = nil
+	p.currElements = nil
 	p.descParsed = false
 }
 
@@ -64,6 +81,22 @@ func findTag(doc *html.Node, tag string) (*html.Node, bool) {
 	}
 
 	return nil, false
+}
+
+// findAllTags returns every element node with the given tag under doc, in document order.
+func findAllTags(doc *html.Node, tag string) []*html.Node {
+	var out []*html.Node
+	if doc == nil {
+		return out
+	}
+	if doc.Type == html.ElementNode && doc.Data == tag {
+		out = append(out, doc)
+	}
+	for child := range doc.ChildNodes() {
+		out = append(out, findAllTags(child, tag)...)
+	}
+
+	return out
 }
 
 func getIDIndex(attrs []html.Attribute, key, value string) (int, bool) {

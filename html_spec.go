@@ -1591,9 +1591,14 @@ func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
 				var id string
 				if id, ok = getAttribute(child.Attr, "id"); ok {
 					if strings.Contains(id, "the-") && strings.Contains(id, "-element") {
-						var tagNode *html.Node
-						if tagNode, ok = findTag(child, "code"); ok {
-							p.Activate(tagNode.FirstChild.Data)
+						var tags []string
+						for _, n := range findAllTags(child, "code") {
+							if n.FirstChild != nil {
+								tags = append(tags, n.FirstChild.Data)
+							}
+						}
+						if len(tags) > 0 {
+							p.Activate(tags...)
 						}
 					}
 				}
@@ -1601,7 +1606,7 @@ func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
 
 			if child.Data == "p" {
 				if p.active && !p.descParsed {
-					p.currElement.Description = gatherText(child, nil)
+					p.setDescription(gatherText(child, nil))
 					p.descParsed = true
 					p.Reset()
 				}
@@ -1654,7 +1659,6 @@ func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
 		"details",
 		"fieldset",
 		"form",
-		"head",
 		"html",
 	}
 
@@ -1676,6 +1680,7 @@ func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
 		e := &Element{
 			Tag:         "h" + strconv.Itoa(i),
 			Description: "These elements represent headings for their sections.",
+			Text:        true,
 		}
 
 		p.Spec.Elements = append(p.Spec.Elements, e)
