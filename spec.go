@@ -117,6 +117,21 @@ type Element struct {
 	// A Void element has no children
 	Void bool `json:"void,omitempty"`
 	Text bool `json:"text,omitempty"`
+
+	// The fields below were added after v0.2.0. They are all omitempty, so documents that do not use
+	// them marshal exactly as before, and consumers built against older versions of this package
+	// ignore them (encoding/json skips unknown object keys).
+
+	// RawText marks elements whose text content is raw text in the HTML syntax (script, style): it
+	// is not entity-decoded by the parser, so it must not be HTML-escaped when rendered.
+	RawText bool `json:"raw_text,omitempty"`
+	// Deprecated marks elements that are obsolete or deprecated in the source specification.
+	Deprecated bool `json:"deprecated,omitempty"`
+	// Interface is the DOM interface implemented by the element (e.g. HTMLAnchorElement).
+	Interface string `json:"interface,omitempty"`
+	// Categories lists the content categories of the element (e.g. "flow", "phrasing",
+	// "interactive"), as given by the specification's element index, sorted.
+	Categories []string `json:"categories,omitempty"`
 }
 
 // UnmarshalJSON handles converting the marshaled json back into an Element struct.
@@ -127,6 +142,10 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 		Attributes  []json.RawMessage `json:"attributes,omitempty"`
 		Void        bool              `json:"void,omitempty"`
 		Text        bool              `json:"text,omitempty"`
+		RawText     bool              `json:"raw_text,omitempty"`
+		Deprecated  bool              `json:"deprecated,omitempty"`
+		Interface   string            `json:"interface,omitempty"`
+		Categories  []string          `json:"categories,omitempty"`
 	}
 
 	if err := json.Unmarshal(b, &tmp); err != nil {
@@ -137,6 +156,10 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 	e.Description = tmp.Description
 	e.Void = tmp.Void
 	e.Text = tmp.Text
+	e.RawText = tmp.RawText
+	e.Deprecated = tmp.Deprecated
+	e.Interface = tmp.Interface
+	e.Categories = tmp.Categories
 	attrs, err := attrUnmarshal(tmp.Attributes)
 	if err != nil {
 		return err
@@ -147,15 +170,35 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 }
 
 // Attribute defines the interface that all attributes must conform to.
+// The unexported isAttr method means only this package can implement it, so methods can be added
+// without breaking other modules.
 type Attribute interface {
 	isAttr()
 	GetName() string
+	// IsDeprecated reports whether the attribute is deprecated or obsolete in its specification.
+	IsDeprecated() bool
+}
+
+// simpleAttrJSON is the wire form shared by every attribute type without extra fields. Field order
+// matches the historical output so existing documents round-trip byte for byte; the newer fields
+// are omitempty.
+type simpleAttrJSON struct {
+	Name          string `json:"name"`
+	Description   string `json:"description,omitempty"`
+	URL           bool   `json:"url,omitempty"`
+	Deprecated    bool   `json:"deprecated,omitempty"`
+	AttributeType string `json:"attribute_type"`
 }
 
 // AttributeTypeString allows for setting string values on an attribute.
 type AttributeTypeString struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// URL marks string attributes whose value is a URL (href, src, action, ...), so generators can
+	// apply URL-specific handling such as scheme filtering. Added after v0.2.0.
+	URL bool `json:"url,omitempty"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeString) isAttr() {}
@@ -164,14 +207,16 @@ func (a AttributeTypeString) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeString) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeString) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		URL:           a.URL,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeString",
 	})
 }
@@ -180,6 +225,8 @@ func (a AttributeTypeString) MarshalJSON() ([]byte, error) {
 type AttributeTypeChar struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeChar) isAttr() {}
@@ -188,14 +235,15 @@ func (a AttributeTypeChar) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeChar) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeChar) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeChar",
 	})
 }
@@ -204,6 +252,8 @@ func (a AttributeTypeChar) MarshalJSON() ([]byte, error) {
 type AttributeTypeNumber struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeNumber) isAttr() {}
@@ -212,14 +262,15 @@ func (a AttributeTypeNumber) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeNumber) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeNumber) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeNumber",
 	})
 }
@@ -228,6 +279,8 @@ func (a AttributeTypeNumber) MarshalJSON() ([]byte, error) {
 type AttributeTypeFloat struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeFloat) isAttr() {}
@@ -236,14 +289,15 @@ func (a AttributeTypeFloat) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeFloat) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeFloat) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeFloat",
 	})
 }
@@ -252,6 +306,8 @@ func (a AttributeTypeFloat) MarshalJSON() ([]byte, error) {
 type AttributeTypeBool struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeBool) isAttr() {}
@@ -260,14 +316,15 @@ func (a AttributeTypeBool) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeBool) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeBool) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeBool",
 	})
 }
@@ -282,12 +339,18 @@ type AttributeTypeEnum struct {
 	Allowed     map[string]struct{} `json:"allowed"`
 	AllowCustom bool                `json:"allow_custom"`
 	AllowEmpty  bool                `json:"allow_empty"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeEnum) isAttr() {}
 
 func (a AttributeTypeEnum) GetName() string {
 	return a.Name
+}
+
+func (a AttributeTypeEnum) IsDeprecated() bool {
+	return a.Deprecated
 }
 
 // AllowedSorted returns the allowed enum values in sorted order, giving callers
@@ -312,6 +375,7 @@ func (a AttributeTypeEnum) MarshalJSON() ([]byte, error) {
 		Allowed       map[string]struct{} `json:"allowed"`
 		AllowEmpty    bool                `json:"allow_empty"`
 		AllowCustom   bool                `json:"allow_custom"`
+		Deprecated    bool                `json:"deprecated,omitempty"`
 		AttributeType string              `json:"attribute_type"`
 	}{
 		Name:          a.Name,
@@ -319,6 +383,7 @@ func (a AttributeTypeEnum) MarshalJSON() ([]byte, error) {
 		Allowed:       a.Allowed,
 		AllowEmpty:    a.AllowEmpty,
 		AllowCustom:   a.AllowCustom,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeEnum",
 	})
 }
@@ -327,6 +392,8 @@ func (a AttributeTypeEnum) MarshalJSON() ([]byte, error) {
 type AttributeTypeSST struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypeSST) isAttr() {}
@@ -335,14 +402,15 @@ func (a AttributeTypeSST) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypeSST) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypeSST) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypeSST",
 	})
 }
@@ -351,6 +419,8 @@ func (a AttributeTypeSST) MarshalJSON() ([]byte, error) {
 type AttributeTypePrefixedCustom struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	// Deprecated marks the attribute as deprecated or obsolete. Added after v0.2.0.
+	Deprecated bool `json:"deprecated,omitempty"`
 }
 
 func (a AttributeTypePrefixedCustom) isAttr() {}
@@ -359,14 +429,15 @@ func (a AttributeTypePrefixedCustom) GetName() string {
 	return a.Name
 }
 
+func (a AttributeTypePrefixedCustom) IsDeprecated() bool {
+	return a.Deprecated
+}
+
 func (a AttributeTypePrefixedCustom) MarshalJSON() ([]byte, error) {
-	return json.Marshal(&struct {
-		Name          string `json:"name"`
-		Description   string `json:"description,omitempty"`
-		AttributeType string `json:"attribute_type"`
-	}{
+	return json.Marshal(&simpleAttrJSON{
 		Name:          a.Name,
 		Description:   a.Description,
+		Deprecated:    a.Deprecated,
 		AttributeType: "AttributeTypePrefixedCustom",
 	})
 }
