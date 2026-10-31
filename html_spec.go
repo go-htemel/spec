@@ -1542,22 +1542,21 @@ var attrFuncs = map[string]func() []Attribute{
 	"canvas":     canvasAttr,
 }
 
-func GenerateHTMLSpec(closer io.ReadCloser) (*Spec, error) {
+func GenerateHTMLSpec(closer io.ReadCloser) (spec *Spec, err error) {
 	p := NewSpecParser(HTML)
 
 	// Add the defined global attributes
 	p.Spec.Attributes = GlobalAttributes()
 
-	defer func(closer io.ReadCloser) {
-		err := closer.Close()
-		if err != nil {
-			panic(err)
+	defer func() {
+		if cerr := closer.Close(); cerr != nil && err == nil {
+			spec, err = nil, cerr
 		}
-	}(closer)
+	}()
 
 	doc, err := html.Parse(closer)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 
 	var body *html.Node

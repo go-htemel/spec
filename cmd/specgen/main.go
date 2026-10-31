@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -34,30 +35,46 @@ func main() {
 	}
 
 	if cfg.htmlOnly || cfg.all {
-		path := filepath.Join(cfg.outputDir, "html.json")
-
-		f, err := os.Create(path)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		req, err := http.Get(cfg.htmlSpecSite)
-		if err != nil {
-			panic(err)
-		}
-
-		var out *spec.Spec
-		if out, err = spec.GenerateHTMLSpec(req.Body); err != nil {
-			log.Fatal(err)
-		}
-
-		jsonOut, err := json.MarshalIndent(out, "", "  ")
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		if _, err = f.Write(jsonOut); err != nil {
+		if err := generateHTML(cfg); err != nil {
 			log.Fatal(err)
 		}
 	}
+}
+
+func generateHTML(cfg Config) (err error) {
+	path := filepath.Join(cfg.outputDir, "html.json")
+
+	resp, err := http.Get(cfg.htmlSpecSite)
+	if err != nil {
+		return err
+	}
+	// GenerateHTMLSpec closes the body.
+	if resp.StatusCode != http.StatusOK {
+		_ = resp.Body.Close()
+		return fmt.Errorf("fetching %s: unexpected status %s", cfg.htmlSpecSite, resp.Status)
+	}
+
+	out, err := spec.GenerateHTMLSpec(resp.Body)
+	if err != nil {
+		return err
+	}
+
+	jsonOut, err := json.MarshalIndent(out, "", "  ")
+	if err != nil {
+		return err
+	}
+
+	f, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer func() {
+		if cerr := f.Close(); cerr != nil && err == nil {
+			err = cerr
+		}
+	}()
+
+	_, err = f.Write(jsonOut)
+
+	return err
 }
