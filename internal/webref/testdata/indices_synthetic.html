@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- SYNTHETIC TEST FIXTURE. This is NOT WHATWG data: it imitates the shape of the
+     "List of elements" and "List of attributes" tables of
+     https://html.spec.whatwg.org/multipage/indices.html so the parser can be tested offline.
+     Rows and values are invented or simplified. -->
+<html><body>
+<h3 id="elements-3">Elements</h3>
+<table>
+ <caption>List of elements</caption>
+ <thead><tr><th>Element</th><th>Description</th><th>Categories</th><th>Parents&dagger;</th><th>Children</th><th>Attributes</th><th>Interface</th></tr></thead>
+ <tbody>
+  <tr><th><code><a href="#">a</a></code></th><td>Hyperlink</td><td>flow; phrasing*; interactive; palpable</td><td>phrasing</td><td>transparent*</td><td>globals; <code>href</code>; <code>target</code>; <code>download</code></td><td><code>HTMLAnchorElement</code></td></tr>
+  <tr><th><code><a href="#">br</a></code></th><td>Line break</td><td>flow; phrasing</td><td>phrasing</td><td>empty</td><td>globals</td><td><code>HTMLBRElement</code></td></tr>
+  <tr><th><code><a href="#">h1</a></code>, <code><a href="#">h2</a></code></th><td>Heading</td><td>flow; heading; palpable</td><td>legend; summary; flow</td><td>phrasing</td><td>globals</td><td><code>HTMLHeadingElement</code></td></tr>
+  <tr><th><code><a href="#">head</a></code></th><td>Container for document metadata</td><td>none</td><td>html</td><td>metadata content*</td><td>globals</td><td><code>HTMLHeadElement</code></td></tr>
+ </tbody>
+</table>
+<table>
+ <caption>List of attributes (excluding event handler content attributes)</caption>
+ <thead><tr><th>Attribute</th><th>Element(s)</th><th>Description</th><th>Value</th></tr></thead>
+ <tbody>
+  <tr><th><code>href</code></th><td><code><a href="#">a</a></code>; <code><a href="#">area</a></code></td><td>Address of the hyperlink</td><td>Valid URL potentially surrounded by spaces</td></tr>
+  <tr><th><code>target</code></th><td><code><a href="#">a</a></code></td><td>Navigable for hyperlink navigation</td><td>Valid navigable target name or keyword</td></tr>
+  <tr><th><code>download</code></th><td><code><a href="#">a</a></code></td><td>Whether to download the resource</td><td>Text</td></tr>
+  <tr><th><code>hidden</code></th><td>HTML elements</td><td>Whether the element is relevant</td><td>"<code>until-found</code>"; "<code>hidden</code>"; the empty string</td></tr>
+  <tr><th><code>class</code></th><td>HTML elements</td><td>Classes to which the element belongs</td><td>Set of space-separated tokens</td></tr>
+  <tr><th><code>tabindex</code></th><td>HTML elements</td><td>Focusability</td><td>Valid integer</td></tr>
+  <tr><th><code>inert</code></th><td>HTML elements</td><td>Whether the element is inert</td><td>Boolean attribute</td></tr>
+ </tbody>
+</table>
+</body></html>

@@ -1,0 +1,293 @@
+package webref
+
+import (
+	"fmt"
+	"io"
+	"sort"
+	"strings"
+
+	"golang.org/x/net/html"
+)
+
+// WHATWGElement is one row of the "List of elements" table in the HTML standard's index
+// (multipage/indices.html). Rows that document several elements (h1–h6, sub/sup) are expanded.
+type WHATWGElement struct {
+	Description string
+	Categories  []string // e.g. flow, phrasing, interactive; footnote markers removed; "none" -> empty
+	Children    string   // the Children column as text, e.g. "empty", "phrasing", "transparent"
+	Attributes  []string // the Attributes column without "globals"
+	Interface   string
+}
+
+// Void reports whether the element's content model is empty.
+func (e WHATWGElement) Void() bool { return strings.EqualFold(strings.TrimSpace(e.Children), "empty") }
+
+// WHATWGAttribute is one row of the "List of attributes" table.
+type WHATWGAttribute struct {
+	Name        string
+	Global      bool     // the Element(s) column says "HTML elements"
+	Elements    []string // element names listed in the Element(s) column
+	Description string
+	Value       string // the Value column as text, e.g. "Boolean attribute", `"anonymous"; "use-credentials"`
+}
+
+// WHATWGIndex is the parsed content of indices.html.
+type WHATWGIndex struct {
+	Elements   map[string]WHATWGElement
+	Attributes []WHATWGAttribute
+}
+
+// ParseIndices parses the element and attribute index tables. Tables are located by their caption
+// ("List of elements", "List of attributes") and columns by header text, so column reordering or
+// added columns upstream do not silently shift data.
+func ParseIndices(r io.Reader) (*WHATWGIndex, error) {
+	doc, err := html.Parse(r)
+	if err != nil {
+		return nil, err
+	}
+	idx := &WHATWGIndex{Elements: map[string]WHATWGElement{}}
+
+	elTable := findTable(doc, "List of elements")
+	if elTable == nil {
+		return nil, fmt.Errorf(`no table captioned "List of elements"`)
+	}
+	header, rows := tableRows(elTable)
+	col := columnIndex(header)
+	for _, need := range []string{"element", "categories", "children", "attributes"} {
+		if _, ok := col[need]; !ok {
+			return nil, fmt.Errorf("elements table has no %q column (headers: %v)", need, headerTexts(header))
+		}
+	}
+	for _, row := range rows {
+		names := codeTexts(cell(row, col["element"]))
+		if len(names) == 0 {
+			continue
+		}
+		e := WHATWGElement{
+			Description: cellText(cell(row, col["description"])),
+			Children:    stripMarks(cellText(cell(row, col["children"]))),
+			Interface:   strings.Join(codeTexts(cell(row, col["interface"])), " "),
+		}
+		for _, c := range splitList(cellText(cell(row, col["categories"]))) {
+			if c != "none" {
+				e.Categories = append(e.Categories, c)
+			}
+		}
+		sort.Strings(e.Categories)
+		for _, a := range splitList(cellText(cell(row, col["attributes"]))) {
+			if a != "globals" {
+				e.Attributes = append(e.Attributes, a)
+			}
+		}
+		for _, n := range names {
+			idx.Elements[n] = e
+		}
+	}
+
+	atTable := findTable(doc, "List of attributes")
+	if atTable == nil {
+		return nil, fmt.Errorf(`no table captioned "List of attributes"`)
+	}
+	header, rows = tableRows(atTable)
+	col = columnIndex(header)
+	for _, need := range []string{"attribute", "elements", "value"} {
+		if _, ok := col[need]; !ok {
+			return nil, fmt.Errorf("attributes table has no %q column (headers: %v)", need, headerTexts(header))
+		}
+	}
+	for _, row := range rows {
+		names := codeTexts(cell(row, col["attribute"]))
+		if len(names) == 0 {
+			continue
+		}
+		elCell := cell(row, col["elements"])
+		a := WHATWGAttribute{
+			Name:        names[0],
+			Global:      strings.Contains(cellText(elCell), "HTML elements"),
+			Elements:    codeTexts(elCell),
+			Description: cellText(cell(row, col["description"])),
+			Value:       cellText(cell(row, col["value"])),
+		}
+		idx.Attributes = append(idx.Attributes, a)
+	}
+
+	return idx, nil
+}
+
+// ClassifyValue maps the Value column of the attributes table onto a generator attribute kind.
+func ClassifyValue(v string) (kind string, url bool, allowed []string, allowEmpty bool) {
+	t := strings.TrimSpace(stripMarks(v))
+	lower := strings.ToLower(t)
+	switch {
+	case strings.HasPrefix(lower, "boolean attribute"):
+		return KindBool, false, nil, false
+	case strings.HasPrefix(t, `"`) || strings.HasPrefix(t, "“"):
+		for _, part := range strings.Split(t, ";") {
+			part = strings.TrimSpace(part)
+			if part == "the empty string" {
+				allowEmpty = true
+				continue
+			}
+			part = strings.Trim(part, "\"“”")
+			if part != "" {
+				allowed = append(allowed, part)
+			}
+		}
+		sort.Strings(allowed)
+		return KindEnum, false, allowed, allowEmpty
+	case strings.Contains(lower, "space-separated tokens"):
+		return KindSST, false, nil, false
+	case strings.Contains(lower, "url"):
+		return KindString, true, nil, false
+	case strings.Contains(lower, "list of"):
+		return KindString, false, nil, false
+	case strings.Contains(lower, "integer"):
+		return KindNumber, false, nil, false
+	case strings.Contains(lower, "floating-point number"):
+		return KindFloat, false, nil, false
+	}
+
+	return KindString, false, nil, false
+}
+
+func findTable(n *html.Node, caption string) *html.Node {
+	if n.Type == html.ElementNode && n.Data == "table" {
+		for c := n.FirstChild; c != nil; c = c.NextSibling {
+			if c.Type == html.ElementNode && c.Data == "caption" && strings.HasPrefix(cellText(c), caption) {
+				return n
+			}
+		}
+	}
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		if t := findTable(c, caption); t != nil {
+			return t
+		}
+	}
+
+	return nil
+}
+
+// tableRows returns the header cells (from thead, or the first row) and the body rows' cells.
+func tableRows(table *html.Node) (header []*html.Node, rows [][]*html.Node) {
+	var walk func(n *html.Node, inHead bool)
+	walk = func(n *html.Node, inHead bool) {
+		for c := n.FirstChild; c != nil; c = c.NextSibling {
+			if c.Type != html.ElementNode {
+				continue
+			}
+			switch c.Data {
+			case "thead":
+				walk(c, true)
+			case "tbody", "tfoot":
+				walk(c, false)
+			case "tr":
+				var cells []*html.Node
+				for td := c.FirstChild; td != nil; td = td.NextSibling {
+					if td.Type == html.ElementNode && (td.Data == "td" || td.Data == "th") {
+						cells = append(cells, td)
+					}
+				}
+				if inHead || header == nil {
+					if header == nil {
+						header = cells
+					}
+				} else {
+					rows = append(rows, cells)
+				}
+			}
+		}
+	}
+	walk(table, false)
+
+	return header, rows
+}
+
+// columnIndex maps a normalised header ("element", "elements", "value", ...) to its column.
+func columnIndex(header []*html.Node) map[string]int {
+	out := map[string]int{}
+	for i, h := range header {
+		var b strings.Builder
+		for _, r := range strings.ToLower(cellText(h)) {
+			if r >= 'a' && r <= 'z' {
+				b.WriteRune(r)
+			}
+		}
+		out[b.String()] = i // "Element(s)" -> "elements", "Parents†" -> "parents"
+	}
+
+	return out
+}
+
+func headerTexts(header []*html.Node) []string {
+	var out []string
+	for _, h := range header {
+		out = append(out, cellText(h))
+	}
+
+	return out
+}
+
+func cell(row []*html.Node, i int) *html.Node {
+	if i < 0 || i >= len(row) {
+		return nil
+	}
+
+	return row[i]
+}
+
+func cellText(n *html.Node) string {
+	if n == nil {
+		return ""
+	}
+	var b strings.Builder
+	var walk func(*html.Node)
+	walk = func(n *html.Node) {
+		if n.Type == html.TextNode {
+			b.WriteString(n.Data)
+		}
+		for c := n.FirstChild; c != nil; c = c.NextSibling {
+			walk(c)
+		}
+	}
+	walk(n)
+
+	return strings.Join(strings.Fields(b.String()), " ")
+}
+
+func codeTexts(n *html.Node) []string {
+	if n == nil {
+		return nil
+	}
+	var out []string
+	var walk func(*html.Node)
+	walk = func(n *html.Node) {
+		if n.Type == html.ElementNode && n.Data == "code" {
+			if t := cellText(n); t != "" && !contains(out, t) {
+				out = append(out, t)
+			}
+			return
+		}
+		for c := n.FirstChild; c != nil; c = c.NextSibling {
+			walk(c)
+		}
+	}
+	walk(n)
+
+	return out
+}
+
+// stripMarks removes footnote markers (*, †, ‡) used throughout the index tables.
+func stripMarks(s string) string {
+	return strings.NewReplacer("*", "", "†", "", "‡", "").Replace(s)
+}
+
+func splitList(s string) []string {
+	var out []string
+	for _, p := range strings.Split(stripMarks(s), ";") {
+		if p = strings.TrimSpace(p); p != "" {
+			out = append(out, p)
+		}
+	}
+
+	return out
+}
