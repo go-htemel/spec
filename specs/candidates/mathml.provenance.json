@@ -1,0 +1,395 @@
+{
+  "spec": "mathml",
+  "whatwg_index_used": false,
+  "elements": {
+    "a": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "annotation": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "annotation-xml": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "maction": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "math": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "merror": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mfrac": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mi": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mmultiscripts": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mn": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mo": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mover": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mpadded": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mphantom": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mprescripts": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mroot": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mrow": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "ms": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mspace": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "msqrt": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mstyle": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "msub": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "msubsup": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "msup": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mtable": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mtd": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mtext": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "mtr": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "munder": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "munderover": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    },
+    "semantics": {
+      "source": "webref:mathml-core",
+      "flags_source": "overlay"
+    }
+  },
+  "attributes": {
+    "@global/autofocus": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/class": {
+      "kind": "SST",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Set of space-separated class names (MathML Core global attribute; not listed by browser-compat-data)."
+    },
+    "@global/data": {
+      "kind": "PrefixedCustom",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "data-* attributes are MathML Core globals; not listed by browser-compat-data."
+    },
+    "@global/dir": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core: ltr or rtl."
+    },
+    "@global/displaystyle": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core boolean-valued attribute (true/false keywords, not an HTML boolean attribute)."
+    },
+    "@global/id": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "MathML Core global attribute; not listed by browser-compat-data."
+    },
+    "@global/mathbackground": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/mathcolor": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/mathsize": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/scriptlevel": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/style": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "MathML Core global attribute; not listed by browser-compat-data."
+    },
+    "@global/tabindex": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Hyperlink target (MathMLAnchorElement in mathml-core.idl, which @webref/elements does not yet link to the a element)."
+    },
+    "a/hreflang": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/target": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/type": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "math/display": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core: block or inline."
+    },
+    "mfrac/linethickness": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mi/mathvariant": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core only defines the value normal."
+    },
+    "mo/form": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core operator form."
+    },
+    "mo/largeop": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "mo/lspace": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mo/maxsize": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mo/minsize": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mo/movablelimits": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "mo/rspace": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mo/stretchy": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "mo/symmetric": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "mover/accent": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "mpadded/depth": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mpadded/height": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mpadded/lspace": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mpadded/voffset": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mpadded/width": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mspace/depth": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mspace/height": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mspace/width": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mtd/columnspan": {
+      "kind": "Number",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core: positive integer."
+    },
+    "mtd/rowspan": {
+      "kind": "Number",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core: non-negative integer."
+    },
+    "munder/accentunder": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "munderover/accent": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    },
+    "munderover/accentunder": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "MathML Core true/false keyword attribute."
+    }
+  },
+  "skipped": {
+    "@global/href": "browser-compat-data: not standard track",
+    "maction/actiontype": "browser-compat-data: not standard track",
+    "maction/selection": "browser-compat-data: not standard track",
+    "mfrac/denomalign": "browser-compat-data: not standard track",
+    "mfrac/numalign": "browser-compat-data: not standard track",
+    "mmultiscripts/subscriptshift": "browser-compat-data: not standard track",
+    "mmultiscripts/superscriptshift": "browser-compat-data: not standard track",
+    "mo/accent": "browser-compat-data: not standard track",
+    "mstyle/background": "browser-compat-data: not standard track",
+    "mstyle/color": "browser-compat-data: not standard track",
+    "mstyle/fontsize": "browser-compat-data: not standard track",
+    "mstyle/fontstyle": "browser-compat-data: not standard track",
+    "mstyle/fontweight": "browser-compat-data: not standard track",
+    "msub/subscriptshift": "browser-compat-data: not standard track",
+    "msubsup/subscriptshift": "browser-compat-data: not standard track",
+    "msubsup/superscriptshift": "browser-compat-data: not standard track",
+    "msup/superscriptshift": "browser-compat-data: not standard track",
+    "mtable/align": "browser-compat-data: not standard track",
+    "mtable/columnalign": "browser-compat-data: not standard track",
+    "mtable/columnlines": "browser-compat-data: not standard track",
+    "mtable/columnspacing": "browser-compat-data: not standard track",
+    "mtable/frame": "browser-compat-data: not standard track",
+    "mtable/framespacing": "browser-compat-data: not standard track",
+    "mtable/rowalign": "browser-compat-data: not standard track",
+    "mtable/rowlines": "browser-compat-data: not standard track",
+    "mtable/rowspacing": "browser-compat-data: not standard track",
+    "mtable/width": "browser-compat-data: not standard track",
+    "mtd/columnalign": "browser-compat-data: not standard track",
+    "mtd/rowalign": "browser-compat-data: not standard track",
+    "mtr/columnalign": "browser-compat-data: not standard track",
+    "mtr/rowalign": "browser-compat-data: not standard track"
+  }
+}

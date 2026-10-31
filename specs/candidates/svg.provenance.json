@@ -1,0 +1,3093 @@
+{
+  "spec": "svg",
+  "whatwg_index_used": false,
+  "elements": {
+    "a": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "animate": {
+      "source": "webref:svg-animations",
+      "flags_source": "overlay"
+    },
+    "animateMotion": {
+      "source": "webref:svg-animations",
+      "flags_source": "overlay"
+    },
+    "animateTransform": {
+      "source": "webref:svg-animations",
+      "flags_source": "overlay"
+    },
+    "circle": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "clipPath": {
+      "source": "webref:css-masking-1",
+      "flags_source": "overlay"
+    },
+    "defs": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "desc": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "ellipse": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "feBlend": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feColorMatrix": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feComponentTransfer": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feComposite": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feConvolveMatrix": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feDiffuseLighting": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feDisplacementMap": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feDistantLight": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feDropShadow": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feFlood": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feFuncA": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feFuncB": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feFuncG": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feFuncR": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feGaussianBlur": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feImage": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feMerge": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feMergeNode": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feMorphology": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feOffset": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "fePointLight": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feSpecularLighting": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feSpotLight": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feTile": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "feTurbulence": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "filter": {
+      "source": "webref:filter-effects-1",
+      "flags_source": "overlay"
+    },
+    "foreignObject": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "g": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "image": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "line": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "linearGradient": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "marker": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "mask": {
+      "source": "webref:css-masking-1",
+      "flags_source": "overlay"
+    },
+    "metadata": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "mpath": {
+      "source": "webref:svg-animations",
+      "flags_source": "overlay"
+    },
+    "path": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "pattern": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "polygon": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "polyline": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "radialGradient": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "rect": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "script": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "set": {
+      "source": "webref:svg-animations",
+      "flags_source": "overlay"
+    },
+    "stop": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "style": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "svg": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "switch": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "symbol": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "text": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "textPath": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "title": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "tspan": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "use": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    },
+    "view": {
+      "source": "webref:SVG2",
+      "flags_source": "overlay"
+    }
+  },
+  "attributes": {
+    "@global/alignment-baseline": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/aria": {
+      "kind": "PrefixedCustom",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "aria-* attributes (WAI-ARIA) are not listed by browser-compat-data's SVG globals; modelled as a prefix like data-*."
+    },
+    "@global/autofocus": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/baseline-shift": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/class": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Set of space-separated class names; IDL exposes SVGAnimatedString className."
+    },
+    "@global/clip": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/clip-path": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/clip-rule": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/color": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/color-interpolation": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/color-interpolation-filters": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/cursor": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/data": {
+      "kind": "PrefixedCustom",
+      "source": "bcd",
+      "type_source": "bcd"
+    },
+    "@global/direction": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/display": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/dominant-baseline": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/fill": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Presentation attribute (paint); browser-compat-data lists fill per element only, so it would otherwise be missing from shapes it does not list. Animation elements override it with freeze/remove."
+    },
+    "@global/fill-opacity": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/fill-rule": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/filter": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/flood-color": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/flood-opacity": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/font-family": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/font-size": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/font-size-adjust": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/font-stretch": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/font-style": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/font-variant": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/font-weight": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/glyph-orientation-horizontal": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/glyph-orientation-vertical": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/id": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/image-rendering": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/lang": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/letter-spacing": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/lighting-color": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/marker-end": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/marker-mid": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/marker-start": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/mask": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/opacity": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/overflow": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/paint-order": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/pointer-events": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/requiredExtensions": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/shape-rendering": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/stop-color": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/stop-opacity": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/stroke": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/stroke-dasharray": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/stroke-dashoffset": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/stroke-linecap": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/stroke-linejoin": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/stroke-miterlimit": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/stroke-opacity": {
+      "kind": "Float",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "\u003cnumber\u003e (or \u003calpha-value\u003e) presentation attribute; seeded from specs/svg.json."
+    },
+    "@global/stroke-width": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/style": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/tabindex": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/text-anchor": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/text-decoration": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/text-overflow": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/text-rendering": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/transform": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/transform-box": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/transform-origin": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/unicode-bidi": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/vector-effect": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/visibility": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/white-space": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/word-spacing": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/writing-mode": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+    },
+    "@global/xml:lang": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/xml:space": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XML attribute; keywords default/preserve."
+    },
+    "a/download": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/hreflang": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/ping": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Set of space-separated URLs, as in HTML; IDL type is a plain USVString."
+    },
+    "a/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens, as in HTML."
+    },
+    "a/rel": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "a/target": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/type": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/xlink:actuate": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "a/xlink:show": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "a/xlink:title": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "animate/accumulate": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/additive": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/attributeName": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Target attribute name; not reflected in IDL."
+    },
+    "animate/attributeType": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated in SVG 2 but still widely used; keywords from SVG 1.1."
+    },
+    "animate/begin": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/by": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/calcMode": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/dur": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/end": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/fill": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute."
+    },
+    "animate/from": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Animation target reference; SVGAnimationElement does not include SVGURIReference in IDL."
+    },
+    "animate/keySplines": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/keyTimes": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/max": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/min": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/repeatCount": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/repeatDur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/restart": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "animate/to": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animate/values": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/accumulate": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/additive": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/begin": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/by": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/calcMode": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/dur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/end": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/fill": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute."
+    },
+    "animateMotion/from": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Animation target reference; SVGAnimationElement does not include SVGURIReference in IDL."
+    },
+    "animateMotion/keyPoints": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/keySplines": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/keyTimes": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/max": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/min": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/origin": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "animateMotion/path": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/repeatCount": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/repeatDur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/restart": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/rotate": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "auto | auto-reverse | \u003cnumber\u003e."
+    },
+    "animateMotion/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "animateMotion/to": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateMotion/values": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/accumulate": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/additive": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/attributeName": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Target attribute name; not reflected in IDL."
+    },
+    "animateTransform/attributeType": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Deprecated in SVG 2 but still widely used; keywords from SVG 1.1."
+    },
+    "animateTransform/begin": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/by": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/calcMode": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/dur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/end": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/fill": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute."
+    },
+    "animateTransform/from": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Animation target reference; SVGAnimationElement does not include SVGURIReference in IDL."
+    },
+    "animateTransform/keySplines": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/keyTimes": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/max": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/min": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/repeatCount": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/repeatDur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/restart": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "animateTransform/to": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "animateTransform/type": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Transform type keywords; not in IDL."
+    },
+    "animateTransform/values": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "circle/cx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "circle/cy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "circle/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "circle/r": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "circle/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "clipPath/clipPathUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "clipPath/systemLanguage": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "defs/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "ellipse/cx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ellipse/cy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ellipse/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ellipse/rx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ellipse/ry": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ellipse/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "feBlend/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/in2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/mode": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feBlend/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feBlend/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feColorMatrix/values": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feColorMatrix/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComponentTransfer/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/in2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/k1": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/k2": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/k3": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/k4": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/operator": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feComposite/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feComposite/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/bias": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/divisor": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/edgeMode": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feConvolveMatrix/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/kernelMatrix": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/kernelUnitLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feConvolveMatrix/order": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feConvolveMatrix/preserveAlpha": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/targetX": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/targetY": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feConvolveMatrix/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/diffuseConstant": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/kernelUnitLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feDiffuseLighting/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/surfaceScale": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDiffuseLighting/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/in2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/scale": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/xChannelSelector": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feDisplacementMap/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDisplacementMap/yChannelSelector": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feDistantLight/azimuth": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDistantLight/elevation": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/dx": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/dy": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/stdDeviation": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feDropShadow/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feDropShadow/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFlood/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFlood/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFlood/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFlood/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFlood/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/amplitude": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/exponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/intercept": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/offset": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/slope": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/tableValues": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncA/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feFuncB/amplitude": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/exponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/intercept": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/offset": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/slope": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/tableValues": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncB/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feFuncG/amplitude": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/exponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/intercept": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/offset": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/slope": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/tableValues": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncG/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feFuncR/amplitude": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/exponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/intercept": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/offset": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/slope": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/tableValues": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feFuncR/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feGaussianBlur/edgeMode": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feGaussianBlur/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feGaussianBlur/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feGaussianBlur/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feGaussianBlur/stdDeviation": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feGaussianBlur/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feGaussianBlur/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feGaussianBlur/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "CORS settings attribute, as in HTML."
+    },
+    "feImage/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feImage/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "feImage/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMerge/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMerge/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMerge/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMerge/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMerge/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMergeNode/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/operator": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feMorphology/radius": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feMorphology/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feMorphology/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/dx": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/dy": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feOffset/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "fePointLight/x": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "fePointLight/y": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "fePointLight/z": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/kernelUnitLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feSpecularLighting/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/specularConstant": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/specularExponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/surfaceScale": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpecularLighting/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/limitingConeAngle": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/pointsAtX": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/pointsAtY": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/pointsAtZ": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/specularExponent": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/x": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/y": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feSpotLight/z": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/in": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTile/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/baseFrequency": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVG 2 filter attribute of type \u003cnumber-optional-number\u003e; IDL splits it into X/Y members (renamed via idl_renames)."
+    },
+    "feTurbulence/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/numOctaves": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/result": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/seed": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/stitchTiles": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feTurbulence/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "feTurbulence/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "feTurbulence/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "filter/filterUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "filter/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "filter/primitiveUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "filter/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "filter/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "filter/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "filter/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "foreignObject/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "foreignObject/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "foreignObject/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "foreignObject/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "foreignObject/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "g/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "image/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "CORS settings attribute, as in HTML."
+    },
+    "image/decoding": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "As in HTML's img decoding."
+    },
+    "image/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "image/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "image/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "image/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "image/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "image/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "image/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "image/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "line/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "line/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "line/x1": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "line/x2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "line/y1": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "line/y2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/gradientTransform": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/gradientUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "linearGradient/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/spreadMethod": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "linearGradient/x1": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/x2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "linearGradient/y1": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "linearGradient/y2": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/markerHeight": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/markerUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "marker/markerWidth": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/orient": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "auto | auto-start-reverse | \u003cangle\u003e; IDL splits it into orientType/orientAngle (renamed via idl_renames)."
+    },
+    "marker/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/refX": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/refY": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "marker/viewBox": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mask/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mask/mask-type": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Presentation attribute that only applies to mask; browser-compat-data does not list it."
+    },
+    "mask/maskContentUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "mask/maskUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "mask/systemLanguage": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "mask/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mask/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mask/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mpath/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "mpath/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "path/d": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "path/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "path/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "pattern/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/patternContentUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "pattern/patternTransform": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/patternUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "pattern/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/systemLanguage": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "pattern/viewBox": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "pattern/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "pattern/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "polygon/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "polygon/points": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "polygon/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "polyline/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "polyline/points": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "polyline/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "radialGradient/cx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/cy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/fr": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/fx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/fy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/gradientTransform": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/gradientUnits": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "radialGradient/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/r": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "radialGradient/spreadMethod": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "radialGradient/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "rect/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/pathLength": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/rx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/ry": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "rect/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "rect/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGScriptElement exposes crossOrigin without [Reflect]; browser-compat-data does not list the content attribute."
+    },
+    "script/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "set/attributeName": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Target attribute name; not reflected in IDL."
+    },
+    "set/attributeType": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "Deprecated in SVG 2 but still widely used; keywords from SVG 1.1."
+    },
+    "set/begin": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/dur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/end": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/fill": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute."
+    },
+    "set/href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Animation target reference; SVGAnimationElement does not include SVGURIReference in IDL."
+    },
+    "set/max": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/min": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/repeatCount": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/repeatDur": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/restart": {
+      "kind": "Enum",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "set/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "set/to": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+    },
+    "stop/offset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "\u003cnumber\u003e | \u003cpercentage\u003e: IDL's SVGAnimatedNumber is narrower than the content attribute syntax (\"50%\" is valid)."
+    },
+    "style/media": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "style/title": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "style/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/baseProfile": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "svg/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "svg/version": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "svg/viewBox": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "svg/zoomAndPan": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated in SVG 2; keywords from SVG 1.1."
+    },
+    "switch/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "symbol/height": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "symbol/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "symbol/refX": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "symbol/refY": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "symbol/viewBox": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "symbol/width": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "symbol/x": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "symbol/y": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+    },
+    "text/dx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "text/dy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "text/lengthAdjust": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "text/rotate": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "text/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "text/textLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "text/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "text/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textPath/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textPath/lengthAdjust": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "textPath/method": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "textPath/side": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "textPath/spacing": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "textPath/startOffset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textPath/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "textPath/textLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textPath/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "tspan/dx": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "tspan/dy": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "tspan/lengthAdjust": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+    },
+    "tspan/rotate": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "tspan/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "tspan/textLength": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "tspan/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "tspan/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "use/height": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "use/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "use/systemLanguage": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "use/width": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "use/x": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "use/xlink:href": {
+      "kind": "URL",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+    },
+    "use/y": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "view/preserveAspectRatio": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "view/viewBox": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "view/zoomAndPan": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Deprecated in SVG 2; keywords from SVG 1.1."
+    }
+  },
+  "skipped": {
+    "@global/focusgroup": "browser-compat-data: not standard track",
+    "@global/focusgroupstart": "browser-compat-data: not standard track",
+    "@global/font-width": "browser-compat-data: not standard track",
+    "a/interestfor": "browser-compat-data: not standard track",
+    "feImage/fetchpriority": "browser-compat-data: not standard track",
+    "image/fetchpriority": "browser-compat-data: not standard track",
+    "script/async": "browser-compat-data: experimental and not in the spec's IDL",
+    "script/defer": "browser-compat-data: experimental and not in the spec's IDL",
+    "script/fetchpriority": "browser-compat-data: not standard track",
+    "textPath/path": "browser-compat-data: experimental and not in the spec's IDL"
+  }
+}

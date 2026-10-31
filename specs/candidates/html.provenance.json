@@ -1,0 +1,2329 @@
+{
+  "spec": "html",
+  "whatwg_index_used": false,
+  "elements": {
+    "a": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "abbr": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "address": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "area": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "article": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "aside": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "audio": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "b": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "base": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "bdi": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "bdo": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "blockquote": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "body": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "br": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "button": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "canvas": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "caption": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "cite": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "code": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "col": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "colgroup": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "data": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "datalist": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "dd": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "del": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "details": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "dfn": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "dialog": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "div": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "dl": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "dt": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "em": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "embed": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "fieldset": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "figcaption": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "figure": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "footer": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "form": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h1": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h2": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h3": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h4": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h5": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "h6": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "head": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "header": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "hgroup": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "hr": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "html": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "i": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "iframe": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "img": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "input": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "ins": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "kbd": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "label": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "legend": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "li": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "link": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "main": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "map": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "mark": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "menu": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "meta": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "meter": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "nav": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "noscript": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "object": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "ol": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "optgroup": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "option": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "output": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "p": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "picture": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "pre": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "progress": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "q": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "rp": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "rt": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "ruby": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "s": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "samp": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "script": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "search": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "section": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "select": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "selectedcontent": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "slot": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "small": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "source": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "span": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "strong": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "style": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "sub": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "summary": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "sup": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "table": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "tbody": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "td": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "template": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "textarea": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "tfoot": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "th": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "thead": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "time": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "title": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "tr": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "track": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "u": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "ul": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "var": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "video": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    },
+    "wbr": {
+      "source": "webref:html",
+      "flags_source": "overlay"
+    }
+  },
+  "attributes": {
+    "@global/accesskey": {
+      "kind": "Char",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Kept as a single key (as in the legacy document) for API ergonomics; the spec allows a space-separated list of single code points."
+    },
+    "@global/aria": {
+      "kind": "PrefixedCustom",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "aria-* attributes (ARIA in HTML) are not in browser-compat-data's HTML globals; modelled as a prefix like data-*."
+    },
+    "@global/autocapitalize": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+    },
+    "@global/autocorrect": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute (empty string = on); IDL exposes a boolean."
+    },
+    "@global/autofocus": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/class": {
+      "kind": "SST",
+      "source": "bcd",
+      "type_source": "overlay-pending",
+      "reason": "Set of space-separated tokens; DOM's Element.className is not reflected with a DOMTokenList type in IDL."
+    },
+    "@global/contenteditable": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; IDL exposes a DOMString with custom getter."
+    },
+    "@global/data": {
+      "kind": "PrefixedCustom",
+      "source": "bcd",
+      "type_source": "bcd"
+    },
+    "@global/dir": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "@global/draggable": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated true/false attribute, not a boolean attribute, although the IDL type is boolean."
+    },
+    "@global/enterkeyhint": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "@global/exportparts": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/headingoffset": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/headingreset": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/hidden": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; the bare attribute means hidden. IDL type is a union."
+    },
+    "@global/id": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/inert": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/inputmode": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "@global/is": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/itemid": {
+      "kind": "URL",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Microdata globals are not listed by browser-compat-data; valid URL potentially surrounded by spaces."
+    },
+    "@global/itemprop": {
+      "kind": "SST",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Microdata; unordered set of unique space-separated tokens."
+    },
+    "@global/itemref": {
+      "kind": "SST",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Microdata; unordered set of unique space-separated tokens (IDs)."
+    },
+    "@global/itemscope": {
+      "kind": "Bool",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Microdata; boolean attribute."
+    },
+    "@global/itemtype": {
+      "kind": "SST",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "Microdata; unordered set of unique space-separated tokens (absolute URLs)."
+    },
+    "@global/lang": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/nonce": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "@global/part": {
+      "kind": "SST",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "CSS Shadow Parts: space-separated part names."
+    },
+    "@global/popover": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute (bare = auto). The legacy document typed it as String."
+    },
+    "@global/role": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay",
+      "reason": "ARIA role attribute (wai-aria IDL reflects it) is not in browser-compat-data's HTML globals."
+    },
+    "@global/slot": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/spellcheck": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated true/false attribute; IDL exposes a boolean."
+    },
+    "@global/style": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "@global/tabindex": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/title": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "@global/translate": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated yes/no attribute; IDL exposes a boolean."
+    },
+    "@global/writingsuggestions": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+    },
+    "a/download": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Bare attribute (download) or a suggested file name: generated as an Enum with only the empty value plus custom values. The legacy document typed it as Bool, which cannot express a file name."
+    },
+    "a/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/hreflang": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/ping": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Set of space-separated valid non-empty URLs; IDL type is a plain USVString."
+    },
+    "a/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "a/rel": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/target": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "a/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/alt": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/coords": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/download": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Bare attribute (download) or a suggested file name: generated as an Enum with only the empty value plus custom values. The legacy document typed it as Bool, which cannot express a file name."
+    },
+    "area/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/hreflang": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/ping": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Set of space-separated valid non-empty URLs; IDL type is a plain USVString."
+    },
+    "area/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "area/rel": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/shape": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "area/target": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "area/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "audio/autoplay": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "audio/controls": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "audio/controlslist": {
+      "kind": "SST",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Set of tokens (nodownload, nofullscreen, noremoteplayback) from a WICG proposal that browser-compat-data lists as standard-track."
+    },
+    "audio/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+    },
+    "audio/disableremoteplayback": {
+      "kind": "Bool",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Boolean attribute from the Remote Playback API (W3C)."
+    },
+    "audio/loading": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+    },
+    "audio/loop": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "audio/muted": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "audio/preload": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute (empty = auto)."
+    },
+    "audio/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "base/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "base/target": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "blockquote/cite": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "body/onafterprint": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onbeforeprint": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onbeforeunload": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onhashchange": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onlanguagechange": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onmessage": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onmessageerror": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onoffline": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/ononline": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onpagehide": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onpagereveal": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onpageshow": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onpageswap": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onpopstate": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onrejectionhandled": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onstorage": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onunhandledrejection": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "body/onunload": {
+      "kind": "String",
+      "source": "idl-event-handler",
+      "type_source": "idl"
+    },
+    "button/command": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Built-in commands plus custom commands (\"--name\"), which the WHATWG index cannot express as a closed list."
+    },
+    "button/commandfor": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "button/formaction": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/formenctype": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values; the legacy document typed it as String."
+    },
+    "button/formmethod": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "button/formnovalidate": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/formtarget": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/popovertarget": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "button/popovertargetaction": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "button/type": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+    },
+    "button/value": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "canvas/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "canvas/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "col/span": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "colgroup/span": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "data/value": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "del/cite": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "del/datetime": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "details/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "details/open": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "dialog/closedby": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+    },
+    "dialog/open": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "embed/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "embed/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "embed/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "embed/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "fieldset/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "fieldset/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "fieldset/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/accept-charset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/action": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/autocomplete": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "On a form the attribute is on/off only."
+    },
+    "form/enctype": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "form/method": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "form/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/novalidate": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/rel": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "form/target": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/allow": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/allowfullscreen": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "iframe/loading": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+    },
+    "iframe/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "iframe/sandbox": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "iframe/srcdoc": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "iframe/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "img/alt": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/controls": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+    },
+    "img/decoding": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "img/fetchpriority": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "img/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "img/ismap": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/loading": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+    },
+    "img/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "img/sizes": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/srcset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/usemap": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "img/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "input/accept": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/alpha": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/alt": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/autocomplete": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+    },
+    "input/capture": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "HTML Media Capture (W3C) facing mode; not in the HTML standard."
+    },
+    "input/checked": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/colorspace": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "input/dirname": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "input/formaction": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/formenctype": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values; the legacy document typed it as String."
+    },
+    "input/formmethod": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "input/formnovalidate": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/formtarget": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "input/list": {
+      "kind": "String",
+      "source": "overlay",
+      "type_source": "overlay-pending",
+      "reason": "ID of a datalist; IDL exposes a read-only element reference and browser-compat-data does not list it."
+    },
+    "input/max": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/maxlength": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/min": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/minlength": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/multiple": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/pattern": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/placeholder": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/popovertarget": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/popovertargetaction": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "input/readonly": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/required": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/size": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/step": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/type": {
+      "kind": "Enum",
+      "source": "bcd",
+      "type_source": "bcd-values"
+    },
+    "input/value": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "input/webkitdirectory": {
+      "kind": "Bool",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Boolean attribute from the File and Directory Entries API; browser-compat-data lists it as standard-track."
+    },
+    "input/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "ins/cite": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ins/datetime": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "label/for": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "li/value": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/as": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "link/blocking": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+    },
+    "link/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/fetchpriority": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "link/href": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/hreflang": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/imagesizes": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/imagesrcset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/integrity": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/media": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "link/rel": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/sizes": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "link/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "map/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meta/charset": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "meta/content": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meta/http-equiv": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Pragma directives; IDL reflects a DOMString."
+    },
+    "meta/media": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meta/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/high": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/low": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/max": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/min": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/optimum": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "meter/value": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "object/data": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "object/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "object/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "object/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "object/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "object/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "ol/reversed": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ol/start": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "ol/type": {
+      "kind": "Char",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Keywords 1, a, A, i, I differ only in case, so an Enum would generate colliding Go identifiers (OlTypeA twice); kept as Char like the legacy document."
+    },
+    "optgroup/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "optgroup/label": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "option/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "option/label": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-setter"
+    },
+    "option/selected": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "option/value": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-setter"
+    },
+    "output/for": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "output/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "output/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "progress/max": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "progress/value": {
+      "kind": "Float",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "q/cite": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/async": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Boolean attribute; the IDL attribute has a custom getter so it is not marked [Reflect]."
+    },
+    "script/blocking": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+    },
+    "script/defer": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/fetchpriority": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "script/integrity": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/nomodule": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "script/referrerpolicy": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."
+    },
+    "script/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "script/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "select/autocomplete": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+    },
+    "select/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "select/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "select/multiple": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "select/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "select/required": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "select/size": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "slot/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "source/media": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/sizes": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/srcset": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/type": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "source/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "style/blocking": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "style/media": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "td/colspan": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "td/headers": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Set of space-separated element IDs; IDL type is a plain DOMString."
+    },
+    "td/rowspan": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/for": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/shadowrootclonable": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/shadowrootcustomelementregistry": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/shadowrootdelegatesfocus": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/shadowrootmode": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute."
+    },
+    "template/shadowrootserializable": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "template/shadowrootslotassignment": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl-unreflected"
+    },
+    "textarea/autocomplete": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay",
+      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+    },
+    "textarea/cols": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/dirname": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/disabled": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/form": {
+      "kind": "String",
+      "source": "bcd",
+      "type_source": "default"
+    },
+    "textarea/maxlength": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/minlength": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/name": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/placeholder": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/readonly": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/required": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/rows": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "textarea/wrap": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute (IDL reflects it as DOMString)."
+    },
+    "th/abbr": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "th/colspan": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "th/headers": {
+      "kind": "SST",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Set of space-separated element IDs; IDL type is a plain DOMString."
+    },
+    "th/rowspan": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "th/scope": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute; the legacy document typed it as String."
+    },
+    "time/datetime": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "track/default": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "track/kind": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute limited to known values."
+    },
+    "track/label": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "track/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "track/srclang": {
+      "kind": "String",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/autoplay": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/controls": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/controlslist": {
+      "kind": "SST",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Set of tokens (nodownload, nofullscreen, noremoteplayback) from a WICG proposal that browser-compat-data lists as standard-track."
+    },
+    "video/crossorigin": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+    },
+    "video/disablepictureinpicture": {
+      "kind": "Bool",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Boolean attribute from Picture-in-Picture (W3C)."
+    },
+    "video/disableremoteplayback": {
+      "kind": "Bool",
+      "source": "bcd",
+      "type_source": "overlay",
+      "reason": "Boolean attribute from the Remote Playback API (W3C)."
+    },
+    "video/height": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    },
+    "video/loading": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+    },
+    "video/loop": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/muted": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/playsinline": {
+      "kind": "Bool",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/poster": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/preload": {
+      "kind": "Enum",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Enumerated attribute (empty = auto)."
+    },
+    "video/src": {
+      "kind": "URL",
+      "source": "idl",
+      "type_source": "idl"
+    },
+    "video/width": {
+      "kind": "Number",
+      "source": "idl",
+      "type_source": "overlay-pending",
+      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+    }
+  },
+  "skipped": {
+    "\u003cacronym\u003e": "obsolete element (webref)",
+    "\u003capplet\u003e": "obsolete element (webref)",
+    "\u003cbasefont\u003e": "obsolete element (webref)",
+    "\u003cbgsound\u003e": "obsolete element (webref)",
+    "\u003cbig\u003e": "obsolete element (webref)",
+    "\u003cblink\u003e": "obsolete element (webref)",
+    "\u003ccenter\u003e": "obsolete element (webref)",
+    "\u003cdir\u003e": "obsolete element (webref)",
+    "\u003cfont\u003e": "obsolete element (webref)",
+    "\u003cframe\u003e": "obsolete element (webref)",
+    "\u003cframeset\u003e": "obsolete element (webref)",
+    "\u003cisindex\u003e": "obsolete element (webref)",
+    "\u003ckeygen\u003e": "obsolete element (webref)",
+    "\u003clisting\u003e": "obsolete element (webref)",
+    "\u003cmarquee\u003e": "obsolete element (webref)",
+    "\u003cmenuitem\u003e": "obsolete element (webref)",
+    "\u003cmulticol\u003e": "obsolete element (webref)",
+    "\u003cnextid\u003e": "obsolete element (webref)",
+    "\u003cnobr\u003e": "obsolete element (webref)",
+    "\u003cnoembed\u003e": "obsolete element (webref)",
+    "\u003cnoframes\u003e": "obsolete element (webref)",
+    "\u003cparam\u003e": "obsolete element (webref)",
+    "\u003cplaintext\u003e": "obsolete element (webref)",
+    "\u003crb\u003e": "obsolete element (webref)",
+    "\u003crtc\u003e": "obsolete element (webref)",
+    "\u003cspacer\u003e": "obsolete element (webref)",
+    "\u003cstrike\u003e": "obsolete element (webref)",
+    "\u003ctt\u003e": "obsolete element (webref)",
+    "\u003cxmp\u003e": "obsolete element (webref)",
+    "@global/anchor": "browser-compat-data: not standard track",
+    "@global/containertiming": "browser-compat-data: experimental and not in the spec's IDL",
+    "@global/containertimingignore": "browser-compat-data: experimental and not in the spec's IDL",
+    "@global/drawable": "browser-compat-data: not standard track",
+    "@global/elementtiming": "browser-compat-data: experimental and not in the spec's IDL",
+    "@global/focusgroup": "browser-compat-data: not standard track",
+    "@global/focusgroupstart": "browser-compat-data: not standard track",
+    "@global/virtualkeyboardpolicy": "browser-compat-data: experimental and not in the spec's IDL",
+    "a/attributionsourceid": "browser-compat-data: experimental and not in the spec's IDL",
+    "a/attributionsrc": "browser-compat-data: not standard track",
+    "a/charset": "obsolete attribute",
+    "a/coords": "obsolete attribute",
+    "a/hreftranslate": "browser-compat-data: not standard track",
+    "a/interestfor": "browser-compat-data: not standard track",
+    "a/name": "obsolete attribute",
+    "a/rev": "obsolete attribute",
+    "a/shape": "obsolete attribute",
+    "area/attributionsrc": "browser-compat-data: not standard track",
+    "area/interestfor": "browser-compat-data: not standard track",
+    "area/nohref": "obsolete attribute",
+    "body/alink": "obsolete attribute",
+    "body/background": "obsolete attribute",
+    "body/bgcolor": "obsolete attribute",
+    "body/bottommargin": "obsolete attribute",
+    "body/leftmargin": "obsolete attribute",
+    "body/link": "obsolete attribute",
+    "body/rightmargin": "obsolete attribute",
+    "body/text": "obsolete attribute",
+    "body/topmargin": "obsolete attribute",
+    "body/vlink": "obsolete attribute",
+    "br/clear": "obsolete attribute",
+    "button/interestfor": "browser-compat-data: not standard track",
+    "canvas/content": "browser-compat-data: not standard track",
+    "canvas/moz-opaque": "browser-compat-data: not standard track",
+    "caption/align": "obsolete attribute",
+    "col/align": "obsolete attribute",
+    "col/char": "obsolete attribute",
+    "col/charoff": "obsolete attribute",
+    "col/valign": "obsolete attribute",
+    "col/width": "obsolete attribute",
+    "colgroup/align": "obsolete attribute",
+    "colgroup/char": "obsolete attribute",
+    "colgroup/charoff": "obsolete attribute",
+    "colgroup/valign": "obsolete attribute",
+    "colgroup/width": "obsolete attribute",
+    "div/align": "obsolete attribute",
+    "dl/compact": "obsolete attribute",
+    "embed/align": "obsolete attribute",
+    "embed/name": "obsolete attribute",
+    "h1/align": "obsolete attribute",
+    "h2/align": "obsolete attribute",
+    "h3/align": "obsolete attribute",
+    "h4/align": "obsolete attribute",
+    "h5/align": "obsolete attribute",
+    "h6/align": "obsolete attribute",
+    "hr/align": "obsolete attribute",
+    "hr/color": "obsolete attribute",
+    "hr/noshade": "obsolete attribute",
+    "hr/size": "obsolete attribute",
+    "hr/width": "obsolete attribute",
+    "html/version": "obsolete attribute",
+    "html/xmlns": "browser-compat-data: not standard track",
+    "iframe/align": "obsolete attribute",
+    "iframe/allowpaymentrequest": "browser-compat-data: not standard track",
+    "iframe/browsingtopics": "browser-compat-data: not standard track",
+    "iframe/credentialless": "browser-compat-data: experimental and not in the spec's IDL",
+    "iframe/cross-origin-top-navigation-by-user-activation": "browser-compat-data: not standard track",
+    "iframe/csp": "browser-compat-data: experimental and not in the spec's IDL",
+    "iframe/frameborder": "obsolete attribute",
+    "iframe/longdesc": "obsolete attribute",
+    "iframe/marginheight": "obsolete attribute",
+    "iframe/marginwidth": "obsolete attribute",
+    "iframe/privateToken": "browser-compat-data: experimental and not in the spec's IDL",
+    "iframe/scrolling": "obsolete attribute",
+    "img/align": "obsolete attribute",
+    "img/attributionsrc": "browser-compat-data: not standard track",
+    "img/border": "obsolete attribute",
+    "img/hspace": "obsolete attribute",
+    "img/longdesc": "obsolete attribute",
+    "img/lowsrc": "obsolete attribute",
+    "img/name": "obsolete attribute",
+    "img/vspace": "obsolete attribute",
+    "input/align": "obsolete attribute",
+    "input/hspace": "obsolete attribute",
+    "input/switch": "browser-compat-data: not standard track",
+    "input/usemap": "obsolete attribute",
+    "input/vspace": "obsolete attribute",
+    "legend/align": "obsolete attribute",
+    "li/type": "obsolete attribute",
+    "link/charset": "obsolete attribute",
+    "link/rev": "obsolete attribute",
+    "link/target": "obsolete attribute",
+    "menu/compact": "obsolete attribute",
+    "meta/scheme": "obsolete attribute",
+    "object/align": "obsolete attribute",
+    "object/archive": "obsolete attribute",
+    "object/border": "obsolete attribute",
+    "object/classid": "obsolete attribute",
+    "object/code": "obsolete attribute",
+    "object/codebase": "obsolete attribute",
+    "object/codetype": "obsolete attribute",
+    "object/declare": "obsolete attribute",
+    "object/hspace": "obsolete attribute",
+    "object/standby": "obsolete attribute",
+    "object/usemap": "obsolete attribute",
+    "object/vspace": "obsolete attribute",
+    "ol/compact": "obsolete attribute",
+    "p/align": "obsolete attribute",
+    "pre/width": "obsolete attribute",
+    "script/attributionsrc": "browser-compat-data: not standard track",
+    "script/charset": "obsolete attribute",
+    "script/event": "obsolete attribute",
+    "script/for": "obsolete attribute",
+    "style/type": "obsolete attribute",
+    "table/align": "obsolete attribute",
+    "table/bgcolor": "obsolete attribute",
+    "table/border": "obsolete attribute",
+    "table/cellpadding": "obsolete attribute",
+    "table/cellspacing": "obsolete attribute",
+    "table/frame": "obsolete attribute",
+    "table/rules": "obsolete attribute",
+    "table/summary": "obsolete attribute",
+    "table/width": "obsolete attribute",
+    "tbody/align": "obsolete attribute",
+    "tbody/bgcolor": "browser-compat-data: not standard track",
+    "tbody/char": "obsolete attribute",
+    "tbody/charoff": "obsolete attribute",
+    "tbody/valign": "obsolete attribute",
+    "td/abbr": "obsolete attribute",
+    "td/align": "obsolete attribute",
+    "td/axis": "obsolete attribute",
+    "td/bgcolor": "obsolete attribute",
+    "td/char": "obsolete attribute",
+    "td/charoff": "obsolete attribute",
+    "td/height": "obsolete attribute",
+    "td/nowrap": "obsolete attribute",
+    "td/scope": "obsolete attribute",
+    "td/valign": "obsolete attribute",
+    "td/width": "obsolete attribute",
+    "template/shadowrootreferencetarget": "browser-compat-data: not standard track",
+    "tfoot/align": "obsolete attribute",
+    "tfoot/bgcolor": "browser-compat-data: not standard track",
+    "tfoot/char": "obsolete attribute",
+    "tfoot/charoff": "obsolete attribute",
+    "tfoot/valign": "obsolete attribute",
+    "th/align": "obsolete attribute",
+    "th/axis": "obsolete attribute",
+    "th/bgcolor": "obsolete attribute",
+    "th/char": "obsolete attribute",
+    "th/charoff": "obsolete attribute",
+    "th/height": "obsolete attribute",
+    "th/nowrap": "obsolete attribute",
+    "th/valign": "obsolete attribute",
+    "th/width": "obsolete attribute",
+    "thead/align": "obsolete attribute",
+    "thead/bgcolor": "browser-compat-data: not standard track",
+    "thead/char": "obsolete attribute",
+    "thead/charoff": "obsolete attribute",
+    "thead/valign": "obsolete attribute",
+    "tr/align": "obsolete attribute",
+    "tr/bgcolor": "obsolete attribute",
+    "tr/char": "obsolete attribute",
+    "tr/charoff": "obsolete attribute",
+    "tr/valign": "obsolete attribute",
+    "ul/compact": "obsolete attribute",
+    "ul/type": "obsolete attribute"
+  }
+}
