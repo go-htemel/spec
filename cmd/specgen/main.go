@@ -1,3 +1,8 @@
+// Command specgen scrapes element names from the live WHATWG HTML page and writes spec documents.
+//
+// Deprecated: use cmd/specgen2, which builds the documents offline from committed inputs under data/.
+// This command is kept for history; do not use it to produce new data. With its default flags it
+// overwrites the committed specs/ directory.
 package main
 
 import (
