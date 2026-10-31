@@ -2,6 +2,8 @@ package spec
 
 import (
 	"encoding/json"
+	"fmt"
+	"sort"
 )
 
 // Spec defines the spec document that all found elements and their attributes are parsed into.
@@ -32,7 +34,7 @@ func attrUnmarshal(in []json.RawMessage) ([]Attribute, error) {
 				return nil, err
 			}
 			out = append(out, a)
-		case "AttributeType":
+		case "AttributeTypeChar":
 			a := &AttributeTypeChar{}
 			if err := json.Unmarshal(attr, &a); err != nil {
 				return nil, err
@@ -74,6 +76,8 @@ func attrUnmarshal(in []json.RawMessage) ([]Attribute, error) {
 				return nil, err
 			}
 			out = append(out, a)
+		default:
+			return nil, fmt.Errorf("unknown attribute_type %q for attribute %q", tmpAttr.AttributeType, tmpAttr.Name)
 		}
 	}
 
@@ -286,6 +290,21 @@ func (a AttributeTypeEnum) GetName() string {
 	return a.Name
 }
 
+// AllowedSorted returns the allowed enum values in sorted order, giving callers
+// a deterministic alternative to iterating the Allowed map.
+func (a AttributeTypeEnum) AllowedSorted() []string {
+	out := make([]string, 0, len(a.Allowed))
+	for k := range a.Allowed {
+		out = append(out, k)
+	}
+	sort.Strings(out)
+
+	return out
+}
+
+// MarshalJSON emits the allowed values as an object with keys in sorted order,
+// so the output is deterministic. (encoding/json already sorts map keys, but this
+// is made explicit and kept independent of the map type's encoding.)
 func (a AttributeTypeEnum) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&struct {
 		Name          string              `json:"name"`
