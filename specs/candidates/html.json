@@ -814,10 +814,6 @@
       "description": "The embed element provides an integration point for an external application or interactive content.",
       "attributes": [
         {
-          "name": "any",
-          "attribute_type": "AttributeTypeString"
-        },
-        {
           "name": "height",
           "description": "Vertical dimension",
           "attribute_type": "AttributeTypeNumber"
@@ -1501,7 +1497,7 @@
         {
           "name": "step",
           "description": "Granularity to be matched by the form control's value",
-          "attribute_type": "AttributeTypeFloat"
+          "attribute_type": "AttributeTypeString"
         },
         {
           "name": "type",
@@ -1826,12 +1822,10 @@
           "name": "http-equiv",
           "description": "Pragma directive",
           "allowed": {
-            "content-language": {},
             "content-security-policy": {},
             "content-type": {},
             "default-style": {},
             "refresh": {},
-            "set-cookie": {},
             "x-ua-compatible": {}
           },
           "allow_empty": false,
@@ -2272,13 +2266,12 @@
           "name": "type",
           "description": "Type of script",
           "allowed": {
-            "a valid MIME type string that is not a JavaScript MIME type essence match": {},
             "importmap": {},
             "module": {},
             "speculationrules": {}
           },
           "allow_empty": false,
-          "allow_custom": false,
+          "allow_custom": true,
           "attribute_type": "AttributeTypeEnum"
         }
       ],
@@ -2766,7 +2759,7 @@
         {
           "name": "datetime",
           "description": "Machine-readable value",
-          "attribute_type": "AttributeTypeNumber"
+          "attribute_type": "AttributeTypeString"
         }
       ],
       "text": true,

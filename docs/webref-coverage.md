@@ -16,77 +16,89 @@ and the committed `specs/*.json`. Everything outside the notes block is regenera
 
 | spec | elements old/new | only old | only new | attrs only old | attrs only new | type disagreements | of which evidence / overlay / pending / weak | all new attrs: evidence / overlay / pending / weak |
 |---|---|---|---|---|---|---|---|---|
-| html | 112/113 | 0 | 1 | 4 | 23 | 26 | 11 / 10 / 5 / 0 | 218 / 24 / 73 / 2 |
+| html | 112/113 | 0 | 1 | 4 | 22 | 25 | 17 / 8 / 0 / 0 | 294 / 22 / 0 / 0 |
 | svg | 63/63 | 0 | 0 | 7 | 41 | 18 | 12 / 6 / 0 / 0 | 277 / 149 / 27 / 76 |
 
 <!-- notes:begin -->
 ## Analysis (hand-written; preserved across `report` runs)
 
-**State of inputs.** The candidates were built from @webref/elements 2.9.2, @webref/idl 3.86.0 and
-@mdn/browser-compat-data 8.1.7 (pinned in `data/SOURCES.json`). The WHATWG index snapshot
-(`data/whatwg/indices.html`) is **not vendored**: html.spec.whatwg.org was unreachable when this was
-produced, so `whatwg_index_used` is false in every provenance file and the overlay carries
-stand-ins marked `"pending": "whatwg-index"`.
+**State of inputs.** The candidates were built from @webref/elements 2.9.2, @webref/idl 3.86.0,
+@mdn/browser-compat-data 8.1.7 and the WHATWG HTML index tables (`data/whatwg/indices.html`, pinned to
+commit 404b3eb1… of whatwg/html); all are pinned in `data/SOURCES.json` and `whatwg_index_used` is true in
+the HTML provenance file. Precedence is overlay > WHATWG index > IDL > BCD default. No HTML overlay entry
+is a stand-in any more: every one is a deliberate judgment call with a permanent reason, and no HTML
+attribute falls back to an unexamined String (0 weak, 0 pending).
 
 ### HTML: where the new pipeline is right
 
 - **Elements.** `sup` is new: the committed html.json predates the scraper fix that collects every
   `<code>` in a heading. The 29 obsolete elements webref lists are left out (they come back, marked
   deprecated, with `-include-obsolete`).
-- **All 5 attributes only in the old document are errors in it:** `td`/`th` `span` does not exist
+- **All 4 attributes only in the old document are errors in it:** `td`/`th` `span` does not exist
   (the attribute is `colspan`, which the new document has); `template shadowrootdelegatefocus` is a
   misspelling of `shadowrootdelegatesfocus`; `audio playsinline` is video-only (IDL and
-  browser-compat-data agree); `link color` is no longer in HTML (neither IDL nor BCD lists it).
-- **Type disagreements backed by evidence (8):** `textarea rows` String → Number (reflected
-  `unsigned long`); `input max`/`min` Number → String (they take dates and times, IDL is DOMString);
-  `output for` → SST (DOMTokenList); `link`/`script`/`style` `blocking` → SST (DOMTokenList; the
-  old Enum{render} or String could not take several tokens). One to double-check against the index:
-  `template shadowrootcustomelementregistry` Bool → String, because html.idl reflects it as a
+  browser-compat-data agree).
+- **Type disagreements backed by evidence (17 of 25).** From the index: the enumerated globals and
+  `popover` String -> Enum, `form enctype` / `button`+`input` `formenctype` -> Enum of the three
+  encodings, `th scope` -> Enum, `meta charset` -> Enum{utf-8}, `script type` ->
+  Enum{importmap,module,speculationrules} plus custom values (a MIME type), `meta http-equiv` loses
+  the long-removed `content-language` and `set-cookie`, and `autocomplete` is an SST on
+  input/textarea (autofill tokens) with Enum{on,off} on form. From IDL: `textarea rows` -> Number,
+  `output for` and `link`/`script`/`style` `blocking` -> SST (DOMTokenList), `input max`/`min`
+  Number -> String (they take dates and times, the index says "Varies"). `input step` stays out of
+  the list because the index value is `Valid floating-point number greater than zero, or "any"`,
+  which is a union and so a String (the old document had String too). One to double-check:
+  `template shadowrootcustomelementregistry` Bool -> String, because html.idl reflects it as a
   DOMString.
-- **New attributes backed by evidence (9):** globals `headingoffset`/`headingreset`; `area`
-  `hreflang`/`type`; `img controls`; `td`/`th` `colspan`; `template` `for` and
-  `shadowrootdelegatesfocus`.
-- **URL flag:** 23 HTML attributes are now marked `url: true` (only `[ReflectURL]`, USVString
-  `[ReflectSetter]` and Trusted-Types script URLs; `srcset`, `imagesrcset` and `ping` are lists and
-  are not flagged).
+- **New attributes backed by evidence (13).** Globals `headingoffset`/`headingreset`/`is`; `area`
+  `hreflang`/`type`; `img controls`; `td`/`th` `colspan`; `template` `for`,
+  `shadowrootdelegatesfocus` and `shadowrootslotassignment`; `audio`/`video` `loading` (the index lists it for them).
+- **URL flag:** 23 HTML attributes are now marked `url: true` (the index's "Valid URL potentially
+  surrounded by spaces" and `[ReflectURL]` IDL types; `srcset`, `imagesrcset` and `ping` are lists
+  and are not flagged).
 
-### HTML: judgment calls (overlay, not pending)
+### HTML: what the index could not express (overlay, permanent)
 
-`download` → Enum with only the empty value plus custom values (bare attribute or file name; the old
-Bool could not carry a name); `referrerpolicy` → Enum of Referrer Policy tokens (the index only says
-"Referrer policy"); `autocomplete` → SST on input/select/textarea, Enum{on,off} on form; `ol type`
-stays Char (an Enum would generate `OlTypeA` twice); `accesskey` stays Char; `button command` keeps
-custom values; `role`, `aria-*`, `part` added as globals; event handlers only from
-`WindowEventHandlers` on body (not the ~100 `GlobalEventHandlers`); `raw_text` on script and style.
-Attributes from other W3C specs that BCD lists as standard-track (`capture`, `webkitdirectory`,
-`controlslist`, `disableremoteplayback`, `disablepictureinpicture`) get types here.
-
-### HTML: gaps the WHATWG index will fill
-
-- **73 attribute types are overlay stand-ins** (`pending`), mostly enumerated attributes "limited to
-  known values" whose IDL is a non-reflected DOMString (dir, hidden, popover, crossorigin, preload,
-  enctype, method, kind, scope, ...), microdata globals that BCD does not list, and
-  `width`/`height` that embed/iframe/object reflect as DOMString. 5 of the 23 type disagreements
-  are in this group (popover String → Enum, form `enctype`, button/input `formenctype`, th `scope`).
-- **20 attribute types are String fallbacks** (`weak`); most are genuinely free text (id, style,
-  slot, form, nonce, meta charset, srcdoc), the rest (link `as`, `shadowrootslotassignment`, option
-  `label`/`value` setters, `exportparts`, `is`) will be checked against the index's Value column.
+- `download` on a/area: bare attribute or a file name. The index only says "Text"; generated as an
+  Enum with only the empty value plus custom values (the old Bool could not carry a name).
+- `referrerpolicy`: the index says "Referrer policy" without listing the tokens; the overlay lists
+  the eight Referrer Policy keywords.
+- `button command`: the index has no value syntax; built-in commands plus `--custom` ones.
+- `ol type` stays Char. The index lists `"1"; "a"; "A"; "i"; "I"`, but an Enum of those would
+  generate `OlTypeA` twice (Go identifiers are case-folded by the generator).
+- `accesskey` stays Char (one key, for ergonomics; the spec allows a token list).
+- `role`, `aria-*`, `part` and `exportparts` are not in the index or BCD's HTML globals. `exportparts`
+  is a comma-separated `part[:alias]` list that no attribute kind models, so it is a deliberate String.
+- Attributes from other W3C specs that BCD lists as standard-track and the index does not
+  (`capture`, `webkitdirectory`, `controlslist`, `disableremoteplayback`, `disablepictureinpicture`).
+- Event handlers come only from `WindowEventHandlers` (on body), not the ~100
+  `GlobalEventHandlers`; `raw_text` on script and style.
 - **Void/text flags** come from the overlay `void`/`no_text` lists. The index's Children column
   cannot supply `void`: it says "empty" for iframe, template and selectedcontent too, which still take
-  end tags. `categories` now comes from the index's Categories column. The text flag changes in the
+  end tags. `categories` comes from the index's Categories column. The text flag changes in the
   details are corrections of the old hand lists (details, fieldset, form, ruby and transparent
-  elements accept text; colgroup and hgroup do not; h2–h6 were stale).
+  elements accept text; colgroup and hgroup do not; h2-h6 were stale).
+
+The 44 overlay stand-ins written before the snapshot was vendored all turned out to be redundant: the
+index gives the same type, keywords and empty-value semantics (`hidden`, `autocorrect`, `popover`,
+`contenteditable`, `crossorigin` ... allow the empty string; `width`/`height` are plain non-negative
+integers). Two index quirks needed code, not overlay: the elements table's Attributes column omits
+`dialog closedby` (the attributes table has it, so rows naming an element now refine attributes found
+by IDL/BCD, but never add new ones: it lists `picture` for width/height), and values such as
+"Autofill field name and related tokens" or an enumerated list that ends in prose ("...; a valid MIME
+type string") needed classifier rules. Unions ("..., or valid duration string", a number "or "any"")
+classify as String instead of the first number-like word in them (`time datetime` was a Number).
 
 ### SVG
 
 - **Elements** match exactly (63, from SVG2 + Filter Effects 1 + CSS Masking 1 + SVG Animations).
-- **Evidence (12 type disagreements):** `pathLength` on the 7 shapes String → Float, `feOffset` and
-  `feDropShadow` `dx`/`dy` String → Float (SVGAnimatedNumber), and `feConvolveMatrix preserveAlpha`
-  Bool → Enum{false,true}: SVG booleans are keywords, a bare attribute is invalid, so the old Bool
+- **Evidence (12 type disagreements):** `pathLength` on the 7 shapes String -> Float, `feOffset` and
+  `feDropShadow` `dx`/`dy` String -> Float (SVGAnimatedNumber), and `feConvolveMatrix preserveAlpha`
+  Bool -> Enum{false,true}: SVG booleans are keywords, a bare attribute is invalid, so the old Bool
   generated wrong markup. (`stop offset` would have become Float too, but it accepts percentages,
   so the overlay keeps it a String: IDL types can be narrower than the content syntax.)
 - **Overlay (6):** `fill` on the 4 animation elements is Enum{freeze,remove}, not paint; `a ping`
-  → SST; `a referrerpolicy` loses the old document's bogus `""` member.
+  -> SST; `a referrerpolicy` loses the old document's bogus `""` member.
 - **Only in old (7):** `filter href` (Filter Effects 1 dropped SVGURIReference from filter; only the
   deprecated `xlink:href` remains) and `svg xmlns` (a namespace declaration, ignored in HTML) are
   correctly gone; `xlink:href` on the 4 animation elements is a gap (BCD lists only `href` there;
@@ -101,10 +113,22 @@ Attributes from other W3C specs that BCD lists as standard-track (`capture`, `we
 
 ### Verification against htemel
 
-The candidates were fed to htemel's real generator in a scratch copy of /home/user/htemel (the repo
-itself was not modified): with the pinned spec v0.2.0 (an old consumer, which ignores the new JSON
-keys) and with this branch via `replace`, `cmd/genelements` generated html (113 files), svg (63)
-and mathml (31), `go build ./...` succeeded and htemel's test suite passed.
+The candidates were fed to htemel's real generator in a scratch clone of go-htemel/htemel (at
+2a6fcda) with `replace github.com/go-htemel/spec => ../spec` and html.json/svg.json replaced by the
+candidates: `go generate ./... && go build ./... && go test ./...` all pass (no name collisions,
+unknown attribute types or constant clashes). API-change surface of promoting html and svg:
+
+- **html:** 5,675 -> 6,302 element setter signatures; 4 removed (the four old-document errors above),
+  631 added (mostly the 5 new globals times 106 elements), 135 changed. 106 of the changes are
+  `Popover(string)` -> `Popover(...XPopover)` (a typed enum per element); the other 29 are `Download`
+  bool -> `...ADownload`/`...AreaDownload` (enum with custom), `Referrerpolicy` string -> typed enum on
+  6 elements, `Autocomplete(string)` -> `...string` (input, textarea), `Blocking` x3 and `For` -> `...string`,
+  `Charset`, `Enctype`, `Formenctype` x2, `Scope`, `Type` (script) -> typed enums, `Rows` string -> int,
+  `Max`/`Min` int -> string.
+- **svg:** 5,507 -> 6,185 signatures; 7 removed (`xlink:href` on the animation elements, `filter href`,
+  `svg xmlns`, `textPath path`), 685 added, 17 changed (`PathLength` x7 and `Dx`/`Dy` x4 to float64,
+  `Fill` on animation elements and `PreserveAlpha` to typed enums, `Ping` to `...string`).
+- Overall `git diff --stat html/` is 112 files (+6,131/-561) and `svg/` 63 files.
 <!-- notes:end -->
 
 ## How to read the details
@@ -116,8 +140,8 @@ Each difference carries a class:
 
 - **evidence**: new value backed by reflected IDL / SVG IDL types (pipeline evidence)
 - **overlay**: new value from an overlay judgment call
-- **pending**: overlay stand-in for data a not-yet-vendored source would supply (WHATWG index for HTML, @webref/css for SVG presentation attributes)
-- **weak**: new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML)
+- **pending**: overlay stand-in for data a not-yet-vendored source would supply (@webref/css for SVG presentation attributes)
+- **weak**: new type is a String fallback: no source states the value syntax
 - **skipped**: dropped on purpose (obsolete, not standard-track, or overlay removal)
 - **not-in-source**: no source lists it for this element
 
@@ -131,22 +155,20 @@ Comparing `specs/html.json` (old) with `specs/candidates/html.json` (new). WHATW
 | elements only in old | 0 |
 | elements only in new | 1 |
 | global attributes old / new | 31 / 36 |
-| element attributes on both sides (incl. globals) | 263 (agree on type: 238) |
+| element attributes on both sides (incl. globals) | 263 (agree on type: 239) |
 | attributes only in old (elements + globals) | 4 |
-| attributes only in new (elements + globals) | 23 |
-| type disagreements (elements + globals) | 26 |
+| attributes only in new (elements + globals) | 22 |
+| type disagreements (elements + globals) | 25 |
 | URL-flagged attributes in new | 23 |
 | deprecated-flagged attributes in new | 0 |
-| all new attributes by type source: evidence / overlay / pending / weak | 218 / 24 / 73 / 2 |
+| all new attributes by type source: evidence / overlay / pending / weak | 294 / 22 / 0 / 0 |
 
 By class:
 
 | class | meaning | only in new | type disagreements | only in old |
 |---|---|---|---|---|
-| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 11 | 11 | 0 |
-| overlay | new value from an overlay judgment call | 8 | 10 | 0 |
-| pending | overlay stand-in for data a not-yet-vendored source would supply (WHATWG index for HTML, @webref/css for SVG presentation attributes) | 2 | 5 | 0 |
-| weak | new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML) | 2 | 0 | 0 |
+| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 13 | 17 | 0 |
+| overlay | new value from an overlay judgment call | 9 | 8 | 0 |
 | not-in-source | no source lists it for this element | 0 | 0 | 4 |
 
 Elements only in new: `sup`
@@ -156,9 +178,9 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `popover` | String | Enum{auto,hint,manual}+empty | pending | exists: idl; type: overlay-pending; Enumerated attribute (bare = auto). The legacy document typed it as String. |
+| `popover` | String | Enum{auto,hint,manual}+empty | evidence | exists: idl; type: whatwg |
 
-- only in new: [evidence] `headingoffset` Number, `headingreset` Bool, `is` String; [overlay] `part` SST; [weak] `exportparts` String
+- only in new: [evidence] `headingoffset` Number, `headingreset` Bool, `is` String; [overlay] `exportparts` String, `part` SST
 
 #### `<a>`
 
@@ -182,7 +204,7 @@ Elements only in new: `sup`
 #### `<audio>`
 
 - flags: text false -> true (source: overlay)
-- only in new: [overlay] `controlslist` SST, `disableremoteplayback` Bool; [pending] `loading` Enum{eager,lazy}
+- only in new: [evidence] `loading` Enum{eager,lazy}; [overlay] `controlslist` SST, `disableremoteplayback` Bool
 - only in old: [not-in-source] `playsinline` Bool
 
 #### `<button>`
@@ -190,7 +212,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | pending | exists: idl; type: overlay-pending; Enumerated attribute limited to known values; the legacy document typed it as String. |
+| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
 
 
 #### `<colgroup>`
@@ -200,10 +222,6 @@ Elements only in new: `sup`
 #### `<details>`
 
 - flags: text false -> true (source: overlay)
-
-#### `<embed>`
-
-- only in new: [weak] `any` String
 
 #### `<fieldset>`
 
@@ -215,7 +233,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `enctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | pending | exists: idl; type: overlay-pending; Enumerated attribute limited to known values. |
+| `enctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
 
 
 #### `<h2>`
@@ -264,10 +282,9 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | pending | exists: idl; type: overlay-pending; Enumerated attribute limited to known values; the legacy document typed it as String. |
+| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
 | `max` | Number | String | evidence | exists: idl; type: idl |
 | `min` | Number | String | evidence | exists: idl; type: idl |
-| `step` | String | Float | evidence | exists: idl; type: whatwg |
 
 - only in new: [overlay] `capture` Enum{environment,user}+empty, `webkitdirectory` Bool
 
@@ -290,6 +307,7 @@ Elements only in new: `sup`
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
 | `charset` | String | Enum{utf-8} | evidence | exists: bcd; type: whatwg |
+| `http-equiv` | Enum{content-language,content-security-policy,content-type,default-style,refresh,set-cookie,x-ua-compatible} | Enum{content-security-policy,content-type,default-style,refresh,x-ua-compatible} | evidence | exists: idl; type: whatwg |
 
 
 #### `<object>`
@@ -315,7 +333,7 @@ Elements only in new: `sup`
 |---|---|---|---|---|
 | `blocking` | Enum{render} | SST | evidence | exists: idl; type: whatwg |
 | `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-| `type` | String | Enum{a valid MIME type string that is not a JavaScript MIME type essence match,importmap,module,speculationrules} | evidence | exists: idl; type: whatwg |
+| `type` | String | Enum{importmap,module,speculationrules}+custom | evidence | exists: idl; type: whatwg |
 
 
 #### `<select>`
@@ -323,7 +341,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `autocomplete` | String | SST | overlay | exists: idl; type: overlay; Autofill detail tokens ("shipping street-address"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off. |
+| `autocomplete` | String | SST | evidence | exists: idl; type: whatwg |
 
 
 #### `<style>`
@@ -349,7 +367,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `autocomplete` | String | SST | overlay | exists: idl; type: overlay; Autofill detail tokens ("shipping street-address"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off. |
+| `autocomplete` | String | SST | evidence | exists: idl; type: whatwg |
 | `rows` | String | Number | evidence | exists: idl; type: whatwg |
 
 
@@ -358,23 +376,15 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `scope` | String | Enum{col,colgroup,row,rowgroup} | pending | exists: idl; type: overlay-pending; Enumerated attribute; the legacy document typed it as String. |
+| `scope` | String | Enum{col,colgroup,row,rowgroup} | evidence | exists: idl; type: whatwg |
 
 - only in new: [evidence] `colspan` Number
 - only in old: [not-in-source] `span` Number
 
-#### `<time>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `datetime` | String | Number | evidence | exists: idl; type: whatwg |
-
-
 #### `<video>`
 
 - flags: text false -> true (source: overlay)
-- only in new: [overlay] `controlslist` SST, `disablepictureinpicture` Bool, `disableremoteplayback` Bool; [pending] `loading` Enum{eager,lazy}
+- only in new: [evidence] `loading` Enum{eager,lazy}; [overlay] `controlslist` SST, `disablepictureinpicture` Bool, `disableremoteplayback` Bool
 
 ## svg
 
@@ -400,7 +410,7 @@ By class:
 |---|---|---|---|---|
 | evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 0 | 12 | 0 |
 | overlay | new value from an overlay judgment call | 0 | 6 | 0 |
-| weak | new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML) | 41 | 0 | 0 |
+| weak | new type is a String fallback: no source states the value syntax | 41 | 0 | 0 |
 | skipped | dropped on purpose (obsolete, not standard-track, or overlay removal) | 0 | 0 | 1 |
 | not-in-source | no source lists it for this element | 0 | 0 | 6 |
 

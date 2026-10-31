@@ -80,7 +80,9 @@ func ParseIndices(r io.Reader) (*WHATWGIndex, error) {
 		}
 		sort.Strings(e.Categories)
 		for _, a := range splitList(cellText(cell(row, col["attributes"]))) {
-			if a != "globals" {
+			// "globals" is the global attributes; embed's "any*" and custom elements' "any, as decided
+			// by the element's author" say any attribute is allowed, which is no attribute name.
+			if a != "globals" && a != "any" && !strings.HasPrefix(a, "any,") {
 				e.Attributes = append(e.Attributes, a)
 			}
 		}
@@ -119,40 +121,54 @@ func ParseIndices(r io.Reader) (*WHATWGIndex, error) {
 	return idx, nil
 }
 
+// ValueClass is what the Value column of the attributes table says about an attribute's type.
+type ValueClass struct {
+	Kind        string
+	URL         bool
+	Allowed     []string
+	AllowEmpty  bool
+	AllowCustom bool // an enumerated list that also admits free text ("module"; ...; a valid MIME type string)
+}
+
 // ClassifyValue maps the Value column of the attributes table onto a generator attribute kind.
-func ClassifyValue(v string) (kind string, url bool, allowed []string, allowEmpty bool) {
+func ClassifyValue(v string) ValueClass {
 	t := strings.TrimSpace(stripMarks(v))
 	lower := strings.ToLower(t)
 	switch {
 	case strings.HasPrefix(lower, "boolean attribute"):
-		return KindBool, false, nil, false
+		return ValueClass{Kind: KindBool}
 	case strings.HasPrefix(t, `"`) || strings.HasPrefix(t, "“"):
+		c := ValueClass{Kind: KindEnum}
 		for _, part := range strings.Split(t, ";") {
 			part = strings.TrimSpace(part)
-			if part == "the empty string" {
-				allowEmpty = true
-				continue
-			}
-			part = strings.Trim(part, "\"“”")
-			if part != "" {
-				allowed = append(allowed, part)
+			switch {
+			case part == "the empty string":
+				c.AllowEmpty = true
+			case strings.HasPrefix(part, `"`) || strings.HasPrefix(part, "“"):
+				if part = strings.Trim(part, "\"“”"); part != "" {
+					c.Allowed = append(c.Allowed, part)
+				}
+			case part != "":
+				c.AllowCustom = true // prose such as "a valid MIME type string that is not ..."
 			}
 		}
-		sort.Strings(allowed)
-		return KindEnum, false, allowed, allowEmpty
-	case strings.Contains(lower, "space-separated tokens"):
-		return KindSST, false, nil, false
+		sort.Strings(c.Allowed)
+		return c
+	case strings.Contains(lower, "space-separated tokens"), strings.HasPrefix(lower, "autofill field name"):
+		return ValueClass{Kind: KindSST}
 	case strings.Contains(lower, "url"):
-		return KindString, true, nil, false
-	case strings.Contains(lower, "list of"):
-		return KindString, false, nil, false
-	case strings.Contains(lower, "integer"):
-		return KindNumber, false, nil, false
-	case strings.Contains(lower, "floating-point number"):
-		return KindFloat, false, nil, false
+		return ValueClass{Kind: KindString, URL: true}
+	case strings.Contains(lower, "list of"), strings.Contains(lower, ", or "):
+		// Lists and unions ("valid month string, ..., or valid duration string"; a number "or \"any\"")
+		// are not one number.
+		return ValueClass{Kind: KindString}
+	case strings.HasPrefix(lower, "valid integer"), strings.HasPrefix(lower, "valid non-negative integer"):
+		return ValueClass{Kind: KindNumber}
+	case strings.HasPrefix(lower, "valid floating-point number"):
+		return ValueClass{Kind: KindFloat}
 	}
 
-	return KindString, false, nil, false
+	return ValueClass{Kind: KindString}
 }
 
 // ExtractIndexTables returns a minimal HTML document containing only the "List of elements" and

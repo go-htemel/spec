@@ -13,7 +13,7 @@ import (
 const (
 	ClassEvidence = "evidence"      // new value backed by reflected IDL / SVG IDL / the WHATWG index
 	ClassOverlay  = "overlay"       // new value is a recorded judgment call
-	ClassPending  = "pending"       // overlay stand-in for data the WHATWG index will supply
+	ClassPending  = "pending"       // overlay stand-in for data a not-yet-vendored source will supply
 	ClassWeak     = "weak"          // new type is a guess (String) — a gap the index (html) or overlay (svg) must fill
 	ClassSkipped  = "skipped"       // dropped on purpose (obsolete, non-standard, overlay removal)
 	ClassNoSource = "not-in-source" // old attribute that no source lists for the element
@@ -22,8 +22,8 @@ const (
 var classText = map[string]string{
 	ClassEvidence: "new value backed by reflected IDL / SVG IDL types (pipeline evidence)",
 	ClassOverlay:  "new value from an overlay judgment call",
-	ClassPending:  "overlay stand-in for data a not-yet-vendored source would supply (WHATWG index for HTML, @webref/css for SVG presentation attributes)",
-	ClassWeak:     "new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML)",
+	ClassPending:  "overlay stand-in for data a not-yet-vendored source would supply (@webref/css for SVG presentation attributes)",
+	ClassWeak:     "new type is a String fallback: no source states the value syntax",
 	ClassSkipped:  "dropped on purpose (obsolete, not standard-track, or overlay removal)",
 	ClassNoSource: "no source lists it for this element",
 }

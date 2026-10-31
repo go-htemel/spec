@@ -471,14 +471,12 @@
     "@global/autocapitalize": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+      "type_source": "whatwg"
     },
     "@global/autocorrect": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute (empty string = on); IDL exposes a boolean."
+      "type_source": "whatwg"
     },
     "@global/autofocus": {
       "kind": "Bool",
@@ -488,14 +486,12 @@
     "@global/class": {
       "kind": "SST",
       "source": "bcd",
-      "type_source": "overlay-pending",
-      "reason": "Set of space-separated tokens; DOM's Element.className is not reflected with a DOMTokenList type in IDL."
+      "type_source": "whatwg"
     },
     "@global/contenteditable": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; IDL exposes a DOMString with custom getter."
+      "type_source": "whatwg"
     },
     "@global/data": {
       "kind": "PrefixedCustom",
@@ -505,25 +501,23 @@
     "@global/dir": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "@global/draggable": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated true/false attribute, not a boolean attribute, although the IDL type is boolean."
+      "type_source": "whatwg"
     },
     "@global/enterkeyhint": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "@global/exportparts": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "overlay",
+      "reason": "CSS Shadow Parts: comma-separated list of part[:alias] mappings. Neither the index nor the IDL lists it; no kind models a comma-separated list, so String is the deliberate type."
     },
     "@global/headingoffset": {
       "kind": "Number",
@@ -538,8 +532,7 @@
     "@global/hidden": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; the bare attribute means hidden. IDL type is a union."
+      "type_source": "whatwg"
     },
     "@global/id": {
       "kind": "String",
@@ -554,8 +547,7 @@
     "@global/inputmode": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "@global/is": {
       "kind": "String",
@@ -565,32 +557,27 @@
     "@global/itemid": {
       "kind": "URL",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "Microdata globals are not listed by browser-compat-data; valid URL potentially surrounded by spaces."
+      "type_source": "whatwg"
     },
     "@global/itemprop": {
       "kind": "SST",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "Microdata; unordered set of unique space-separated tokens."
+      "type_source": "whatwg"
     },
     "@global/itemref": {
       "kind": "SST",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "Microdata; unordered set of unique space-separated tokens (IDs)."
+      "type_source": "whatwg"
     },
     "@global/itemscope": {
       "kind": "Bool",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "Microdata; boolean attribute."
+      "type_source": "whatwg"
     },
     "@global/itemtype": {
       "kind": "SST",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "Microdata; unordered set of unique space-separated tokens (absolute URLs)."
+      "type_source": "whatwg"
     },
     "@global/lang": {
       "kind": "String",
@@ -611,8 +598,7 @@
     "@global/popover": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute (bare = auto). The legacy document typed it as String."
+      "type_source": "whatwg"
     },
     "@global/role": {
       "kind": "String",
@@ -628,8 +614,7 @@
     "@global/spellcheck": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated true/false attribute; IDL exposes a boolean."
+      "type_source": "whatwg"
     },
     "@global/style": {
       "kind": "String",
@@ -649,14 +634,12 @@
     "@global/translate": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated yes/no attribute; IDL exposes a boolean."
+      "type_source": "whatwg"
     },
     "@global/writingsuggestions": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+      "type_source": "whatwg"
     },
     "a/download": {
       "kind": "Enum",
@@ -677,8 +660,7 @@
     "a/ping": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Set of space-separated valid non-empty URLs; IDL type is a plain USVString."
+      "type_source": "whatwg"
     },
     "a/referrerpolicy": {
       "kind": "Enum",
@@ -730,8 +712,7 @@
     "area/ping": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Set of space-separated valid non-empty URLs; IDL type is a plain USVString."
+      "type_source": "whatwg"
     },
     "area/referrerpolicy": {
       "kind": "Enum",
@@ -747,8 +728,7 @@
     "area/shape": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "area/target": {
       "kind": "String",
@@ -779,8 +759,7 @@
     "audio/crossorigin": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+      "type_source": "whatwg"
     },
     "audio/disableremoteplayback": {
       "kind": "Bool",
@@ -791,8 +770,7 @@
     "audio/loading": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+      "type_source": "whatwg"
     },
     "audio/loop": {
       "kind": "Bool",
@@ -807,8 +785,7 @@
     "audio/preload": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute (empty = auto)."
+      "type_source": "whatwg"
     },
     "audio/src": {
       "kind": "URL",
@@ -949,14 +926,12 @@
     "button/formenctype": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values; the legacy document typed it as String."
+      "type_source": "whatwg"
     },
     "button/formmethod": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "button/formnovalidate": {
       "kind": "Bool",
@@ -981,14 +956,12 @@
     "button/popovertargetaction": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "button/type": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+      "type_source": "whatwg"
     },
     "button/value": {
       "kind": "String",
@@ -998,14 +971,12 @@
     "canvas/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "canvas/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "col/span": {
       "kind": "Number",
@@ -1045,24 +1016,17 @@
     "dialog/closedby": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; IDL only has a DOMString setter."
+      "type_source": "whatwg"
     },
     "dialog/open": {
       "kind": "Bool",
       "source": "idl",
       "type_source": "whatwg"
     },
-    "embed/any": {
-      "kind": "String",
-      "source": "whatwg",
-      "type_source": "default"
-    },
     "embed/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "embed/src": {
       "kind": "URL",
@@ -1077,8 +1041,7 @@
     "embed/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "fieldset/disabled": {
       "kind": "Bool",
@@ -1108,20 +1071,17 @@
     "form/autocomplete": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "On a form the attribute is on/off only."
+      "type_source": "whatwg"
     },
     "form/enctype": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "form/method": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "form/name": {
       "kind": "String",
@@ -1156,14 +1116,12 @@
     "iframe/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "iframe/loading": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+      "type_source": "whatwg"
     },
     "iframe/name": {
       "kind": "String",
@@ -1194,8 +1152,7 @@
     "iframe/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "img/alt": {
       "kind": "String",
@@ -1210,26 +1167,22 @@
     "img/crossorigin": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+      "type_source": "whatwg"
     },
     "img/decoding": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "img/fetchpriority": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "img/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "img/ismap": {
       "kind": "Bool",
@@ -1239,8 +1192,7 @@
     "img/loading": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+      "type_source": "whatwg"
     },
     "img/referrerpolicy": {
       "kind": "Enum",
@@ -1271,8 +1223,7 @@
     "img/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "input/accept": {
       "kind": "String",
@@ -1292,8 +1243,7 @@
     "input/autocomplete": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay",
-      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+      "type_source": "whatwg"
     },
     "input/capture": {
       "kind": "Enum",
@@ -1309,8 +1259,7 @@
     "input/colorspace": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "input/dirname": {
       "kind": "String",
@@ -1335,14 +1284,12 @@
     "input/formenctype": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values; the legacy document typed it as String."
+      "type_source": "whatwg"
     },
     "input/formmethod": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "input/formnovalidate": {
       "kind": "Bool",
@@ -1357,14 +1304,12 @@
     "input/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "input/list": {
       "kind": "String",
       "source": "whatwg",
-      "type_source": "overlay-pending",
-      "reason": "ID of a datalist; IDL exposes a read-only element reference and browser-compat-data does not list it."
+      "type_source": "whatwg"
     },
     "input/max": {
       "kind": "String",
@@ -1414,8 +1359,7 @@
     "input/popovertargetaction": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "input/readonly": {
       "kind": "Bool",
@@ -1438,9 +1382,9 @@
       "type_source": "whatwg"
     },
     "input/step": {
-      "kind": "Float",
+      "kind": "String",
       "source": "idl",
-      "type_source": "whatwg"
+      "type_source": "idl"
     },
     "input/type": {
       "kind": "Enum",
@@ -1461,8 +1405,7 @@
     "input/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "ins/cite": {
       "kind": "URL",
@@ -1502,8 +1445,7 @@
     "link/crossorigin": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+      "type_source": "whatwg"
     },
     "link/disabled": {
       "kind": "Bool",
@@ -1513,8 +1455,7 @@
     "link/fetchpriority": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "link/href": {
       "kind": "URL",
@@ -1585,8 +1526,7 @@
     "meta/http-equiv": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Pragma directives; IDL reflects a DOMString."
+      "type_source": "whatwg"
     },
     "meta/media": {
       "kind": "String",
@@ -1641,8 +1581,7 @@
     "object/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "object/name": {
       "kind": "String",
@@ -1657,8 +1596,7 @@
     "object/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "ol/reversed": {
       "kind": "Bool",
@@ -1739,8 +1677,7 @@
     "script/async": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Boolean attribute; the IDL attribute has a custom getter so it is not marked [Reflect]."
+      "type_source": "whatwg"
     },
     "script/blocking": {
       "kind": "SST",
@@ -1750,8 +1687,7 @@
     "script/crossorigin": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+      "type_source": "whatwg"
     },
     "script/defer": {
       "kind": "Bool",
@@ -1761,8 +1697,7 @@
     "script/fetchpriority": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "script/integrity": {
       "kind": "String",
@@ -1793,8 +1728,7 @@
     "select/autocomplete": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay",
-      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+      "type_source": "whatwg"
     },
     "select/disabled": {
       "kind": "Bool",
@@ -1834,8 +1768,7 @@
     "source/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "source/media": {
       "kind": "String",
@@ -1865,8 +1798,7 @@
     "source/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "style/blocking": {
       "kind": "SST",
@@ -1886,8 +1818,7 @@
     "td/headers": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Set of space-separated element IDs; IDL type is a plain DOMString."
+      "type_source": "whatwg"
     },
     "td/rowspan": {
       "kind": "Number",
@@ -1917,8 +1848,7 @@
     "template/shadowrootmode": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute."
+      "type_source": "whatwg"
     },
     "template/shadowrootserializable": {
       "kind": "Bool",
@@ -1933,8 +1863,7 @@
     "textarea/autocomplete": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay",
-      "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."
+      "type_source": "whatwg"
     },
     "textarea/cols": {
       "kind": "Number",
@@ -1994,8 +1923,7 @@
     "textarea/wrap": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute (IDL reflects it as DOMString)."
+      "type_source": "whatwg"
     },
     "th/abbr": {
       "kind": "String",
@@ -2010,8 +1938,7 @@
     "th/headers": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Set of space-separated element IDs; IDL type is a plain DOMString."
+      "type_source": "whatwg"
     },
     "th/rowspan": {
       "kind": "Number",
@@ -2021,13 +1948,12 @@
     "th/scope": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute; the legacy document typed it as String."
+      "type_source": "whatwg"
     },
     "time/datetime": {
-      "kind": "Number",
+      "kind": "String",
       "source": "idl",
-      "type_source": "whatwg"
+      "type_source": "idl"
     },
     "track/default": {
       "kind": "Bool",
@@ -2037,8 +1963,7 @@
     "track/kind": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute limited to known values."
+      "type_source": "whatwg"
     },
     "track/label": {
       "kind": "String",
@@ -2074,8 +1999,7 @@
     "video/crossorigin": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "CORS settings attribute; IDL exposes a nullable DOMString."
+      "type_source": "whatwg"
     },
     "video/disablepictureinpicture": {
       "kind": "Bool",
@@ -2092,14 +2016,12 @@
     "video/height": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     },
     "video/loading": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."
+      "type_source": "whatwg"
     },
     "video/loop": {
       "kind": "Bool",
@@ -2124,8 +2046,7 @@
     "video/preload": {
       "kind": "Enum",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Enumerated attribute (empty = auto)."
+      "type_source": "whatwg"
     },
     "video/src": {
       "kind": "URL",
@@ -2135,8 +2056,7 @@
     "video/width": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "overlay-pending",
-      "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."
+      "type_source": "whatwg"
     }
   },
   "skipped": {

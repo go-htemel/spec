@@ -1,5 +1,5 @@
 {
-  "comment": "Judgment calls for the HTML document that no vendored source makes. Every attribute entry has a reason. Entries with \"pending\": \"whatwg-index\" restate what the WHATWG attribute index (data/whatwg/indices.html) says and become redundant once that snapshot is vendored; the rest are deliberate choices. void is the HTML syntax's void element list, which no table states; no_text stands in for the index's Children column.",
+  "comment": "Judgment calls for the HTML document that the vendored sources (webref, browser-compat-data, the WHATWG index in data/whatwg/indices.html) do not make. Every attribute entry has a reason. void is the HTML syntax's void element list, which no table states; no_text stands in for the index's Children column.",
   "void": ["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"],
   "no_text": ["colgroup", "dl", "head", "hgroup", "html", "iframe", "menu", "ol", "optgroup", "picture", "select", "table", "tbody", "tfoot", "thead", "tr", "ul"],
   "raw_text": ["script", "style"],
@@ -10,86 +10,24 @@
       "accesskey": {"type": "Char", "reason": "Kept as a single key (as in the legacy document) for API ergonomics; the spec allows a space-separated list of single code points."},
       "aria": {"type": "PrefixedCustom", "reason": "aria-* attributes (ARIA in HTML) are not in browser-compat-data's HTML globals; modelled as a prefix like data-*."},
       "role": {"type": "String", "reason": "ARIA role attribute (wai-aria IDL reflects it) is not in browser-compat-data's HTML globals."},
-      "class": {"type": "SST", "pending": "whatwg-index", "reason": "Set of space-separated tokens; DOM's Element.className is not reflected with a DOMTokenList type in IDL."},
       "part": {"type": "SST", "reason": "CSS Shadow Parts: space-separated part names."},
-      "itemid": {"type": "URL", "pending": "whatwg-index", "reason": "Microdata globals are not listed by browser-compat-data; valid URL potentially surrounded by spaces."},
-      "itemprop": {"type": "SST", "pending": "whatwg-index", "reason": "Microdata; unordered set of unique space-separated tokens."},
-      "itemref": {"type": "SST", "pending": "whatwg-index", "reason": "Microdata; unordered set of unique space-separated tokens (IDs)."},
-      "itemscope": {"type": "Bool", "pending": "whatwg-index", "reason": "Microdata; boolean attribute."},
-      "itemtype": {"type": "SST", "pending": "whatwg-index", "reason": "Microdata; unordered set of unique space-separated tokens (absolute URLs)."},
-      "autocapitalize": {"type": "Enum", "allowed": ["characters", "none", "off", "on", "sentences", "words"], "pending": "whatwg-index", "reason": "Enumerated attribute; IDL only has a DOMString setter."},
-      "autocorrect": {"type": "Enum", "allowed": ["off", "on"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute (empty string = on); IDL exposes a boolean."},
-      "contenteditable": {"type": "Enum", "allowed": ["false", "plaintext-only", "true"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute; IDL exposes a DOMString with custom getter."},
-      "dir": {"type": "Enum", "allowed": ["auto", "ltr", "rtl"], "pending": "whatwg-index", "reason": "Enumerated attribute."},
-      "draggable": {"type": "Enum", "allowed": ["false", "true"], "pending": "whatwg-index", "reason": "Enumerated true/false attribute, not a boolean attribute, although the IDL type is boolean."},
-      "enterkeyhint": {"type": "Enum", "allowed": ["done", "enter", "go", "next", "previous", "search", "send"], "pending": "whatwg-index", "reason": "Enumerated attribute."},
-      "hidden": {"type": "Enum", "allowed": ["hidden", "until-found"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute; the bare attribute means hidden. IDL type is a union."},
-      "inputmode": {"type": "Enum", "allowed": ["decimal", "email", "none", "numeric", "search", "tel", "text", "url"], "pending": "whatwg-index", "reason": "Enumerated attribute."},
-      "popover": {"type": "Enum", "allowed": ["auto", "hint", "manual"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute (bare = auto). The legacy document typed it as String."},
-      "spellcheck": {"type": "Enum", "allowed": ["false", "true"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated true/false attribute; IDL exposes a boolean."},
-      "translate": {"type": "Enum", "allowed": ["no", "yes"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated yes/no attribute; IDL exposes a boolean."},
-      "writingsuggestions": {"type": "Enum", "allowed": ["false", "true"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute; IDL only has a DOMString setter."}
+      "exportparts": {"type": "String", "reason": "CSS Shadow Parts: comma-separated list of part[:alias] mappings. Neither the index nor the IDL lists it; no kind models a comma-separated list, so String is the deliberate type."}
     },
     "*": {
-      "crossorigin": {"type": "Enum", "allowed": ["anonymous", "use-credentials"], "allow_empty": true, "pending": "whatwg-index", "reason": "CORS settings attribute; IDL exposes a nullable DOMString."},
-      "decoding": {"type": "Enum", "allowed": ["async", "auto", "sync"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."},
-      "fetchpriority": {"type": "Enum", "allowed": ["auto", "high", "low"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."},
-      "loading": {"type": "Enum", "allowed": ["eager", "lazy"], "pending": "whatwg-index", "reason": "Lazy loading attribute, applies wherever the element has it (img, iframe, and video/audio in current HTML)."},
-      "preload": {"type": "Enum", "allowed": ["auto", "metadata", "none"], "allow_empty": true, "pending": "whatwg-index", "reason": "Enumerated attribute (empty = auto)."},
-      "referrerpolicy": {"type": "Enum", "allowed": ["no-referrer", "no-referrer-when-downgrade", "origin", "origin-when-cross-origin", "same-origin", "strict-origin", "strict-origin-when-cross-origin", "unsafe-url"], "allow_empty": true, "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."},
-      "popovertargetaction": {"type": "Enum", "allowed": ["hide", "show", "toggle"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."},
-      "formmethod": {"type": "Enum", "allowed": ["dialog", "get", "post"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."},
-      "formenctype": {"type": "Enum", "allowed": ["application/x-www-form-urlencoded", "multipart/form-data", "text/plain"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values; the legacy document typed it as String."},
-      "ping": {"type": "SST", "pending": "whatwg-index", "reason": "Set of space-separated valid non-empty URLs; IDL type is a plain USVString."},
-      "autocomplete": {"type": "SST", "reason": "Autofill detail tokens (\"shipping street-address\"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off."},
-      "headers": {"type": "SST", "pending": "whatwg-index", "reason": "Set of space-separated element IDs; IDL type is a plain DOMString."},
-      "height": {"type": "Number", "pending": "whatwg-index", "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."},
-      "width": {"type": "Number", "pending": "whatwg-index", "reason": "Valid non-negative integer; embed/iframe/object reflect it as DOMString in IDL."}
+      "referrerpolicy": {"type": "Enum", "allowed": ["no-referrer", "no-referrer-when-downgrade", "origin", "origin-when-cross-origin", "same-origin", "strict-origin", "strict-origin-when-cross-origin", "unsafe-url"], "allow_empty": true, "reason": "Referrer Policy tokens. The WHATWG index only says \"Referrer policy\", so this stays a judgment call; the legacy document typed it as String."}
     },
     "a,area": {
       "download": {"type": "Enum", "allow_empty": true, "allow_custom": true, "reason": "Bare attribute (download) or a suggested file name: generated as an Enum with only the empty value plus custom values. The legacy document typed it as Bool, which cannot express a file name."}
     },
-    "area": {
-      "shape": {"type": "Enum", "allowed": ["circle", "default", "poly", "rect"], "pending": "whatwg-index", "reason": "Enumerated attribute."}
-    },
     "button": {
-      "type": {"type": "Enum", "allowed": ["button", "reset", "submit"], "pending": "whatwg-index", "reason": "Enumerated attribute; IDL only has a DOMString setter."},
       "command": {"type": "Enum", "allowed": ["close", "hide-popover", "request-close", "show-modal", "show-popover", "toggle-popover"], "allow_custom": true, "reason": "Built-in commands plus custom commands (\"--name\"), which the WHATWG index cannot express as a closed list."}
     },
-    "dialog": {
-      "closedby": {"type": "Enum", "allowed": ["any", "closerequest", "none"], "pending": "whatwg-index", "reason": "Enumerated attribute; IDL only has a DOMString setter."}
-    },
-    "form": {
-      "autocomplete": {"type": "Enum", "allowed": ["off", "on"], "pending": "whatwg-index", "reason": "On a form the attribute is on/off only."},
-      "enctype": {"type": "Enum", "allowed": ["application/x-www-form-urlencoded", "multipart/form-data", "text/plain"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."},
-      "method": {"type": "Enum", "allowed": ["dialog", "get", "post"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."}
-    },
     "input": {
-      "colorspace": {"type": "Enum", "allowed": ["display-p3", "limited-srgb"], "pending": "whatwg-index", "reason": "Enumerated attribute."},
-      "list": {"type": "String", "pending": "whatwg-index", "reason": "ID of a datalist; IDL exposes a read-only element reference and browser-compat-data does not list it."},
       "capture": {"type": "Enum", "allowed": ["environment", "user"], "allow_empty": true, "reason": "HTML Media Capture (W3C) facing mode; not in the HTML standard."},
       "webkitdirectory": {"type": "Bool", "reason": "Boolean attribute from the File and Directory Entries API; browser-compat-data lists it as standard-track."}
     },
     "ol": {
       "type": {"type": "Char", "reason": "Keywords 1, a, A, i, I differ only in case, so an Enum would generate colliding Go identifiers (OlTypeA twice); kept as Char like the legacy document."}
-    },
-    "script": {
-      "async": {"type": "Bool", "pending": "whatwg-index", "reason": "Boolean attribute; the IDL attribute has a custom getter so it is not marked [Reflect]."}
-    },
-    "template": {
-      "shadowrootmode": {"type": "Enum", "allowed": ["closed", "open"], "pending": "whatwg-index", "reason": "Enumerated attribute."}
-    },
-    "textarea": {
-      "wrap": {"type": "Enum", "allowed": ["hard", "soft"], "pending": "whatwg-index", "reason": "Enumerated attribute (IDL reflects it as DOMString)."}
-    },
-    "th": {
-      "scope": {"type": "Enum", "allowed": ["col", "colgroup", "row", "rowgroup"], "pending": "whatwg-index", "reason": "Enumerated attribute; the legacy document typed it as String."}
-    },
-    "track": {
-      "kind": {"type": "Enum", "allowed": ["captions", "chapters", "descriptions", "metadata", "subtitles"], "pending": "whatwg-index", "reason": "Enumerated attribute limited to known values."}
-    },
-    "meta": {
-      "http-equiv": {"type": "Enum", "allowed": ["content-language", "content-security-policy", "content-type", "default-style", "refresh", "set-cookie", "x-ua-compatible"], "pending": "whatwg-index", "reason": "Pragma directives; IDL reflects a DOMString."}
     },
     "video,audio": {
       "controlslist": {"type": "SST", "reason": "Set of tokens (nodownload, nofullscreen, noremoteplayback) from a WICG proposal that browser-compat-data lists as standard-track."},

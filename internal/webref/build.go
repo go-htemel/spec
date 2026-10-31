@@ -384,6 +384,15 @@ func (b *builder) elementAttrs(d elementDef) map[string]*attr {
 				}
 			}
 		}
+		// The elements table's Attributes column lags behind the attributes table (dialog's omits
+		// closedby), so rows naming this element refine attributes another source already found. They
+		// do not add new ones: the attributes table also lists picture for width/height, which the
+		// elements table rightly does not.
+		for _, wa := range b.whatwg.Attributes {
+			if contains(wa.Elements, d.tag) && !contains(b.whatwg.Elements[d.tag].Attributes, wa.Name) {
+				b.applyWHATWG(attrs, wa.Name, wa, false)
+			}
+		}
 	}
 
 	b.applyOverlay(attrs, "*", false)
@@ -595,7 +604,7 @@ func (b *builder) addBCD(attrs map[string]*attr, scope, key string, st *BCDStatu
 }
 
 func (b *builder) applyWHATWG(attrs map[string]*attr, name string, wa WHATWGAttribute, add bool) {
-	kind, url, allowed, empty := ClassifyValue(wa.Value)
+	vc := ClassifyValue(wa.Value)
 	a, ok := attrs[name]
 	if !ok {
 		if !add {
@@ -606,10 +615,10 @@ func (b *builder) applyWHATWG(attrs map[string]*attr, name string, wa WHATWGAttr
 	}
 	// A reflected IDL type is at least as precise as "Text"; anything more specific from the
 	// index (enumerated keywords, URL, token set) wins.
-	if !WeakType(a.TypeSource) && a.TypeSource != srcBCD && kind == KindString && !url {
+	if !WeakType(a.TypeSource) && a.TypeSource != srcBCD && vc.Kind == KindString && !vc.URL {
 		return
 	}
-	a.Kind, a.URL, a.Allowed, a.AllowEmpty, a.AllowCustom = kind, url, allowed, empty, false
+	a.Kind, a.URL, a.Allowed, a.AllowEmpty, a.AllowCustom = vc.Kind, vc.URL, vc.Allowed, vc.AllowEmpty, vc.AllowCustom
 	a.TypeSource = srcWHATWG
 }
 
