@@ -1,0 +1,896 @@
+{
+  "comment": "Judgment calls for the SVG document. SVG has no attribute index comparable to WHATWG's, so keyword lists for SVGAnimatedEnumeration attributes and the value types of presentation attributes (CSS properties) come from here; they were seeded from the hand-curated specs/svg.json. Entries with \"pending\" name the machine-readable source that could replace them (\"webref-css\": @webref/css property value syntax).",
+  "text": [
+    "a",
+    "desc",
+    "foreignObject",
+    "metadata",
+    "script",
+    "style",
+    "text",
+    "textPath",
+    "title",
+    "tspan"
+  ],
+  "idl_renames": {
+    "className": "class",
+    "in1": "in",
+    "crossOrigin": "crossorigin",
+    "kernelUnitLengthX": "kernelUnitLength",
+    "kernelUnitLengthY": "kernelUnitLength",
+    "orderX": "order",
+    "orderY": "order",
+    "stdDeviationX": "stdDeviation",
+    "stdDeviationY": "stdDeviation",
+    "radiusX": "radius",
+    "radiusY": "radius",
+    "baseFrequencyX": "baseFrequency",
+    "baseFrequencyY": "baseFrequency",
+    "orientType": "orient",
+    "orientAngle": "orient"
+  },
+  "ignore_bcd": [
+    "svgView"
+  ],
+  "attributes": {
+    "@global": {
+      "aria": {
+        "type": "PrefixedCustom",
+        "reason": "aria-* attributes (WAI-ARIA) are not listed by browser-compat-data's SVG globals; modelled as a prefix like data-*."
+      },
+      "class": {
+        "type": "SST",
+        "reason": "Set of space-separated class names; IDL exposes SVGAnimatedString className."
+      },
+      "fill": {
+        "type": "String",
+        "reason": "Presentation attribute (paint); browser-compat-data lists fill per element only, so it would otherwise be missing from shapes it does not list. Animation elements override it with freeze/remove."
+      },
+      "xml:space": {
+        "type": "Enum",
+        "allowed": [
+          "default",
+          "preserve"
+        ],
+        "reason": "Deprecated XML attribute; keywords default/preserve."
+      },
+      "fill-opacity": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "fill-rule": {
+        "type": "Enum",
+        "allowed": [
+          "evenodd",
+          "nonzero"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "stroke-opacity": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "stroke-linecap": {
+        "type": "Enum",
+        "allowed": [
+          "butt",
+          "round",
+          "square"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "stroke-linejoin": {
+        "type": "Enum",
+        "allowed": [
+          "arcs",
+          "bevel",
+          "miter",
+          "miter-clip",
+          "round"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "stroke-miterlimit": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "opacity": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "visibility": {
+        "type": "Enum",
+        "allowed": [
+          "collapse",
+          "hidden",
+          "visible"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "clip-rule": {
+        "type": "Enum",
+        "allowed": [
+          "evenodd",
+          "nonzero"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "pointer-events": {
+        "type": "Enum",
+        "allowed": [
+          "all",
+          "auto",
+          "bounding-box",
+          "fill",
+          "none",
+          "painted",
+          "stroke",
+          "visible",
+          "visibleFill",
+          "visiblePainted",
+          "visibleStroke"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "vector-effect": {
+        "type": "Enum",
+        "allowed": [
+          "fixed-position",
+          "non-rotation",
+          "non-scaling-size",
+          "non-scaling-stroke",
+          "none"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "shape-rendering": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "crispEdges",
+          "geometricPrecision",
+          "optimizeSpeed"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "color-interpolation": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "linearRGB",
+          "sRGB"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "color-interpolation-filters": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "linearRGB",
+          "sRGB"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "flood-opacity": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "stop-opacity": {
+        "type": "Float",
+        "pending": "webref-css",
+        "reason": "<number> (or <alpha-value>) presentation attribute; seeded from specs/svg.json."
+      },
+      "font-style": {
+        "type": "Enum",
+        "allowed": [
+          "italic",
+          "normal",
+          "oblique"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "text-anchor": {
+        "type": "Enum",
+        "allowed": [
+          "end",
+          "middle",
+          "start"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "dominant-baseline": {
+        "type": "Enum",
+        "allowed": [
+          "alphabetic",
+          "auto",
+          "central",
+          "hanging",
+          "ideographic",
+          "mathematical",
+          "middle",
+          "text-bottom",
+          "text-top"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "alignment-baseline": {
+        "type": "Enum",
+        "allowed": [
+          "after-edge",
+          "alphabetic",
+          "auto",
+          "baseline",
+          "before-edge",
+          "bottom",
+          "center",
+          "central",
+          "hanging",
+          "ideographic",
+          "mathematical",
+          "middle",
+          "text-after-edge",
+          "text-before-edge",
+          "text-bottom",
+          "text-top",
+          "top"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "text-rendering": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "geometricPrecision",
+          "optimizeLegibility",
+          "optimizeSpeed"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "image-rendering": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "crisp-edges",
+          "high-quality",
+          "optimizeQuality",
+          "optimizeSpeed",
+          "pixelated",
+          "smooth"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "overflow": {
+        "type": "Enum",
+        "allowed": [
+          "auto",
+          "clip",
+          "hidden",
+          "scroll",
+          "visible"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "transform-box": {
+        "type": "Enum",
+        "allowed": [
+          "border-box",
+          "content-box",
+          "fill-box",
+          "stroke-box",
+          "view-box"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "direction": {
+        "type": "Enum",
+        "allowed": [
+          "ltr",
+          "rtl"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      },
+      "writing-mode": {
+        "type": "Enum",
+        "allowed": [
+          "horizontal-tb",
+          "lr",
+          "lr-tb",
+          "rl",
+          "rl-tb",
+          "sideways-lr",
+          "sideways-rl",
+          "tb",
+          "tb-rl",
+          "vertical-lr",
+          "vertical-rl"
+        ],
+        "allow_custom": true,
+        "pending": "webref-css",
+        "reason": "Keyword values seeded from the hand-curated specs/svg.json."
+      }
+    },
+    "text,textPath,tspan": {
+      "lengthAdjust": {
+        "allowed": [
+          "spacing",
+          "spacingAndGlyphs"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "textPath": {
+      "method": {
+        "allowed": [
+          "align",
+          "stretch"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "spacing": {
+        "allowed": [
+          "auto",
+          "exact"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "side": {
+        "allowed": [
+          "left",
+          "right"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "marker": {
+      "markerUnits": {
+        "allowed": [
+          "strokeWidth",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "orient": {
+        "type": "String",
+        "reason": "auto | auto-start-reverse | <angle>; IDL splits it into orientType/orientAngle (renamed via idl_renames)."
+      }
+    },
+    "pattern": {
+      "patternUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "patternContentUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "clipPath": {
+      "clipPathUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "mask": {
+      "maskUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "maskContentUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "mask-type": {
+        "type": "Enum",
+        "allowed": [
+          "alpha",
+          "luminance"
+        ],
+        "pending": "webref-css",
+        "reason": "Presentation attribute that only applies to mask; browser-compat-data does not list it."
+      }
+    },
+    "linearGradient,radialGradient": {
+      "gradientUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "spreadMethod": {
+        "allowed": [
+          "pad",
+          "reflect",
+          "repeat"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "filter": {
+      "filterUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "primitiveUnits": {
+        "allowed": [
+          "objectBoundingBox",
+          "userSpaceOnUse"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feBlend": {
+      "mode": {
+        "allowed": [
+          "color",
+          "color-burn",
+          "color-dodge",
+          "darken",
+          "difference",
+          "exclusion",
+          "hard-light",
+          "hue",
+          "lighten",
+          "luminosity",
+          "multiply",
+          "normal",
+          "overlay",
+          "saturation",
+          "screen",
+          "soft-light"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feColorMatrix": {
+      "type": {
+        "allowed": [
+          "hueRotate",
+          "luminanceToAlpha",
+          "matrix",
+          "saturate"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feComposite": {
+      "operator": {
+        "allowed": [
+          "arithmetic",
+          "atop",
+          "in",
+          "lighter",
+          "out",
+          "over",
+          "xor"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feConvolveMatrix,feGaussianBlur": {
+      "edgeMode": {
+        "allowed": [
+          "duplicate",
+          "none",
+          "wrap"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feDisplacementMap": {
+      "xChannelSelector": {
+        "allowed": [
+          "A",
+          "B",
+          "G",
+          "R"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "yChannelSelector": {
+        "allowed": [
+          "A",
+          "B",
+          "G",
+          "R"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feFuncA,feFuncB,feFuncG,feFuncR": {
+      "type": {
+        "allowed": [
+          "discrete",
+          "gamma",
+          "identity",
+          "linear",
+          "table"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      }
+    },
+    "feMorphology": {
+      "operator": {
+        "allowed": [
+          "dilate",
+          "erode"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "radius": {
+        "type": "String",
+        "reason": "SVG 2 filter attribute of type <number-optional-number>; IDL splits it into X/Y members (renamed via idl_renames)."
+      }
+    },
+    "feTurbulence": {
+      "stitchTiles": {
+        "allowed": [
+          "noStitch",
+          "stitch"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "type": {
+        "allowed": [
+          "fractalNoise",
+          "turbulence"
+        ],
+        "type": "Enum",
+        "reason": "SVGAnimatedEnumeration: IDL has numeric constants, not the content keywords; keywords seeded from specs/svg.json."
+      },
+      "baseFrequency": {
+        "type": "String",
+        "reason": "SVG 2 filter attribute of type <number-optional-number>; IDL splits it into X/Y members (renamed via idl_renames)."
+      }
+    },
+    "*": {
+      "crossorigin": {
+        "type": "Enum",
+        "allowed": [
+          "anonymous",
+          "use-credentials"
+        ],
+        "allow_empty": true,
+        "reason": "CORS settings attribute, as in HTML."
+      },
+      "decoding": {
+        "type": "Enum",
+        "allowed": [
+          "async",
+          "auto",
+          "sync"
+        ],
+        "reason": "As in HTML's img decoding."
+      },
+      "referrerpolicy": {
+        "type": "Enum",
+        "allowed": [
+          "no-referrer",
+          "no-referrer-when-downgrade",
+          "origin",
+          "origin-when-cross-origin",
+          "same-origin",
+          "strict-origin",
+          "strict-origin-when-cross-origin",
+          "unsafe-url"
+        ],
+        "allow_empty": true,
+        "reason": "Referrer Policy tokens, as in HTML."
+      },
+      "zoomAndPan": {
+        "type": "Enum",
+        "allowed": [
+          "disable",
+          "magnify"
+        ],
+        "reason": "Deprecated in SVG 2; keywords from SVG 1.1."
+      },
+      "xlink:href": {
+        "type": "URL",
+        "reason": "Deprecated XLink spelling of href; browser-compat-data lists it per element without a value type."
+      }
+    },
+    "feConvolveMatrix,feDiffuseLighting,feSpecularLighting": {
+      "kernelUnitLength": {
+        "type": "String",
+        "reason": "SVG 2 filter attribute of type <number-optional-number>; IDL splits it into X/Y members (renamed via idl_renames)."
+      }
+    },
+    "feConvolveMatrix": {
+      "order": {
+        "type": "String",
+        "reason": "SVG 2 filter attribute of type <number-optional-number>; IDL splits it into X/Y members (renamed via idl_renames)."
+      }
+    },
+    "feDropShadow,feGaussianBlur": {
+      "stdDeviation": {
+        "type": "String",
+        "reason": "SVG 2 filter attribute of type <number-optional-number>; IDL splits it into X/Y members (renamed via idl_renames)."
+      }
+    },
+    "symbol": {
+      "height": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      },
+      "refX": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      },
+      "refY": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      },
+      "width": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      },
+      "x": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      },
+      "y": {
+        "type": "String",
+        "reason": "SVG 2 adds x/y/width/height/refX/refY to symbol (geometry properties), but SVGSymbolElement's IDL does not expose them."
+      }
+    },
+    "script": {
+      "crossorigin": {
+        "type": "Enum",
+        "allowed": [
+          "anonymous",
+          "use-credentials"
+        ],
+        "allow_empty": true,
+        "reason": "SVGScriptElement exposes crossOrigin without [Reflect]; browser-compat-data does not list the content attribute."
+      }
+    },
+    "animate,animateMotion,animateTransform,set": {
+      "begin": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "dur": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "end": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "min": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "max": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "repeatCount": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "repeatDur": {
+        "type": "String",
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "restart": {
+        "type": "Enum",
+        "allowed": [
+          "always",
+          "never",
+          "whenNotActive"
+        ],
+        "reason": "SVG Animations timing attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "fill": {
+        "type": "Enum",
+        "allowed": [
+          "freeze",
+          "remove"
+        ],
+        "reason": "On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute."
+      },
+      "href": {
+        "type": "URL",
+        "reason": "Animation target reference; SVGAnimationElement does not include SVGURIReference in IDL."
+      }
+    },
+    "animate,animateMotion,animateTransform": {
+      "by": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "from": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "keySplines": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "keyTimes": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "values": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "to": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "calcMode": {
+        "type": "Enum",
+        "allowed": [
+          "discrete",
+          "linear",
+          "paced",
+          "spline"
+        ],
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "additive": {
+        "type": "Enum",
+        "allowed": [
+          "replace",
+          "sum"
+        ],
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "accumulate": {
+        "type": "Enum",
+        "allowed": [
+          "none",
+          "sum"
+        ],
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      }
+    },
+    "animate,animateTransform,set": {
+      "attributeName": {
+        "type": "String",
+        "reason": "Target attribute name; not reflected in IDL."
+      },
+      "attributeType": {
+        "type": "Enum",
+        "allowed": [
+          "CSS",
+          "XML",
+          "auto"
+        ],
+        "reason": "Deprecated in SVG 2 but still widely used; keywords from SVG 1.1."
+      }
+    },
+    "set": {
+      "to": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      }
+    },
+    "animateTransform": {
+      "type": {
+        "type": "Enum",
+        "allowed": [
+          "rotate",
+          "scale",
+          "skewX",
+          "skewY",
+          "translate"
+        ],
+        "reason": "Transform type keywords; not in IDL."
+      }
+    },
+    "animateMotion": {
+      "keyPoints": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "path": {
+        "type": "String",
+        "reason": "SVG Animations value attribute: not reflected in IDL and only partly listed by browser-compat-data."
+      },
+      "rotate": {
+        "type": "String",
+        "reason": "auto | auto-reverse | <number>."
+      }
+    },
+    "a": {
+      "ping": {
+        "type": "SST",
+        "reason": "Set of space-separated URLs, as in HTML; IDL type is a plain USVString."
+      }
+    },
+    "stop": {
+      "offset": {
+        "type": "String",
+        "reason": "<number> | <percentage>: IDL's SVGAnimatedNumber is narrower than the content attribute syntax (\"50%\" is valid)."
+      }
+    }
+  }
+}

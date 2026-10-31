@@ -1,0 +1,4060 @@
+{
+  "elements": {
+    "a": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element"
+      ],
+      "attributes": {
+        "attributionsourceid": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://privacycg.github.io/private-click-measurement/#dom-htmlanchorelement-attributionsourceid"
+          ]
+        },
+        "attributionsrc": {
+          "deprecated": true
+        },
+        "charset": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-charset"
+          ]
+        },
+        "coords": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-coords"
+          ]
+        },
+        "download": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-download"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href"
+          ]
+        },
+        "hreflang": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-hreflang"
+          ]
+        },
+        "hreftranslate": {
+          "experimental": true
+        },
+        "implicit_noopener": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/document-sequences.html#the-rules-for-choosing-a-navigable"
+          ]
+        },
+        "interestfor": {
+          "experimental": true
+        },
+        "name": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-name"
+          ]
+        },
+        "ping": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#ping"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-referrerpolicy"
+          ]
+        },
+        "rel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-rel"
+          ]
+        },
+        "rev": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-rev"
+          ]
+        },
+        "shape": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-shape"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-target"
+          ]
+        },
+        "text_fragments": {
+          "standard_track": true
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-type"
+          ]
+        }
+      }
+    },
+    "abbr": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element"
+      ]
+    },
+    "acronym": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#acronym"
+      ]
+    },
+    "address": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-address-element"
+      ]
+    },
+    "area": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element"
+      ],
+      "attributes": {
+        "alt": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/image-maps.html#attr-area-alt"
+          ]
+        },
+        "attributionsrc": {
+          "deprecated": true
+        },
+        "coords": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/image-maps.html#attr-area-coords"
+          ]
+        },
+        "download": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-download"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-href"
+          ]
+        },
+        "hreflang": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-hreflang"
+          ]
+        },
+        "implicit_noopener": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/document-sequences.html#the-rules-for-choosing-a-navigable"
+          ]
+        },
+        "interestfor": {
+          "experimental": true
+        },
+        "nohref": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-area-nohref"
+          ]
+        },
+        "ping": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#ping"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-referrerpolicy"
+          ]
+        },
+        "rel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-rel"
+          ]
+        },
+        "shape": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/image-maps.html#attr-area-shape"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-target"
+          ]
+        },
+        "type": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#attr-hyperlink-type"
+          ]
+        }
+      }
+    },
+    "article": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-article-element"
+      ]
+    },
+    "aside": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-aside-element"
+      ]
+    },
+    "audio": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/media.html#the-audio-element"
+      ],
+      "attributes": {
+        "autoplay": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay"
+          ]
+        },
+        "controls": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-controls"
+          ]
+        },
+        "controlslist": {
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/controls-list/#solution-outline"
+          ]
+        },
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-crossorigin"
+          ]
+        },
+        "disableremoteplayback": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute"
+          ]
+        },
+        "loading": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-loading"
+          ]
+        },
+        "loop": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-loop"
+          ]
+        },
+        "muted": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-muted"
+          ]
+        },
+        "preload": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-preload"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-src"
+          ]
+        }
+      }
+    },
+    "b": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element"
+      ]
+    },
+    "base": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element"
+      ],
+      "attributes": {
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-base-href"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-base-target"
+          ]
+        }
+      }
+    },
+    "bdi": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element"
+      ]
+    },
+    "bdo": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element"
+      ]
+    },
+    "big": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#big"
+      ]
+    },
+    "blockquote": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element"
+      ],
+      "attributes": {
+        "cite": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/grouping-content.html#attr-blockquote-cite"
+          ]
+        }
+      }
+    },
+    "body": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-body-element"
+      ],
+      "attributes": {
+        "alink": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-alink"
+          ]
+        },
+        "background": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-background"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-bgcolor"
+          ]
+        },
+        "bottommargin": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-bottommargin"
+          ]
+        },
+        "leftmargin": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-leftmargin"
+          ]
+        },
+        "link": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-link"
+          ]
+        },
+        "rightmargin": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-rightmargin"
+          ]
+        },
+        "text": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-text"
+          ]
+        },
+        "topmargin": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-topmargin"
+          ]
+        },
+        "vlink": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-vlink"
+          ]
+        }
+      }
+    },
+    "br": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element"
+      ],
+      "attributes": {
+        "clear": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-br-clear"
+          ]
+        }
+      }
+    },
+    "button": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element"
+      ],
+      "attributes": {
+        "command": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command"
+          ]
+        },
+        "commandfor": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-commandfor"
+          ]
+        },
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "formaction": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formaction"
+          ]
+        },
+        "formenctype": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formenctype"
+          ]
+        },
+        "formmethod": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formmethod"
+          ]
+        },
+        "formnovalidate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formnovalidate"
+          ]
+        },
+        "formtarget": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formtarget"
+          ]
+        },
+        "interestfor": {
+          "experimental": true
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        },
+        "popovertarget": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/popover.html#attr-popovertarget"
+          ]
+        },
+        "popovertargetaction": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/popover.html#attr-popovertargetaction"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-type"
+          ]
+        },
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-value"
+          ]
+        }
+      }
+    },
+    "camera": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mediacapture-extensions/#the-camera-html-element"
+      ]
+    },
+    "canvas": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element"
+      ],
+      "attributes": {
+        "content": {
+          "experimental": true
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/canvas.html#attr-canvas-height"
+          ]
+        },
+        "moz-opaque": {
+          "deprecated": true
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/canvas.html#attr-canvas-width"
+          ]
+        }
+      }
+    },
+    "caption": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-caption-align"
+          ]
+        }
+      }
+    },
+    "center": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#center"
+      ]
+    },
+    "cite": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element"
+      ]
+    },
+    "code": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element"
+      ]
+    },
+    "col": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-col-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-align"
+          ]
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-charoff"
+          ]
+        },
+        "span": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-col-span"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-valign"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-width"
+          ]
+        }
+      }
+    },
+    "colgroup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-align"
+          ]
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-charoff"
+          ]
+        },
+        "span": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-colgroup-span"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-valign"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-col-width"
+          ]
+        }
+      }
+    },
+    "data": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element"
+      ],
+      "attributes": {
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/text-level-semantics.html#attr-data-value"
+          ]
+        }
+      }
+    },
+    "datalist": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+      ],
+      "attributes": {
+        "input_type_color": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)"
+          ]
+        },
+        "input_type_date": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)"
+          ]
+        },
+        "input_type_email": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)"
+          ]
+        },
+        "input_type_number": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)"
+          ]
+        },
+        "input_type_range": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)"
+          ]
+        },
+        "input_type_search": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"
+          ]
+        },
+        "input_type_tel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)"
+          ]
+        },
+        "input_type_text": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"
+          ]
+        },
+        "input_type_time": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#time-state-(type=time)"
+          ]
+        },
+        "input_type_url": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element",
+            "https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)"
+          ]
+        }
+      }
+    },
+    "dd": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element"
+      ]
+    },
+    "del": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/edits.html#the-del-element"
+      ],
+      "attributes": {
+        "cite": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/edits.html#attr-mod-cite"
+          ]
+        },
+        "datetime": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/edits.html#attr-mod-datetime"
+          ]
+        }
+      }
+    },
+    "details": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+      ],
+      "attributes": {
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-name"
+          ]
+        },
+        "open": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-open"
+          ]
+        },
+        "search_match_opens": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/interaction.html#interaction-with-details-and-hidden=until-found"
+          ]
+        }
+      }
+    },
+    "dfn": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element"
+      ]
+    },
+    "dialog": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+      ],
+      "attributes": {
+        "closedby": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby"
+          ]
+        },
+        "open": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-open"
+          ]
+        }
+      }
+    },
+    "dir": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#dir"
+      ],
+      "attributes": {
+        "compact": {
+          "deprecated": true
+        }
+      }
+    },
+    "div": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true
+        }
+      }
+    },
+    "dl": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element"
+      ]
+    },
+    "dt": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element"
+      ]
+    },
+    "em": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element"
+      ]
+    },
+    "embed": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-embed-align"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "name": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-embed-name"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-embed-src"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-embed-type"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "fencedframe": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://wicg.github.io/fenced-frame/#the-fencedframe-element"
+      ],
+      "attributes": {
+        "allow": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/fenced-frame/#element-attrdef-fencedframe-allow"
+          ]
+        },
+        "height": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "fieldset": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element"
+      ],
+      "attributes": {
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        }
+      }
+    },
+    "figcaption": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element"
+      ]
+    },
+    "figure": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element"
+      ]
+    },
+    "font": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#font"
+      ],
+      "attributes": {
+        "color": {
+          "deprecated": true
+        },
+        "face": {
+          "deprecated": true
+        },
+        "size": {
+          "deprecated": true
+        }
+      }
+    },
+    "footer": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element"
+      ]
+    },
+    "form": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/forms.html#the-form-element"
+      ],
+      "attributes": {
+        "accept-charset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/forms.html#attr-form-accept-charset"
+          ]
+        },
+        "action": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-action"
+          ]
+        },
+        "autocomplete": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/forms.html#attr-form-autocomplete"
+          ]
+        },
+        "enctype": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-enctype"
+          ]
+        },
+        "method": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-method"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/forms.html#attr-form-name"
+          ]
+        },
+        "novalidate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-novalidate"
+          ]
+        },
+        "rel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/forms.html#attr-form-rel"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-target"
+          ]
+        }
+      }
+    },
+    "frame": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#frame"
+      ],
+      "attributes": {
+        "frameborder": {
+          "deprecated": true
+        },
+        "marginheight": {
+          "deprecated": true
+        },
+        "marginwidth": {
+          "deprecated": true
+        },
+        "name": {
+          "deprecated": true
+        },
+        "noresize": {
+          "deprecated": true
+        },
+        "scrolling": {
+          "deprecated": true
+        },
+        "src": {
+          "deprecated": true
+        }
+      }
+    },
+    "frameset": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#frameset"
+      ],
+      "attributes": {
+        "cols": {
+          "deprecated": true
+        },
+        "rows": {
+          "deprecated": true
+        }
+      }
+    },
+    "geolocation": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://wicg.github.io/PEPC/geolocation-element.html#elementdef-geolocation"
+      ],
+      "attributes": {
+        "autolocate": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/PEPC/geolocation-element.html#element-attrdef-geolocation-autolocate"
+          ]
+        },
+        "watch": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/PEPC/geolocation-element.html#element-attrdef-geolocation-watch"
+          ]
+        }
+      }
+    },
+    "h1": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ],
+      "attributes": {
+        "no_ua_styles_in_article_aside_nav_section": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings"
+          ]
+        }
+      }
+    },
+    "h2": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ]
+    },
+    "h3": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ]
+    },
+    "h4": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ]
+    },
+    "h5": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ]
+    },
+    "h6": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+      ]
+    },
+    "head": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-head-element"
+      ]
+    },
+    "header": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-header-element"
+      ]
+    },
+    "hgroup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element"
+      ],
+      "attributes": {
+        "implicit_group_role": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/aria/html-aam/#el-hgroup"
+          ]
+        }
+      }
+    },
+    "hr": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true
+        },
+        "color": {
+          "deprecated": true
+        },
+        "hr_in_select": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element"
+          ]
+        },
+        "noshade": {
+          "deprecated": true
+        },
+        "size": {
+          "deprecated": true
+        },
+        "width": {
+          "deprecated": true
+        }
+      }
+    },
+    "html": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element"
+      ],
+      "attributes": {
+        "version": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-html-version"
+          ]
+        },
+        "xmlns": {}
+      }
+    },
+    "i": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element"
+      ]
+    },
+    "iframe": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-align"
+          ]
+        },
+        "allow": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-allow"
+          ]
+        },
+        "allowfullscreen": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-allowfullscreen"
+          ]
+        },
+        "allowpaymentrequest": {
+          "deprecated": true
+        },
+        "browsingtopics": {
+          "deprecated": true
+        },
+        "credentialless": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/anonymous-iframe/#attr-iframe-credentialless"
+          ]
+        },
+        "cross-origin-top-navigation-by-user-activation": {},
+        "csp": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/webappsec-cspee/#element-attrdef-iframe-csp"
+          ]
+        },
+        "frameborder": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-frameborder"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "loading": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-loading"
+          ]
+        },
+        "longdesc": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-longdesc"
+          ]
+        },
+        "marginheight": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-marginheight"
+          ]
+        },
+        "marginwidth": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-marginwidth"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-name"
+          ]
+        },
+        "privateToken": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/trust-token-api/#iframe-private-token"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-referrerpolicy"
+          ]
+        },
+        "sandbox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox"
+          ]
+        },
+        "scrolling": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-iframe-scrolling"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-src"
+          ]
+        },
+        "srcdoc": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-srcdoc"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "img": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-align"
+          ]
+        },
+        "alt": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt"
+          ]
+        },
+        "aspect_ratio_computed_from_attributes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#dimension-attributes"
+          ]
+        },
+        "attributionsrc": {
+          "deprecated": true
+        },
+        "border": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-border"
+          ]
+        },
+        "controls": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-controls"
+          ]
+        },
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin"
+          ]
+        },
+        "decoding": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-decoding"
+          ]
+        },
+        "fetchpriority": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-fetchpriority"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "hspace": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-hspace"
+          ]
+        },
+        "ismap": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-ismap"
+          ]
+        },
+        "loading": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-loading"
+          ]
+        },
+        "longdesc": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-longdesc"
+          ]
+        },
+        "name": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-name"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-referrerpolicy"
+          ]
+        },
+        "sizes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-sizes"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-src"
+          ]
+        },
+        "srcset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset"
+          ]
+        },
+        "usemap": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/image-maps.html#attr-hyperlink-usemap"
+          ]
+        },
+        "vspace": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-vspace"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "input": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/input.html#the-input-element"
+      ],
+      "attributes": {
+        "accept": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-accept"
+          ]
+        },
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-input-align"
+          ]
+        },
+        "alpha": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-alpha"
+          ]
+        },
+        "alt": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-alt"
+          ]
+        },
+        "autocomplete": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete"
+          ]
+        },
+        "capture": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/html-media-capture/#dfn-capture"
+          ]
+        },
+        "checked": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-checked"
+          ]
+        },
+        "colorspace": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-colorspace"
+          ]
+        },
+        "dirname": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-dirname"
+          ]
+        },
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "formaction": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formaction"
+          ]
+        },
+        "formenctype": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formenctype"
+          ]
+        },
+        "formmethod": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formmethod"
+          ]
+        },
+        "formnovalidate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formnovalidate"
+          ]
+        },
+        "formtarget": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-formtarget"
+          ]
+        },
+        "max": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-max"
+          ]
+        },
+        "maxlength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength"
+          ]
+        },
+        "min": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-min"
+          ]
+        },
+        "minlength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-minlength"
+          ]
+        },
+        "multiple": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        },
+        "pattern": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-pattern"
+          ]
+        },
+        "placeholder": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-placeholder"
+          ]
+        },
+        "popovertarget": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/popover.html#attr-popovertarget"
+          ]
+        },
+        "popovertargetaction": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/popover.html#attr-popovertargetaction"
+          ]
+        },
+        "readonly": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-readonly"
+          ]
+        },
+        "required": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-required"
+          ]
+        },
+        "size": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-size",
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-select-size"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-src"
+          ]
+        },
+        "step": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#attr-input-step"
+          ]
+        },
+        "switch": {
+          "experimental": true
+        },
+        "type_button": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#button-state-(type=button)"
+          ]
+        },
+        "type_checkbox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)"
+          ]
+        },
+        "type_color": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)"
+          ]
+        },
+        "type_date": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)"
+          ]
+        },
+        "type_datetime-local": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#local-date-and-time-state-(type=datetime-local)"
+          ]
+        },
+        "type_email": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)"
+          ]
+        },
+        "type_file": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type=file)"
+          ]
+        },
+        "type_hidden": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)"
+          ]
+        },
+        "type_image": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)"
+          ]
+        },
+        "type_month": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#month-state-(type=month)"
+          ]
+        },
+        "type_number": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)"
+          ]
+        },
+        "type_password": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#password-state-(type=password)"
+          ]
+        },
+        "type_radio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#radio-button-state-(type=radio)"
+          ]
+        },
+        "type_range": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)"
+          ]
+        },
+        "type_reset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#reset-button-state-(type=reset)"
+          ]
+        },
+        "type_search": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"
+          ]
+        },
+        "type_submit": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#submit-button-state-(type=submit)"
+          ]
+        },
+        "type_tel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)"
+          ]
+        },
+        "type_text": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#text-(type=text)-state-and-search-state-(type=search)"
+          ]
+        },
+        "type_time": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#time-state-(type=time)"
+          ]
+        },
+        "type_url": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)"
+          ]
+        },
+        "type_week": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/input.html#week-state-(type=week)"
+          ]
+        },
+        "usemap": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-input-usemap"
+          ]
+        },
+        "webkitdirectory": {
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/entries-api/#dom-htmlinputelement-webkitdirectory"
+          ]
+        }
+      }
+    },
+    "ins": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/edits.html#the-ins-element"
+      ],
+      "attributes": {
+        "cite": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/edits.html#attr-mod-cite"
+          ]
+        },
+        "datetime": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/edits.html#attr-mod-datetime"
+          ]
+        }
+      }
+    },
+    "install": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://wicg.github.io/install-element/#dfn-install"
+      ],
+      "attributes": {
+        "manifest": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/install-element/#dfn-manifest-0"
+          ]
+        },
+        "manifestId": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/install-element/#dfn-manifestid"
+          ]
+        }
+      }
+    },
+    "kbd": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element"
+      ]
+    },
+    "label": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/forms.html#the-label-element"
+      ],
+      "attributes": {
+        "for": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/forms.html#attr-label-for"
+          ]
+        }
+      }
+    },
+    "legend": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-legend-align"
+          ]
+        }
+      }
+    },
+    "li": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element"
+      ],
+      "attributes": {
+        "type": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-li-type"
+          ]
+        },
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/grouping-content.html#attr-li-value"
+          ]
+        }
+      }
+    },
+    "link": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-link-element"
+      ],
+      "attributes": {
+        "as": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-as"
+          ]
+        },
+        "blocking": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-blocking"
+          ]
+        },
+        "charset": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-link-charset"
+          ]
+        },
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-crossorigin"
+          ]
+        },
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-disabled"
+          ]
+        },
+        "fetchpriority": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-fetchpriority"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-href"
+          ]
+        },
+        "hreflang": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-hreflang"
+          ]
+        },
+        "imagesizes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesizes"
+          ]
+        },
+        "imagesrcset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesrcset"
+          ]
+        },
+        "integrity": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-integrity",
+            "https://w3c.github.io/webappsec-subresource-integrity/#the-integrity-attribute"
+          ]
+        },
+        "media": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-media"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-referrerpolicy"
+          ]
+        },
+        "rel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/links.html#linkTypes"
+          ]
+        },
+        "rev": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-link-rev"
+          ]
+        },
+        "sizes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-sizes"
+          ]
+        },
+        "target": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-link-target"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-link-type"
+          ]
+        }
+      }
+    },
+    "main": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element"
+      ]
+    },
+    "map": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element"
+      ],
+      "attributes": {
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/image-maps.html#attr-map-name"
+          ]
+        }
+      }
+    },
+    "mark": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element"
+      ]
+    },
+    "marquee": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/rendering.html#the-marquee-element-2"
+      ],
+      "attributes": {
+        "behavior": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-marquee-behavior"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/rendering.html#the-marquee-element-2"
+          ]
+        },
+        "direction": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-marquee-direction"
+          ]
+        },
+        "height": {
+          "deprecated": true
+        },
+        "hspace": {
+          "deprecated": true
+        },
+        "loop": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-marquee-loop"
+          ]
+        },
+        "scrollamount": {
+          "deprecated": true
+        },
+        "scrolldelay": {
+          "deprecated": true
+        },
+        "truespeed": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-marquee-truespeed"
+          ]
+        },
+        "vspace": {
+          "deprecated": true
+        },
+        "width": {
+          "deprecated": true
+        }
+      }
+    },
+    "menu": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element"
+      ]
+    },
+    "meta": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element"
+      ],
+      "attributes": {
+        "charset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-charset"
+          ]
+        },
+        "content": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-content"
+          ]
+        },
+        "http-equiv": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#standard-metadata-names",
+            "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-meta"
+          ]
+        },
+        "scheme": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-meta-scheme"
+          ]
+        }
+      }
+    },
+    "meter": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element"
+      ],
+      "attributes": {
+        "high": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-high"
+          ]
+        },
+        "low": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-low"
+          ]
+        },
+        "max": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-max"
+          ]
+        },
+        "min": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-max"
+          ]
+        },
+        "optimum": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-optimum"
+          ]
+        },
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-meter-value"
+          ]
+        }
+      }
+    },
+    "microphone": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mediacapture-extensions/#the-microphone-html-element"
+      ]
+    },
+    "model": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://immersive-web.github.io/model-element/#elementdef-model"
+      ],
+      "attributes": {
+        "autoplay": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#autoplay-attribute"
+          ]
+        },
+        "height": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#height-attribute"
+          ]
+        },
+        "loop": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#loop-attribute"
+          ]
+        },
+        "src": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#src-attribute"
+          ]
+        },
+        "stagemode": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#stagemode-attribute"
+          ]
+        },
+        "width": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://immersive-web.github.io/model-element/#width-attribute"
+          ]
+        }
+      }
+    },
+    "nav": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-nav-element"
+      ]
+    },
+    "nobr": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#nobr"
+      ]
+    },
+    "noembed": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#noembed"
+      ]
+    },
+    "noframes": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#noframes"
+      ]
+    },
+    "noscript": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element"
+      ]
+    },
+    "object": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element"
+      ],
+      "attributes": {
+        "archive": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-archive"
+          ]
+        },
+        "border": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-border"
+          ]
+        },
+        "classid": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-classid"
+          ]
+        },
+        "codebase": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-codebase"
+          ]
+        },
+        "codetype": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-codetype"
+          ]
+        },
+        "data": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-object-data"
+          ]
+        },
+        "declare": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-declare"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-object-name"
+          ]
+        },
+        "standby": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-standby"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-object-type"
+          ]
+        },
+        "usemap": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-object-usemap"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "ol": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element"
+      ],
+      "attributes": {
+        "compact": {
+          "deprecated": true
+        },
+        "reversed": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/grouping-content.html#attr-ol-reversed"
+          ]
+        },
+        "start": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/grouping-content.html#attr-ol-start"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/grouping-content.html#attr-ol-type"
+          ]
+        }
+      }
+    },
+    "optgroup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element"
+      ],
+      "attributes": {
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-optgroup-disabled"
+          ]
+        },
+        "label": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-optgroup-label"
+          ]
+        }
+      }
+    },
+    "option": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element"
+      ],
+      "attributes": {
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-option-disabled"
+          ]
+        },
+        "label": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-option-label"
+          ]
+        },
+        "selected": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-option-selected"
+          ]
+        },
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-option-value"
+          ]
+        }
+      }
+    },
+    "output": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element"
+      ],
+      "attributes": {
+        "for": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-output-for"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        }
+      }
+    },
+    "p": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element"
+      ]
+    },
+    "param": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#non-conforming-features"
+      ],
+      "attributes": {
+        "name": {
+          "deprecated": true
+        },
+        "type": {
+          "deprecated": true
+        },
+        "value": {
+          "deprecated": true
+        },
+        "valuetype": {
+          "deprecated": true
+        }
+      }
+    },
+    "picture": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element"
+      ]
+    },
+    "plaintext": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#plaintext"
+      ]
+    },
+    "pre": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element"
+      ],
+      "attributes": {
+        "width": {
+          "deprecated": true
+        }
+      }
+    },
+    "progress": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element"
+      ],
+      "attributes": {
+        "max": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-progress-max"
+          ]
+        },
+        "value": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-progress-value"
+          ]
+        }
+      }
+    },
+    "q": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element"
+      ],
+      "attributes": {
+        "cite": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/text-level-semantics.html#attr-q-cite"
+          ]
+        }
+      }
+    },
+    "rb": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#rb"
+      ]
+    },
+    "rp": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element"
+      ]
+    },
+    "rt": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element"
+      ]
+    },
+    "rtc": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#rtc"
+      ]
+    },
+    "ruby": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
+      ]
+    },
+    "s": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element"
+      ]
+    },
+    "samp": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element"
+      ]
+    },
+    "script": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/scripting.html#the-script-element"
+      ],
+      "attributes": {
+        "async": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-async"
+          ]
+        },
+        "attributionsrc": {
+          "deprecated": true
+        },
+        "blocking": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-blocking"
+          ]
+        },
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-crossorigin"
+          ]
+        },
+        "defer": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-defer"
+          ]
+        },
+        "fetchpriority": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-fetchpriority"
+          ]
+        },
+        "integrity": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-integrity",
+            "https://w3c.github.io/webappsec-subresource-integrity/#the-integrity-attribute"
+          ]
+        },
+        "nomodule": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-referrerpolicy"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-src"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-type"
+          ]
+        }
+      }
+    },
+    "search": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element"
+      ]
+    },
+    "section": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#the-section-element"
+      ]
+    },
+    "select": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element"
+      ],
+      "attributes": {
+        "autocomplete": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete"
+          ]
+        },
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "hr_in_select": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element"
+          ]
+        },
+        "multiple": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-select-multiple"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        },
+        "required": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-select-required"
+          ]
+        },
+        "size": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-select-size"
+          ]
+        }
+      }
+    },
+    "selectedcontent": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element"
+      ]
+    },
+    "slot": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+        "https://dom.spec.whatwg.org/#shadow-tree-slots"
+      ],
+      "attributes": {
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-slot-name"
+          ]
+        }
+      }
+    },
+    "small": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element"
+      ]
+    },
+    "source": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element"
+      ],
+      "attributes": {
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "media": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-source-media"
+          ]
+        },
+        "sizes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-source-sizes"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-source-src"
+          ]
+        },
+        "srcset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-source-srcset"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-source-type"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "span": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element"
+      ]
+    },
+    "strike": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#strike"
+      ]
+    },
+    "strong": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element"
+      ]
+    },
+    "style": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element"
+      ],
+      "attributes": {
+        "blocking": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-style-blocking"
+          ]
+        },
+        "media": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/semantics.html#attr-style-media"
+          ]
+        },
+        "type": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-style-type"
+          ]
+        }
+      }
+    },
+    "sub": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements"
+      ]
+    },
+    "summary": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element"
+      ],
+      "attributes": {
+        "display_list_item": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements"
+          ]
+        }
+      }
+    },
+    "sup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements"
+      ]
+    },
+    "table": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-table-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-align"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-body-bgcolor"
+          ]
+        },
+        "border": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#dom-table-border"
+          ]
+        },
+        "cellpadding": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-cellpadding"
+          ]
+        },
+        "cellspacing": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-cellspacing"
+          ]
+        },
+        "frame": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#dom-table-frame"
+          ]
+        },
+        "rules": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#dom-table-rules"
+          ]
+        },
+        "summary": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#dom-table-summary"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-width"
+          ]
+        }
+      }
+    },
+    "tbody": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-align"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-charoff"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-valign"
+          ]
+        }
+      }
+    },
+    "td": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-td-element"
+      ],
+      "attributes": {
+        "abbr": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-td-abbr"
+          ]
+        },
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-align"
+          ]
+        },
+        "axis": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-axis"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-bgcolor"
+          ]
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-charoff"
+          ]
+        },
+        "colspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-colspan"
+          ]
+        },
+        "headers": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-headers"
+          ]
+        },
+        "rowspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-rowspan"
+          ]
+        },
+        "scope": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-td-scope"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-valign"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-width"
+          ]
+        }
+      }
+    },
+    "template": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+      ],
+      "attributes": {
+        "for": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-for"
+          ]
+        },
+        "shadowrootclonable": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootclonable"
+          ]
+        },
+        "shadowrootcustomelementregistry": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootcustomelementregistry"
+          ]
+        },
+        "shadowrootdelegatesfocus": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootdelegatesfocus"
+          ]
+        },
+        "shadowrootmode": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode"
+          ]
+        },
+        "shadowrootreferencetarget": {
+          "experimental": true
+        },
+        "shadowrootserializable": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootserializable"
+          ]
+        },
+        "shadowrootslotassignment": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootslotassignment"
+          ]
+        }
+      }
+    },
+    "textarea": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element"
+      ],
+      "attributes": {
+        "autocomplete": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete"
+          ]
+        },
+        "cols": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-cols"
+          ]
+        },
+        "dirname": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-dirname"
+          ]
+        },
+        "disabled": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled"
+          ]
+        },
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fae-form"
+          ]
+        },
+        "maxlength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-maxlength"
+          ]
+        },
+        "minlength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-minlength"
+          ]
+        },
+        "name": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name"
+          ]
+        },
+        "placeholder": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-placeholder"
+          ]
+        },
+        "readonly": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-readonly"
+          ]
+        },
+        "required": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-required"
+          ]
+        },
+        "rows": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-rows"
+          ]
+        },
+        "wrap": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/form-elements.html#attr-textarea-wrap"
+          ]
+        }
+      }
+    },
+    "tfoot": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-align"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-charoff"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-valign"
+          ]
+        }
+      }
+    },
+    "th": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-th-element"
+      ],
+      "attributes": {
+        "abbr": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-th-abbr"
+          ]
+        },
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-align"
+          ]
+        },
+        "axis": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-axis"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-bgcolor"
+          ]
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-charoff"
+          ]
+        },
+        "colspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-colspan"
+          ]
+        },
+        "headers": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-headers"
+          ]
+        },
+        "rowspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-tdth-rowspan"
+          ]
+        },
+        "scope": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/tables.html#attr-th-scope"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-valign"
+          ]
+        },
+        "width": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tdth-width"
+          ]
+        }
+      }
+    },
+    "thead": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-thead-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-align"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-charoff"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tbody-valign"
+          ]
+        }
+      }
+    },
+    "time": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element"
+      ],
+      "attributes": {
+        "datetime": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/text-level-semantics.html#attr-time-datetime"
+          ]
+        }
+      }
+    },
+    "title": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+      ]
+    },
+    "tr": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/tables.html#the-tr-element"
+      ],
+      "attributes": {
+        "align": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tr-align"
+          ]
+        },
+        "bgcolor": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tr-bgcolor"
+          ]
+        },
+        "char": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tr-char"
+          ]
+        },
+        "charoff": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tr-charoff"
+          ]
+        },
+        "valign": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-tr-valign"
+          ]
+        }
+      }
+    },
+    "track": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/media.html#the-track-element"
+      ],
+      "attributes": {
+        "default": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-track-default"
+          ]
+        },
+        "kind": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-track-kind"
+          ]
+        },
+        "label": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-track-label"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-track-src"
+          ]
+        },
+        "srclang": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-track-srclang"
+          ]
+        }
+      }
+    },
+    "tt": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#tt"
+      ]
+    },
+    "u": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element"
+      ]
+    },
+    "ul": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element"
+      ],
+      "attributes": {
+        "compact": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-ul-compact"
+          ]
+        },
+        "type": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/obsolete.html#attr-ul-type"
+          ]
+        }
+      }
+    },
+    "usermedia": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element"
+      ]
+    },
+    "var": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element"
+      ]
+    },
+    "video": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/media.html#the-video-element"
+      ],
+      "attributes": {
+        "aspect_ratio_computed_from_attributes": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#dimension-attributes"
+          ]
+        },
+        "autoplay": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-autoplay"
+          ]
+        },
+        "controls": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-controls"
+          ]
+        },
+        "controlslist": {
+          "standard_track": true,
+          "spec_url": [
+            "https://wicg.github.io/controls-list/#solution-outline"
+          ]
+        },
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-crossorigin"
+          ]
+        },
+        "disablepictureinpicture": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/picture-in-picture/#dom-htmlvideoelement-disablepictureinpicture"
+          ]
+        },
+        "disableremoteplayback": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-height"
+          ]
+        },
+        "loading": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-loading"
+          ]
+        },
+        "loop": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-loop"
+          ]
+        },
+        "muted": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-muted"
+          ]
+        },
+        "playsinline": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-video-playsinline"
+          ]
+        },
+        "poster": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-video-poster"
+          ]
+        },
+        "preload": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-preload"
+          ]
+        },
+        "src": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/media.html#attr-media-src"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width"
+          ]
+        }
+      }
+    },
+    "wbr": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element"
+      ]
+    },
+    "xmp": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/obsolete.html#xmp"
+      ]
+    }
+  },
+  "global_attributes": {
+    "accesskey": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#the-accesskey-attribute"
+      ]
+    },
+    "anchor": {
+      "experimental": true
+    },
+    "autocapitalize": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-autocapitalize"
+      ]
+    },
+    "autocorrect": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-autocorrect"
+      ]
+    },
+    "autofocus": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#the-autofocus-attribute"
+      ]
+    },
+    "class": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#classes"
+      ]
+    },
+    "containertiming": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/container-timing/#dom-htmlelement-containertiming"
+      ]
+    },
+    "containertimingignore": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/container-timing/#dom-htmlelement-containertimingignore"
+      ]
+    },
+    "contenteditable": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-contenteditable"
+      ]
+    },
+    "data_attributes": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#attr-data-*"
+      ]
+    },
+    "dir": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute"
+      ]
+    },
+    "draggable": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dnd.html#the-draggable-attribute"
+      ]
+    },
+    "drawable": {
+      "experimental": true
+    },
+    "elementtiming": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/element-timing/#dom-element-elementtiming"
+      ]
+    },
+    "enterkeyhint": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-enterkeyhint"
+      ]
+    },
+    "exportparts": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-shadow/#element-attrdef-html-global-exportparts"
+      ]
+    },
+    "focusgroup": {
+      "experimental": true
+    },
+    "focusgroupstart": {
+      "experimental": true
+    },
+    "headingoffset": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#heading-levels-\u0026-offsets"
+      ]
+    },
+    "headingreset": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/sections.html#heading-levels-\u0026-offsets"
+      ]
+    },
+    "hidden": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#the-hidden-attribute"
+      ]
+    },
+    "id": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#the-id-attribute"
+      ]
+    },
+    "inert": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#the-inert-attribute"
+      ]
+    },
+    "inputmode": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode"
+      ]
+    },
+    "is": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is"
+      ]
+    },
+    "lang": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#attr-lang"
+      ]
+    },
+    "nonce": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/urls-and-fetching.html#attr-nonce"
+      ]
+    },
+    "part": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-shadow/#part-attr"
+      ]
+    },
+    "popover": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/popover.html#the-popover-attribute"
+      ]
+    },
+    "slot": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#attr-slot",
+        "https://dom.spec.whatwg.org/#ref-for-dom-element-slot①"
+      ]
+    },
+    "spellcheck": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-spellcheck"
+      ]
+    },
+    "style": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#the-style-attribute",
+        "https://drafts.csswg.org/css-style-attr/#style-attribute"
+      ]
+    },
+    "tabindex": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex"
+      ]
+    },
+    "title": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute"
+      ]
+    },
+    "translate": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/dom.html#attr-translate"
+      ]
+    },
+    "virtualkeyboardpolicy": {
+      "experimental": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/virtual-keyboard/#dom-elementcontenteditable-virtualkeyboardpolicy"
+      ]
+    },
+    "writingsuggestions": {
+      "standard_track": true,
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/interaction.html#writing-suggestions"
+      ]
+    }
+  }
+}

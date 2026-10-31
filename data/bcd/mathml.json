@@ -1,0 +1,548 @@
+{
+  "elements": {
+    "a": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#the-a-element"
+      ],
+      "attributes": {
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-href"
+          ]
+        },
+        "hreflang": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-hreflang"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-target"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-type"
+          ]
+        }
+      }
+    },
+    "annotation": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#semantics-and-presentation"
+      ]
+    },
+    "annotation-xml": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#semantics-and-presentation"
+      ]
+    },
+    "maction": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-maction"
+      ],
+      "attributes": {
+        "actiontype": {
+          "deprecated": true
+        },
+        "selection": {
+          "deprecated": true
+        }
+      }
+    },
+    "math": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#the-top-level-math-element"
+      ],
+      "attributes": {
+        "display": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-display"
+          ]
+        }
+      }
+    },
+    "menclose": {
+      "attributes": {
+        "notation": {}
+      }
+    },
+    "merror": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#error-message-merror"
+      ]
+    },
+    "mfenced": {
+      "deprecated": true
+    },
+    "mfrac": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#fractions-mfrac"
+      ],
+      "attributes": {
+        "denomalign": {
+          "deprecated": true
+        },
+        "linethickness": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-linethickness"
+          ]
+        },
+        "numalign": {
+          "deprecated": true
+        }
+      }
+    },
+    "mi": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-mi"
+      ],
+      "attributes": {
+        "mathvariant": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-mathvariant"
+          ]
+        }
+      }
+    },
+    "mmultiscripts": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#prescripts-and-tensor-indices-mmultiscripts"
+      ],
+      "attributes": {
+        "subscriptshift": {
+          "deprecated": true
+        },
+        "superscriptshift": {
+          "deprecated": true
+        }
+      }
+    },
+    "mn": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#number-mn"
+      ]
+    },
+    "mo": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#operator-fence-separator-or-accent-mo"
+      ],
+      "attributes": {
+        "accent": {},
+        "form": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-form"
+          ]
+        },
+        "largeop": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-largeop-0"
+          ]
+        },
+        "lspace": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-lspace-0"
+          ]
+        },
+        "maxsize": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-maxsize-0"
+          ]
+        },
+        "minsize": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-minsize-0"
+          ]
+        },
+        "movablelimits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-movablelimits-0"
+          ]
+        },
+        "named_spaces": {
+          "deprecated": true
+        },
+        "nonzero_unitless_values": {
+          "deprecated": true
+        },
+        "rspace": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-rspace-0"
+          ]
+        },
+        "stretchy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-stretchy-0"
+          ]
+        },
+        "symmetric": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-symmetric-0"
+          ]
+        }
+      }
+    },
+    "mover": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#underscripts-and-overscripts-munder-mover-munderover"
+      ],
+      "attributes": {
+        "accent": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-accent"
+          ]
+        }
+      }
+    },
+    "mpadded": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#adjust-space-around-content-mpadded"
+      ],
+      "attributes": {
+        "depth": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mpadded-depth"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mpadded-height"
+          ]
+        },
+        "lspace": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mpadded-lspace"
+          ]
+        },
+        "named_spaces": {
+          "deprecated": true
+        },
+        "nonzero_unitless_values": {
+          "deprecated": true
+        },
+        "pseudo_units": {
+          "deprecated": true
+        },
+        "relative_values": {},
+        "scale_factor": {
+          "deprecated": true
+        },
+        "voffset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mpadded-voffset"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mpadded-width"
+          ]
+        }
+      }
+    },
+    "mphantom": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#making-sub-expressions-invisible-mphantom"
+      ]
+    },
+    "mprescripts": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#prescripts-and-tensor-indices-mmultiscripts"
+      ]
+    },
+    "mroot": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#radicals-msqrt-mroot"
+      ]
+    },
+    "mrow": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#horizontally-group-sub-expressions-mrow"
+      ]
+    },
+    "ms": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#string-literal-ms"
+      ]
+    },
+    "mspace": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#space-mspace"
+      ],
+      "attributes": {
+        "depth": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mspace-depth"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mspace-height"
+          ]
+        },
+        "named_spaces": {
+          "deprecated": true
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#attribute-mspace-width"
+          ]
+        }
+      }
+    },
+    "msqrt": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#radicals-msqrt-mroot"
+      ]
+    },
+    "mstyle": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#style-change-mstyle"
+      ],
+      "attributes": {
+        "background": {
+          "deprecated": true
+        },
+        "color": {
+          "deprecated": true
+        },
+        "fontsize": {
+          "deprecated": true
+        },
+        "fontstyle": {
+          "deprecated": true
+        },
+        "fontweight": {
+          "deprecated": true
+        }
+      }
+    },
+    "msub": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#subscripts-and-superscripts-msub-msup-msubsup"
+      ],
+      "attributes": {
+        "subscriptshift": {
+          "deprecated": true
+        }
+      }
+    },
+    "msubsup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#subscripts-and-superscripts-msub-msup-msubsup"
+      ],
+      "attributes": {
+        "subscriptshift": {
+          "deprecated": true
+        },
+        "superscriptshift": {
+          "deprecated": true
+        }
+      }
+    },
+    "msup": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#subscripts-and-superscripts-msub-msup-msubsup"
+      ],
+      "attributes": {
+        "superscriptshift": {
+          "deprecated": true
+        }
+      }
+    },
+    "mtable": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#table-or-matrix-mtable"
+      ],
+      "attributes": {
+        "align": {},
+        "columnalign": {},
+        "columnlines": {},
+        "columnspacing": {},
+        "frame": {},
+        "framespacing": {},
+        "rowalign": {},
+        "rowlines": {},
+        "rowspacing": {},
+        "width": {}
+      }
+    },
+    "mtd": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#entry-in-table-or-matrix-mtd"
+      ],
+      "attributes": {
+        "columnalign": {},
+        "columnspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-columnspan"
+          ]
+        },
+        "rowalign": {},
+        "rowspan": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-rowspan"
+          ]
+        }
+      }
+    },
+    "mtext": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#text-mtext"
+      ]
+    },
+    "mtr": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#row-in-table-or-matrix-mtr"
+      ],
+      "attributes": {
+        "columnalign": {},
+        "rowalign": {}
+      }
+    },
+    "munder": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#underscripts-and-overscripts-munder-mover-munderover"
+      ],
+      "attributes": {
+        "accentunder": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-accentunder"
+          ]
+        }
+      }
+    },
+    "munderover": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#underscripts-and-overscripts-munder-mover-munderover"
+      ],
+      "attributes": {
+        "accent": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-accent"
+          ]
+        },
+        "accentunder": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/mathml-core/#dfn-accentunder"
+          ]
+        }
+      }
+    },
+    "semantics": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#semantics-and-presentation"
+      ],
+      "attributes": {
+        "advanced_visible_child_selection": {
+          "deprecated": true
+        }
+      }
+    }
+  },
+  "global_attributes": {
+    "dir": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-dir"
+      ]
+    },
+    "displaystyle": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-displaystyle"
+      ]
+    },
+    "href": {
+      "deprecated": true
+    },
+    "mathbackground": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-mathbackground"
+      ]
+    },
+    "mathcolor": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-mathcolor"
+      ]
+    },
+    "mathsize": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-mathsize"
+      ]
+    },
+    "scriptlevel": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/mathml-core/#dfn-scriptlevel"
+      ]
+    }
+  }
+}

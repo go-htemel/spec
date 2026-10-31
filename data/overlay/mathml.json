@@ -1,0 +1,40 @@
+{
+  "comment": "Judgment calls for the MathML Core document. MathML Core has no per-element IDL (every element is a MathMLElement), so element attributes come from browser-compat-data (standard-track only) and their types from here, following the MathML Core attribute definitions.",
+  "text": ["annotation", "mi", "mn", "mo", "ms", "mtext"],
+  "attributes": {
+    "@global": {
+      "class": {"type": "SST", "reason": "Set of space-separated class names (MathML Core global attribute; not listed by browser-compat-data)."},
+      "id": {"type": "String", "reason": "MathML Core global attribute; not listed by browser-compat-data."},
+      "style": {"type": "String", "reason": "MathML Core global attribute; not listed by browser-compat-data."},
+      "data": {"type": "PrefixedCustom", "reason": "data-* attributes are MathML Core globals; not listed by browser-compat-data."},
+      "dir": {"type": "Enum", "allowed": ["ltr", "rtl"], "reason": "MathML Core: ltr or rtl."},
+      "displaystyle": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core boolean-valued attribute (true/false keywords, not an HTML boolean attribute)."}
+    },
+    "a": {
+      "href": {"type": "URL", "reason": "Hyperlink target (MathMLAnchorElement in mathml-core.idl, which @webref/elements does not yet link to the a element)."}
+    },
+    "math": {
+      "display": {"type": "Enum", "allowed": ["block", "inline"], "reason": "MathML Core: block or inline."}
+    },
+    "mi": {
+      "mathvariant": {"type": "Enum", "allowed": ["normal"], "reason": "MathML Core only defines the value normal."}
+    },
+    "mo": {
+      "form": {"type": "Enum", "allowed": ["infix", "postfix", "prefix"], "reason": "MathML Core operator form."},
+      "largeop": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."},
+      "movablelimits": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."},
+      "stretchy": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."},
+      "symmetric": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."}
+    },
+    "mover,munderover": {
+      "accent": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."}
+    },
+    "munder,munderover": {
+      "accentunder": {"type": "Enum", "allowed": ["false", "true"], "reason": "MathML Core true/false keyword attribute."}
+    },
+    "mtd": {
+      "columnspan": {"type": "Number", "reason": "MathML Core: positive integer."},
+      "rowspan": {"type": "Number", "reason": "MathML Core: non-negative integer."}
+    }
+  }
+}

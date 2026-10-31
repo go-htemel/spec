@@ -1,0 +1,59 @@
+{
+  "comment": "Provenance of the vendored inputs under this directory. Regenerate with `go run ./cmd/specgen2 vendor` and `go run ./cmd/specgen2 fetch`; see cmd/specgen2.",
+  "sources": [
+    {
+      "name": "@mdn/browser-compat-data",
+      "version": "8.1.7",
+      "url": "https://registry.npmjs.org/@mdn/browser-compat-data/-/browser-compat-data-8.1.7.tgz",
+      "integrity": "sha512-TJ+rX530bFoE8678PuH2gjCSzwpBcaLlcElRhnnxFdkLHHT1clUAxtjImPFZDAlWQ005px9xaJ4Nd+aQp/rylQ==",
+      "retrieved": "2026-10-31",
+      "published": "2026-10-22T13:20:14.760Z",
+      "license": "CC0-1.0",
+      "files": [
+        "bcd/html.json",
+        "bcd/svg.json",
+        "bcd/mathml.json"
+      ]
+    },
+    {
+      "name": "@webref/elements",
+      "version": "2.9.2",
+      "url": "https://registry.npmjs.org/@webref/elements/-/elements-2.9.2.tgz",
+      "integrity": "sha512-NjGr2/UMDsHc4yBYTLoXOxmt+hQW1YcsBZTX+w1SrEKA0fHJtapqMoFXWYrE4MhtZOjh7PjwKNgE+7w9qVxA9Q==",
+      "retrieved": "2026-10-31",
+      "license": "MIT (webref tooling); element data extracted from the specifications",
+      "files": [
+        "webref/elements/html.json",
+        "webref/elements/SVG2.json",
+        "webref/elements/filter-effects-1.json",
+        "webref/elements/css-masking-1.json",
+        "webref/elements/svg-animations.json",
+        "webref/elements/svg-paths.json",
+        "webref/elements/mathml-core.json"
+      ]
+    },
+    {
+      "name": "@webref/idl",
+      "version": "3.86.0",
+      "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.86.0.tgz",
+      "integrity": "sha512-cfBKahe5RlvgVnOII8XxoPJ/rZ8B9bYaVaewOt9L9IwbDmJOQ7dSNAA5AXM7BQaiQ+/FbqqrE1bGVUm3HBUFYw==",
+      "retrieved": "2026-10-31",
+      "license": "MIT (webref tooling); IDL extracted from the specifications under their licenses",
+      "files": [
+        "webref/idl/html.idl",
+        "webref/idl/SVG.idl",
+        "webref/idl/filter-effects.idl",
+        "webref/idl/css-masking.idl",
+        "webref/idl/svg-animations.idl",
+        "webref/idl/svg-paths.idl",
+        "webref/idl/mathml-core.idl"
+      ]
+    },
+    {
+      "name": "whatwg-html-indices",
+      "url": "https://html.spec.whatwg.org/commit-snapshots/\u003ccommit-sha\u003e/multipage/indices.html",
+      "status": "pending",
+      "note": "Not vendored yet: run `go run ./cmd/specgen2 fetch -sha \u003ccommit\u003e` from a machine that can reach html.spec.whatwg.org. Until then element categories, void/text flags and enumerated values come from overlay/html.json."
+    }
+  ]
+}

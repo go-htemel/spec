@@ -1,0 +1,2734 @@
+{
+  "elements": {
+    "a": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/linking.html#Links"
+      ],
+      "attributes": {
+        "download": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementDownloadAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementHrefAttribute"
+          ]
+        },
+        "hreflang": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementHreflangAttribute"
+          ]
+        },
+        "interestfor": {
+          "experimental": true
+        },
+        "ping": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementPingAttribute"
+          ]
+        },
+        "referrerpolicy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementReferrerpolicyAttribute"
+          ]
+        },
+        "rel": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementRelAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "target": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementTargetAttribute"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#AElementTypeAttribute"
+          ]
+        },
+        "xlink_actuate": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/linking.html#XLinkActuateAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        },
+        "xlink_show": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/linking.html#XLinkShowAttribute"
+          ]
+        },
+        "xlink_title": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkTitleAttribute"
+          ]
+        }
+      }
+    },
+    "animate": {
+      "standard_track": true,
+      "spec_url": [
+        "https://svgwg.org/specs/animations/#AnimateElement"
+      ],
+      "attributes": {
+        "attributeName": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#AttributeNameAttribute"
+          ]
+        },
+        "attributeType": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute"
+          ]
+        },
+        "dur": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#DurAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FillAttribute"
+          ]
+        },
+        "from": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FromAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#HrefAttribute"
+          ]
+        },
+        "repeatCount": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#RepeatCountAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "to": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#ToAttribute"
+          ]
+        }
+      }
+    },
+    "animateMotion": {
+      "standard_track": true,
+      "spec_url": [
+        "https://svgwg.org/specs/animations/#AnimateMotionElement"
+      ],
+      "attributes": {
+        "calcMode": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#CalcModeAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FillAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#HrefAttribute"
+          ]
+        },
+        "keyPoints": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#KeyPointsAttribute"
+          ]
+        },
+        "origin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#OriginAttribute"
+          ]
+        },
+        "path": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute"
+          ]
+        },
+        "rotate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#RotateAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "animateTransform": {
+      "standard_track": true,
+      "spec_url": [
+        "https://svgwg.org/specs/animations/#AnimateTransformElement"
+      ],
+      "attributes": {
+        "by": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#ByAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FillAttribute"
+          ]
+        },
+        "from": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FromAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#HrefAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "to": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#ToAttribute"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#AnimateTransformElementTypeAttribute"
+          ]
+        }
+      }
+    },
+    "circle": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#CircleElement"
+      ],
+      "attributes": {
+        "cx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CxProperty"
+          ]
+        },
+        "cy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CyProperty"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "r": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RProperty"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "clipPath": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#ClipPathElement"
+      ],
+      "attributes": {
+        "clipPathUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-clippath-clippathunits"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "defs": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#Head"
+      ],
+      "attributes": {
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "desc": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#DescriptionAndTitleElements"
+      ]
+    },
+    "ellipse": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#EllipseElement"
+      ],
+      "attributes": {
+        "cx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CxProperty"
+          ]
+        },
+        "cy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CyProperty"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "rx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RxProperty"
+          ]
+        },
+        "ry": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RyProperty"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "feBlend": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feBlendElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "in2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feblend-in2"
+          ]
+        },
+        "mode": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feblend-mode"
+          ]
+        }
+      }
+    },
+    "feColorMatrix": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feColorMatrixElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecolormatrix-type"
+          ]
+        },
+        "values": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecolormatrix-values"
+          ]
+        }
+      }
+    },
+    "feComponentTransfer": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feComponentTransferElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        }
+      }
+    },
+    "feComposite": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feCompositeElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "in2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-in2"
+          ]
+        },
+        "k1": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-k1"
+          ]
+        },
+        "k2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-k2"
+          ]
+        },
+        "k3": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-k3"
+          ]
+        },
+        "k4": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-k4"
+          ]
+        },
+        "operator": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fecomposite-operator"
+          ]
+        }
+      }
+    },
+    "feConvolveMatrix": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feConvolveMatrixElement"
+      ],
+      "attributes": {
+        "bias": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-bias"
+          ]
+        },
+        "divisor": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-divisor"
+          ]
+        },
+        "edgeMode": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-edgemode"
+          ]
+        },
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "kernelMatrix": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-kernelmatrix"
+          ]
+        },
+        "kernelUnitLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-kernelunitlength"
+          ]
+        },
+        "order": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-order"
+          ]
+        },
+        "preserveAlpha": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-preservealpha"
+          ]
+        },
+        "targetX": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-targetx"
+          ]
+        },
+        "targetY": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feconvolvematrix-targety"
+          ]
+        }
+      }
+    },
+    "feDiffuseLighting": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feDiffuseLightingElement"
+      ],
+      "attributes": {
+        "diffuseConstant": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fediffuselighting-diffuseconstant"
+          ]
+        },
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "kernelUnitLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fediffuselighting-kernelunitlength"
+          ]
+        },
+        "surfaceScale": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fediffuselighting-surfacescale"
+          ]
+        }
+      }
+    },
+    "feDisplacementMap": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feDisplacementMapElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "in2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedisplacementmap-in2"
+          ]
+        },
+        "scale": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedisplacementmap-scale"
+          ]
+        },
+        "xChannelSelector": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedisplacementmap-xchannelselector"
+          ]
+        },
+        "yChannelSelector": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedisplacementmap-ychannelselector"
+          ]
+        }
+      }
+    },
+    "feDistantLight": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feDistantLightElement"
+      ],
+      "attributes": {
+        "azimuth": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedistantlight-azimuth"
+          ]
+        },
+        "elevation": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedistantlight-elevation"
+          ]
+        }
+      }
+    },
+    "feDropShadow": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feDropShadowElement"
+      ],
+      "attributes": {
+        "dx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedropshadow-dx"
+          ]
+        },
+        "dy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedropshadow-dy"
+          ]
+        },
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "stdDeviation": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fedropshadow-stddeviation"
+          ]
+        }
+      }
+    },
+    "feFlood": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feFloodElement"
+      ]
+    },
+    "feFuncA": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feFuncAElement"
+      ]
+    },
+    "feFuncB": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feFuncBElement"
+      ]
+    },
+    "feFuncG": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feFuncGElement"
+      ]
+    },
+    "feFuncR": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feFuncRElement"
+      ]
+    },
+    "feGaussianBlur": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feGaussianBlurElement"
+      ],
+      "attributes": {
+        "edgeMode": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#feGaussianBlurElement"
+          ]
+        },
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "stdDeviation": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fegaussianblur-stddeviation"
+          ]
+        }
+      }
+    },
+    "feImage": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feImageElement"
+      ],
+      "attributes": {
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feimage-crossorigin"
+          ]
+        },
+        "fetchpriority": {
+          "experimental": true
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feimage-href"
+          ]
+        },
+        "preserveAspectRatio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feimage-preserveaspectratio"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feimage-xlinkhref"
+          ]
+        }
+      }
+    },
+    "feMerge": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feMergeElement"
+      ]
+    },
+    "feMergeNode": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feMergeNodeElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        }
+      }
+    },
+    "feMorphology": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feMorphologyElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "operator": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-femorphology-operator"
+          ]
+        },
+        "radius": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-femorphology-radius"
+          ]
+        }
+      }
+    },
+    "feOffset": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feOffsetElement"
+      ],
+      "attributes": {
+        "dx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feoffset-dx"
+          ]
+        },
+        "dy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feoffset-dy"
+          ]
+        },
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        }
+      }
+    },
+    "fePointLight": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#fePointLightElement"
+      ],
+      "attributes": {
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fepointlight-x"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fepointlight-y"
+          ]
+        },
+        "z": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fepointlight-z"
+          ]
+        }
+      }
+    },
+    "feSpecularLighting": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feSpecularLightingElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        },
+        "kernelUnitLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespecularlighting-kernelunitlength"
+          ]
+        },
+        "specularConstant": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespecularlighting-specularconstant"
+          ]
+        },
+        "specularExponent": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent"
+          ]
+        },
+        "surfaceScale": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespecularlighting-surfacescale"
+          ]
+        }
+      }
+    },
+    "feSpotLight": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feSpotLightElement"
+      ],
+      "attributes": {
+        "limitingConeAngle": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-limitingconeangle"
+          ]
+        },
+        "pointsAtX": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-pointsatx"
+          ]
+        },
+        "pointsAtY": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-pointsaty"
+          ]
+        },
+        "pointsAtZ": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-pointsatz"
+          ]
+        },
+        "specularExponent": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-x"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-y"
+          ]
+        },
+        "z": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-fespotlight-z"
+          ]
+        }
+      }
+    },
+    "feTile": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feTileElement"
+      ],
+      "attributes": {
+        "in": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitive-in"
+          ]
+        }
+      }
+    },
+    "feTurbulence": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#feTurbulenceElement"
+      ],
+      "attributes": {
+        "baseFrequency": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feturbulence-basefrequency"
+          ]
+        },
+        "numOctaves": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feturbulence-numoctaves"
+          ]
+        },
+        "seed": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feturbulence-seed"
+          ]
+        },
+        "stitchTiles": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feturbulence-stitchtiles"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-feturbulence-type"
+          ]
+        }
+      }
+    },
+    "filter": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#FilterElement"
+      ],
+      "attributes": {
+        "filterUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-filterunits"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-height"
+          ]
+        },
+        "primitiveUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-primitiveunits"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-width"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-x"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/filters.html#FilterElementHrefAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/filter-effects/#element-attrdef-filter-y"
+          ]
+        }
+      }
+    },
+    "foreignObject": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/embedded.html#ForeignObjectElement"
+      ],
+      "attributes": {
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#XProperty"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#YProperty"
+          ]
+        }
+      }
+    },
+    "g": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#GElement"
+      ],
+      "attributes": {
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "image": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/embedded.html#ImageElement"
+      ],
+      "attributes": {
+        "crossorigin": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/embedded.html#ImageElementCrossoriginAttribute"
+          ]
+        },
+        "decoding": {
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-img-decoding"
+          ]
+        },
+        "fetchpriority": {
+          "experimental": true
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/embedded.html#ImageElementHrefAttribute"
+          ]
+        },
+        "preserveAspectRatio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#PreserveAspectRatioAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#XProperty"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#YProperty"
+          ]
+        }
+      }
+    },
+    "line": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#LineElement"
+      ],
+      "attributes": {
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "x1": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#LineElementX1Attribute"
+          ]
+        },
+        "x2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#LineElementX2Attribute"
+          ]
+        },
+        "y1": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#LineElementY1Attribute"
+          ]
+        },
+        "y2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#LineElementY2Attribute"
+          ]
+        }
+      }
+    },
+    "linearGradient": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradients"
+      ],
+      "attributes": {
+        "gradientTransform": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementGradientTransformAttribute"
+          ]
+        },
+        "gradientUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementHrefAttribute"
+          ]
+        },
+        "spreadMethod": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementSpreadMethodAttribute"
+          ]
+        },
+        "x1": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementX1Attribute"
+          ]
+        },
+        "x2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementX2Attribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        },
+        "y1": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementY1Attribute"
+          ]
+        },
+        "y2": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#LinearGradientElementY2Attribute"
+          ]
+        }
+      }
+    },
+    "marker": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElement"
+      ],
+      "attributes": {
+        "markerHeight": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerHeightAttribute"
+          ]
+        },
+        "markerUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerUnitsAttribute"
+          ]
+        },
+        "markerWidth": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerWidthAttribute"
+          ]
+        },
+        "orient": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#OrientAttribute"
+          ]
+        },
+        "refX": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefXAttribute"
+          ]
+        },
+        "refY": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefYAttribute"
+          ]
+        },
+        "viewBox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#ViewBoxAttribute"
+          ]
+        }
+      }
+    },
+    "mask": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#MaskElement"
+      ],
+      "attributes": {
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-height"
+          ]
+        },
+        "maskContentUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-maskcontentunits"
+          ]
+        },
+        "maskUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-maskunits"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-width"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-x"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://drafts.csswg.org/css-masking/#element-attrdef-mask-y"
+          ]
+        }
+      }
+    },
+    "metadata": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#MetadataElement"
+      ]
+    },
+    "mpath": {
+      "standard_track": true,
+      "spec_url": [
+        "https://svgwg.org/specs/animations/#MPathElement"
+      ],
+      "attributes": {
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#MPathElementHrefAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkRefAttrs"
+          ]
+        }
+      }
+    },
+    "path": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathElement"
+      ],
+      "attributes": {
+        "d": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#DProperty",
+            "https://www.w3.org/TR/SVG11/fonts.html#GlyphElementDAttribute",
+            "https://www.w3.org/TR/SVG11/paths.html#DAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "pattern": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#Patterns"
+      ],
+      "attributes": {
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHeightAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHrefAttribute"
+          ]
+        },
+        "patternContentUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementPatternContentUnitsAttribute"
+          ]
+        },
+        "patternTransform": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementPatternTransformAttribute"
+          ]
+        },
+        "patternUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementPatternUnitsAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementWidthAttribute"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementXAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementYAttribute"
+          ]
+        }
+      }
+    },
+    "polygon": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolygonElement"
+      ],
+      "attributes": {
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "points": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolygonElementPointsAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "polyline": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolylineElement"
+      ],
+      "attributes": {
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "points": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolylineElementPointsAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "radialGradient": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradients"
+      ],
+      "attributes": {
+        "cx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementCXAttribute"
+          ]
+        },
+        "cy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementCYAttribute"
+          ]
+        },
+        "fr": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementFRAttribute"
+          ]
+        },
+        "fx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementFXAttribute"
+          ]
+        },
+        "fy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementFYAttribute"
+          ]
+        },
+        "gradientTransform": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementGradientTransformAttribute"
+          ]
+        },
+        "gradientUnits": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementHrefAttribute"
+          ]
+        },
+        "r": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementRAttribute"
+          ]
+        },
+        "spreadMethod": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#RadialGradientElementSpreadMethodAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        }
+      }
+    },
+    "rect": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/shapes.html#RectElement"
+      ],
+      "attributes": {
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "pathLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute"
+          ]
+        },
+        "rx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RxProperty"
+          ]
+        },
+        "ry": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RyProperty"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#XProperty"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#YProperty"
+          ]
+        }
+      }
+    },
+    "script": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElement"
+      ],
+      "attributes": {
+        "async": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-async"
+          ]
+        },
+        "defer": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://html.spec.whatwg.org/multipage/scripting.html#attr-script-defer"
+          ]
+        },
+        "fetchpriority": {
+          "experimental": true
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementHrefAttribute"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementTypeAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        }
+      }
+    },
+    "set": {
+      "standard_track": true,
+      "spec_url": [
+        "https://svgwg.org/specs/animations/#SetElement"
+      ],
+      "attributes": {
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#FillAttribute"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#HrefAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "to": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#SetElementToAttribute"
+          ]
+        }
+      }
+    },
+    "stop": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#GradientStops"
+      ],
+      "attributes": {
+        "offset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/pservers.html#StopElementOffsetAttribute"
+          ]
+        }
+      }
+    },
+    "style": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElement"
+      ],
+      "attributes": {
+        "media": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementMediaAttribute"
+          ]
+        },
+        "title": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTitleAttribute"
+          ]
+        },
+        "type": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTypeAttribute"
+          ]
+        }
+      }
+    },
+    "svg": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#NewDocument"
+      ],
+      "attributes": {
+        "baseProfile": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute"
+          ]
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementHeightAttribute"
+          ]
+        },
+        "preserveAspectRatio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "version": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementVersionAttribute"
+          ]
+        },
+        "viewBox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementWidthAttribute"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementXAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/struct.html#SVGElementYAttribute"
+          ]
+        },
+        "zoomAndPan": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/interact.html#ZoomAndPanAttribute"
+          ]
+        }
+      }
+    },
+    "switch": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#SwitchElement"
+      ],
+      "attributes": {
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        }
+      }
+    },
+    "symbol": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElement"
+      ],
+      "attributes": {
+        "preserveAspectRatio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#PreserveAspectRatioAttribute"
+          ]
+        },
+        "viewBox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#ViewBoxAttribute"
+          ]
+        }
+      }
+    },
+    "text": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElement"
+      ],
+      "attributes": {
+        "dx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDXAttribute"
+          ]
+        },
+        "dy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDYAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "lengthAdjust": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementLengthAdjustAttribute"
+          ]
+        },
+        "rotate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://svgwg.org/specs/animations/#RotateAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "textLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementTextLengthAttribute"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementXAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementYAttribute"
+          ]
+        }
+      }
+    },
+    "textPath": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElement"
+      ],
+      "attributes": {
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementHrefAttribute"
+          ]
+        },
+        "method": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementMethodAttribute"
+          ]
+        },
+        "path": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementPathAttribute"
+          ]
+        },
+        "side": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementSideAttribute"
+          ]
+        },
+        "spacing": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementSpacingAttribute"
+          ]
+        },
+        "startOffset": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementStartOffsetAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "textLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementTextLengthAttribute"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        }
+      }
+    },
+    "title": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#DescriptionAndTitleElements"
+      ],
+      "attributes": {
+        "tooltip_display": {}
+      }
+    },
+    "tspan": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElement"
+      ],
+      "attributes": {
+        "dx": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDXAttribute"
+          ]
+        },
+        "dy": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDYAttribute"
+          ]
+        },
+        "fill": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingFillPaint"
+          ]
+        },
+        "lengthAdjust": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementLengthAdjustAttribute"
+          ]
+        },
+        "rotate": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementRotateAttribute"
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "textLength": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementTextLengthAttribute"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementXAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementYAttribute"
+          ]
+        }
+      }
+    },
+    "use": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#UseElement"
+      ],
+      "attributes": {
+        "data_uri": {
+          "standard_track": true
+        },
+        "external_uri": {
+          "standard_track": true
+        },
+        "height": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "href": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/struct.html#UseElementHrefAttribute"
+          ]
+        },
+        "omit_external_fragment": {
+          "experimental": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/struct.html#:~:text=Allow%20%E2%80%98use%E2%80%99%20to%20reference%20an%20external%20document's%20root%20element%20by%20omitting%20the%20fragment."
+          ]
+        },
+        "systemLanguage": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/types.html#__svg__SVGTests__systemLanguage"
+          ]
+        },
+        "width": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing"
+          ]
+        },
+        "x": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#XProperty"
+          ]
+        },
+        "xlink_href": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#XLinkHrefAttribute"
+          ]
+        },
+        "y": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/geometry.html#YProperty"
+          ]
+        }
+      }
+    },
+    "view": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/linking.html#ViewElement"
+      ],
+      "attributes": {
+        "preserveAspectRatio": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#PreserveAspectRatioAttribute"
+          ]
+        },
+        "svgView": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/linking.html#SVGViewSpecification"
+          ]
+        },
+        "viewBox": {
+          "standard_track": true,
+          "spec_url": [
+            "https://w3c.github.io/svgwg/svg2-draft/coords.html#ViewBoxAttribute"
+          ]
+        },
+        "zoomAndPan": {
+          "deprecated": true,
+          "standard_track": true,
+          "spec_url": [
+            "https://www.w3.org/TR/SVG11/interact.html#ZoomAndPanAttribute"
+          ]
+        }
+      }
+    }
+  },
+  "global_attributes": {
+    "alignment-baseline": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-inline/#alignment-baseline-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#AlignmentBaselineProperty"
+      ]
+    },
+    "autofocus": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#autofocusattribute"
+      ]
+    },
+    "baseline-shift": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-inline/#baseline-shift-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#BaselineShiftProperty"
+      ]
+    },
+    "class": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/styling.html#ElementSpecificStyling"
+      ]
+    },
+    "clip": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#clip-property"
+      ]
+    },
+    "clip-path": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#the-clip-path"
+      ]
+    },
+    "clip-rule": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#the-clip-rule"
+      ]
+    },
+    "color": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-color/#the-color-property",
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#ColorProperty"
+      ]
+    },
+    "color-interpolation": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#ColorInterpolationProperty"
+      ]
+    },
+    "color-interpolation-filters": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#ColorInterpolationFiltersProperty"
+      ]
+    },
+    "cursor": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-ui/#cursor"
+      ]
+    },
+    "data_attributes": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#DataAttributes"
+      ]
+    },
+    "direction": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-writing-modes/#direction",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#DirectionProperty"
+      ]
+    },
+    "display": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-display/#the-display-properties",
+        "https://w3c.github.io/svgwg/svg2-draft/render.html#VisibilityControl"
+      ]
+    },
+    "dominant-baseline": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-inline/#dominant-baseline-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#DominantBaselineProperty"
+      ]
+    },
+    "fill-opacity": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#FillOpacity"
+      ]
+    },
+    "fill-rule": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#WindingRule"
+      ]
+    },
+    "filter": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#FilterProperty"
+      ]
+    },
+    "flood-color": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#FloodColorProperty"
+      ]
+    },
+    "flood-opacity": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#FloodOpacityProperty"
+      ]
+    },
+    "focusgroup": {
+      "experimental": true
+    },
+    "focusgroupstart": {
+      "experimental": true
+    },
+    "font-family": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#generic-font-families",
+        "https://drafts.csswg.org/css-fonts/#font-family-prop"
+      ]
+    },
+    "font-size": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-size-prop"
+      ]
+    },
+    "font-size-adjust": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-size-adjust-prop"
+      ]
+    },
+    "font-stretch": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-stretch-prop",
+        "https://w3c.github.io/svgwg/svg2-draft/styling.html#:~:text=font-stretch"
+      ]
+    },
+    "font-style": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-style-prop"
+      ]
+    },
+    "font-variant": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-variant-prop",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#FontVariantProperty"
+      ]
+    },
+    "font-weight": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-fonts/#font-weight-prop"
+      ]
+    },
+    "font-width": {
+      "experimental": true
+    },
+    "glyph-orientation-horizontal": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#GlyphOrientationHorizontalProperty"
+      ]
+    },
+    "glyph-orientation-vertical": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#GlyphOrientationVerticalProperty"
+      ]
+    },
+    "id": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#Core.attrib"
+      ]
+    },
+    "image-rendering": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-images/#the-image-rendering",
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#ImageRendering"
+      ]
+    },
+    "lang": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#LangSpaceAttrs"
+      ]
+    },
+    "letter-spacing": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-text/#letter-spacing-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#LetterSpacingProperty"
+      ]
+    },
+    "lighting-color": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/filter-effects/#LightingColorProperty"
+      ]
+    },
+    "marker-end": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerEndProperty"
+      ]
+    },
+    "marker-mid": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerMidProperty"
+      ]
+    },
+    "marker-start": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerStartProperty"
+      ]
+    },
+    "mask": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-masking/#the-mask"
+      ]
+    },
+    "opacity": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-color/#propdef-opacity",
+        "https://w3c.github.io/svgwg/svg2-draft/render.html#ObjectAndGroupOpacityProperties"
+      ]
+    },
+    "overflow": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-overflow/#propdef-overflow",
+        "https://w3c.github.io/svgwg/svg2-draft/render.html#OverflowAndClipProperties"
+      ]
+    },
+    "paint-order": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#PaintOrderProperty"
+      ]
+    },
+    "pointer-events": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/interact.html#PointerEventsProperty"
+      ]
+    },
+    "requiredExtensions": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#RequiredExtensionsAttribute"
+      ]
+    },
+    "shape-rendering": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#ShapeRendering"
+      ]
+    },
+    "stop-color": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#StopColorProperty"
+      ]
+    },
+    "stop-opacity": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/pservers.html#StopOpacityProperty"
+      ]
+    },
+    "stroke": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#SpecifyingStrokePaint"
+      ]
+    },
+    "stroke-dasharray": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeDashing"
+      ]
+    },
+    "stroke-dashoffset": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeDashoffsetProperty"
+      ]
+    },
+    "stroke-linecap": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#LineCaps"
+      ]
+    },
+    "stroke-linejoin": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#LineJoin"
+      ]
+    },
+    "stroke-miterlimit": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeMiterlimitProperty"
+      ]
+    },
+    "stroke-opacity": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeOpacity"
+      ]
+    },
+    "stroke-width": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeWidth"
+      ]
+    },
+    "style": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/styling.html#ElementSpecificStyling"
+      ]
+    },
+    "tabindex": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#tabindexattribute"
+      ]
+    },
+    "text-anchor": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextAnchorProperty"
+      ]
+    },
+    "text-decoration": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-text-decor/#text-decoration-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextDecorationProperties"
+      ]
+    },
+    "text-overflow": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-overflow/#text-overflow",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextOverflowProperty"
+      ]
+    },
+    "text-rendering": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/painting.html#TextRenderingProperty"
+      ]
+    },
+    "transform": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-transforms/#svg-transform",
+        "https://w3c.github.io/svgwg/svg2-draft/coords.html#TransformProperty"
+      ]
+    },
+    "transform-origin": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-transforms/#transform-origin-property",
+        "https://w3c.github.io/svgwg/svg2-draft/styling.html#PresentationAttributes"
+      ]
+    },
+    "unicode-bidi": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-writing-modes/#unicode-bidi"
+      ]
+    },
+    "vector-effect": {
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/coords.html#VectorEffectProperty"
+      ]
+    },
+    "visibility": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-display/#visibility",
+        "https://w3c.github.io/svgwg/svg2-draft/render.html#VisibilityControl"
+      ]
+    },
+    "white-space": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-text-4/#white-space-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#TextWhiteSpace"
+      ]
+    },
+    "word-spacing": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-text/#word-spacing-property",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#WordSpacingProperty"
+      ]
+    },
+    "writing-mode": {
+      "standard_track": true,
+      "spec_url": [
+        "https://drafts.csswg.org/css-writing-modes/#block-flow",
+        "https://w3c.github.io/svgwg/svg2-draft/text.html#WritingModeProperty"
+      ]
+    },
+    "xml_lang": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#LangSpaceAttrs"
+      ]
+    },
+    "xml_space": {
+      "deprecated": true,
+      "standard_track": true,
+      "spec_url": [
+        "https://w3c.github.io/svgwg/svg2-draft/struct.html#WhitespaceProcessingXMLSpaceAttribute"
+      ]
+    }
+  }
+}
