@@ -1,6 +1,6 @@
 {
   "spec": "html",
-  "whatwg_index_used": false,
+  "whatwg_index_used": true,
   "elements": {
     "a": {
       "source": "webref:html",
@@ -483,7 +483,7 @@
     "@global/autofocus": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "@global/class": {
       "kind": "SST",
@@ -528,12 +528,12 @@
     "@global/headingoffset": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "@global/headingreset": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "@global/hidden": {
       "kind": "Enum",
@@ -544,12 +544,12 @@
     "@global/id": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "@global/inert": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "@global/inputmode": {
       "kind": "Enum",
@@ -560,35 +560,35 @@
     "@global/is": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "@global/itemid": {
       "kind": "URL",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "Microdata globals are not listed by browser-compat-data; valid URL potentially surrounded by spaces."
     },
     "@global/itemprop": {
       "kind": "SST",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "Microdata; unordered set of unique space-separated tokens."
     },
     "@global/itemref": {
       "kind": "SST",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "Microdata; unordered set of unique space-separated tokens (IDs)."
     },
     "@global/itemscope": {
       "kind": "Bool",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "Microdata; boolean attribute."
     },
     "@global/itemtype": {
       "kind": "SST",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "Microdata; unordered set of unique space-separated tokens (absolute URLs)."
     },
@@ -600,7 +600,7 @@
     "@global/nonce": {
       "kind": "String",
       "source": "idl",
-      "type_source": "idl-unreflected"
+      "type_source": "whatwg"
     },
     "@global/part": {
       "kind": "SST",
@@ -623,7 +623,7 @@
     "@global/slot": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "@global/spellcheck": {
       "kind": "Enum",
@@ -634,12 +634,12 @@
     "@global/style": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "@global/tabindex": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "@global/title": {
       "kind": "String",
@@ -667,7 +667,7 @@
     "a/href": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "a/hreflang": {
       "kind": "String",
@@ -689,7 +689,7 @@
     "a/rel": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "a/target": {
       "kind": "String",
@@ -720,7 +720,7 @@
     "area/href": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "area/hreflang": {
       "kind": "String",
@@ -742,7 +742,7 @@
     "area/rel": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "area/shape": {
       "kind": "Enum",
@@ -763,12 +763,12 @@
     "audio/autoplay": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "audio/controls": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "audio/controlslist": {
       "kind": "SST",
@@ -797,12 +797,12 @@
     "audio/loop": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "audio/muted": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "audio/preload": {
       "kind": "Enum",
@@ -813,12 +813,12 @@
     "audio/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "base/href": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "base/target": {
       "kind": "String",
@@ -828,7 +828,7 @@
     "blockquote/cite": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "body/onafterprint": {
       "kind": "String",
@@ -934,17 +934,17 @@
     "button/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "button/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "button/formaction": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "button/formenctype": {
       "kind": "Enum",
@@ -961,7 +961,7 @@
     "button/formnovalidate": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "button/formtarget": {
       "kind": "String",
@@ -1010,12 +1010,12 @@
     "col/span": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "colgroup/span": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "data/value": {
       "kind": "String",
@@ -1025,7 +1025,7 @@
     "del/cite": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "del/datetime": {
       "kind": "String",
@@ -1040,7 +1040,7 @@
     "details/open": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "dialog/closedby": {
       "kind": "Enum",
@@ -1051,7 +1051,12 @@
     "dialog/open": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
+    },
+    "embed/any": {
+      "kind": "String",
+      "source": "whatwg",
+      "type_source": "default"
     },
     "embed/height": {
       "kind": "Number",
@@ -1062,7 +1067,7 @@
     "embed/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "embed/type": {
       "kind": "String",
@@ -1078,12 +1083,12 @@
     "fieldset/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "fieldset/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "fieldset/name": {
       "kind": "String",
@@ -1098,7 +1103,7 @@
     "form/action": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "form/autocomplete": {
       "kind": "Enum",
@@ -1126,7 +1131,7 @@
     "form/novalidate": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "form/rel": {
       "kind": "SST",
@@ -1146,7 +1151,7 @@
     "iframe/allowfullscreen": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "iframe/height": {
       "kind": "Number",
@@ -1174,17 +1179,17 @@
     "iframe/sandbox": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "iframe/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "iframe/srcdoc": {
       "kind": "String",
       "source": "idl",
-      "type_source": "idl-unreflected"
+      "type_source": "whatwg"
     },
     "iframe/width": {
       "kind": "Number",
@@ -1200,7 +1205,7 @@
     "img/controls": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "img/crossorigin": {
       "kind": "Enum",
@@ -1229,7 +1234,7 @@
     "img/ismap": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "img/loading": {
       "kind": "Enum",
@@ -1251,7 +1256,7 @@
     "img/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "img/srcset": {
       "kind": "String",
@@ -1277,7 +1282,7 @@
     "input/alpha": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/alt": {
       "kind": "String",
@@ -1299,7 +1304,7 @@
     "input/checked": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/colorspace": {
       "kind": "Enum",
@@ -1315,17 +1320,17 @@
     "input/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "input/formaction": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/formenctype": {
       "kind": "Enum",
@@ -1342,7 +1347,7 @@
     "input/formnovalidate": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/formtarget": {
       "kind": "String",
@@ -1357,7 +1362,7 @@
     },
     "input/list": {
       "kind": "String",
-      "source": "overlay",
+      "source": "whatwg",
       "type_source": "overlay-pending",
       "reason": "ID of a datalist; IDL exposes a read-only element reference and browser-compat-data does not list it."
     },
@@ -1369,7 +1374,7 @@
     "input/maxlength": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/min": {
       "kind": "String",
@@ -1379,12 +1384,12 @@
     "input/minlength": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/multiple": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/name": {
       "kind": "String",
@@ -1415,27 +1420,27 @@
     "input/readonly": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/required": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/size": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/step": {
-      "kind": "String",
+      "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "input/type": {
       "kind": "Enum",
@@ -1462,7 +1467,7 @@
     "ins/cite": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "ins/datetime": {
       "kind": "String",
@@ -1477,17 +1482,22 @@
     "li/value": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "link/as": {
       "kind": "String",
       "source": "idl",
-      "type_source": "idl-unreflected"
+      "type_source": "whatwg"
     },
     "link/blocking": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
+    },
+    "link/color": {
+      "kind": "String",
+      "source": "whatwg",
+      "type_source": "whatwg"
     },
     "link/crossorigin": {
       "kind": "Enum",
@@ -1498,7 +1508,7 @@
     "link/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "link/fetchpriority": {
       "kind": "Enum",
@@ -1509,7 +1519,7 @@
     "link/href": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "link/hreflang": {
       "kind": "String",
@@ -1545,12 +1555,12 @@
     "link/rel": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "link/sizes": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "link/type": {
       "kind": "String",
@@ -1563,9 +1573,9 @@
       "type_source": "idl"
     },
     "meta/charset": {
-      "kind": "String",
+      "kind": "Enum",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "meta/content": {
       "kind": "String",
@@ -1591,42 +1601,42 @@
     "meter/high": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "meter/low": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "meter/max": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "meter/min": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "meter/optimum": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "meter/value": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "object/data": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "object/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "object/height": {
       "kind": "Number",
@@ -1653,12 +1663,12 @@
     "ol/reversed": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "ol/start": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "ol/type": {
       "kind": "Char",
@@ -1669,7 +1679,7 @@
     "optgroup/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "optgroup/label": {
       "kind": "String",
@@ -1679,32 +1689,32 @@
     "option/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "option/label": {
       "kind": "String",
       "source": "idl",
-      "type_source": "idl-setter"
+      "type_source": "whatwg"
     },
     "option/selected": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "option/value": {
       "kind": "String",
       "source": "idl",
-      "type_source": "idl-setter"
+      "type_source": "whatwg"
     },
     "output/for": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "output/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "output/name": {
       "kind": "String",
@@ -1714,17 +1724,17 @@
     "progress/max": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "progress/value": {
       "kind": "Float",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "q/cite": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "script/async": {
       "kind": "Bool",
@@ -1735,7 +1745,7 @@
     "script/blocking": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "script/crossorigin": {
       "kind": "Enum",
@@ -1746,7 +1756,7 @@
     "script/defer": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "script/fetchpriority": {
       "kind": "Enum",
@@ -1762,7 +1772,7 @@
     "script/nomodule": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "script/referrerpolicy": {
       "kind": "Enum",
@@ -1773,12 +1783,12 @@
     "script/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl-unreflected"
+      "type_source": "whatwg"
     },
     "script/type": {
-      "kind": "String",
+      "kind": "Enum",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "select/autocomplete": {
       "kind": "SST",
@@ -1789,17 +1799,17 @@
     "select/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "select/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "select/multiple": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "select/name": {
       "kind": "String",
@@ -1809,12 +1819,12 @@
     "select/required": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "select/size": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "slot/name": {
       "kind": "String",
@@ -1840,7 +1850,7 @@
     "source/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "source/srcset": {
       "kind": "String",
@@ -1861,7 +1871,7 @@
     "style/blocking": {
       "kind": "SST",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "style/media": {
       "kind": "String",
@@ -1871,7 +1881,7 @@
     "td/colspan": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "td/headers": {
       "kind": "SST",
@@ -1882,7 +1892,7 @@
     "td/rowspan": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "template/for": {
       "kind": "String",
@@ -1892,17 +1902,17 @@
     "template/shadowrootclonable": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "template/shadowrootcustomelementregistry": {
-      "kind": "String",
+      "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "template/shadowrootdelegatesfocus": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "template/shadowrootmode": {
       "kind": "Enum",
@@ -1913,12 +1923,12 @@
     "template/shadowrootserializable": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "template/shadowrootslotassignment": {
-      "kind": "String",
+      "kind": "Enum",
       "source": "idl",
-      "type_source": "idl-unreflected"
+      "type_source": "whatwg"
     },
     "textarea/autocomplete": {
       "kind": "SST",
@@ -1929,7 +1939,7 @@
     "textarea/cols": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/dirname": {
       "kind": "String",
@@ -1939,22 +1949,22 @@
     "textarea/disabled": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/form": {
       "kind": "String",
       "source": "bcd",
-      "type_source": "default"
+      "type_source": "whatwg"
     },
     "textarea/maxlength": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/minlength": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/name": {
       "kind": "String",
@@ -1969,17 +1979,17 @@
     "textarea/readonly": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/required": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/rows": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "textarea/wrap": {
       "kind": "Enum",
@@ -1995,7 +2005,7 @@
     "th/colspan": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "th/headers": {
       "kind": "SST",
@@ -2006,7 +2016,7 @@
     "th/rowspan": {
       "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "th/scope": {
       "kind": "Enum",
@@ -2015,14 +2025,14 @@
       "reason": "Enumerated attribute; the legacy document typed it as String."
     },
     "time/datetime": {
-      "kind": "String",
+      "kind": "Number",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "track/default": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "track/kind": {
       "kind": "Enum",
@@ -2038,7 +2048,7 @@
     "track/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "track/srclang": {
       "kind": "String",
@@ -2048,12 +2058,12 @@
     "video/autoplay": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/controls": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/controlslist": {
       "kind": "SST",
@@ -2094,22 +2104,22 @@
     "video/loop": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/muted": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/playsinline": {
       "kind": "Bool",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/poster": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/preload": {
       "kind": "Enum",
@@ -2120,7 +2130,7 @@
     "video/src": {
       "kind": "URL",
       "source": "idl",
-      "type_source": "idl"
+      "type_source": "whatwg"
     },
     "video/width": {
       "kind": "Number",

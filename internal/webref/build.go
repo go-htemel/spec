@@ -224,22 +224,20 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 		if l := b.legacyElement(d.tag); l != nil {
 			e.Description = l.Description
 		}
-		flags := "overlay"
+		// Void is the HTML syntax's void element list, which the overlay carries: no index table
+		// states it. The index's Children column only says whether the content model is empty, which
+		// is also true of iframe, template and selectedcontent, so it can only cross-check one way.
+		e.Void = contains(b.ov.Void, d.tag)
 		if b.whatwg != nil {
 			if w, ok := b.whatwg.Elements[d.tag]; ok {
-				e.Void = w.Void()
 				e.Categories = w.Categories
 				if e.Description == "" {
 					e.Description = w.Description
 				}
-				flags = "whatwg"
-				if e.Void != contains(b.ov.Void, d.tag) {
-					b.warn("<%s>: WHATWG index says void=%v, overlay void list disagrees", d.tag, e.Void)
+				if e.Void && !w.EmptyContentModel() {
+					b.warn("<%s>: in the overlay void list but the WHATWG index gives it children %q", d.tag, w.Children)
 				}
 			}
-		}
-		if flags == "overlay" {
-			e.Void = contains(b.ov.Void, d.tag)
 		}
 		if len(b.ov.Text) > 0 {
 			e.Text = contains(b.ov.Text, d.tag)
@@ -247,7 +245,7 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 			e.Text = !e.Void && !contains(b.ov.NoText, d.tag)
 		}
 		e.RawText = contains(b.ov.RawText, d.tag)
-		b.prov.Elements[d.tag] = ElementProvenance{Source: "webref:" + d.file, FlagsSrc: flags}
+		b.prov.Elements[d.tag] = ElementProvenance{Source: "webref:" + d.file, FlagsSrc: "overlay"}
 
 		for _, name := range sortedKeys(attrs) {
 			a := attrs[name]

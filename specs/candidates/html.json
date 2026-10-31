@@ -63,19 +63,34 @@
         }
       ],
       "text": true,
-      "interface": "HTMLAnchorElement"
+      "interface": "HTMLAnchorElement",
+      "categories": [
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "abbr",
       "description": "The abbr element represents an abbreviation or acronym, optionally with its expansion. The title attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and nothing else.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "address",
       "description": "The address element represents the contact information for its nearest article or body element ancestor. If that is the body element, then the contact information applies to the document as a whole.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "area",
@@ -160,19 +175,33 @@
         }
       ],
       "void": true,
-      "interface": "HTMLAreaElement"
+      "interface": "HTMLAreaElement",
+      "categories": [
+        "flow",
+        "phrasing"
+      ]
     },
     {
       "tag": "article",
       "description": "The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "sectioning"
+      ]
     },
     {
       "tag": "aside",
       "description": "The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "sectioning"
+      ]
     },
     {
       "tag": "audio",
@@ -209,6 +238,7 @@
         },
         {
           "name": "loading",
+          "description": "Used when determining loading deferral",
           "allowed": {
             "eager": {},
             "lazy": {}
@@ -247,13 +277,25 @@
         }
       ],
       "text": true,
-      "interface": "HTMLAudioElement"
+      "interface": "HTMLAudioElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "b",
       "description": "The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "base",
@@ -272,19 +314,32 @@
         }
       ],
       "void": true,
-      "interface": "HTMLBaseElement"
+      "interface": "HTMLBaseElement",
+      "categories": [
+        "metadata"
+      ]
     },
     {
       "tag": "bdi",
       "description": "The bdi element represents a span of text that is to be isolated from its surroundings for the purposes of bidirectional text formatting. [BIDI]",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "bdo",
       "description": "The bdo element represents explicit text directionality formatting control for its children. It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override. [BIDI]",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "blockquote",
@@ -298,7 +353,11 @@
         }
       ],
       "text": true,
-      "interface": "HTMLQuoteElement"
+      "interface": "HTMLQuoteElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "body",
@@ -384,7 +443,11 @@
       "tag": "br",
       "description": "The br element represents a line break.",
       "void": true,
-      "interface": "HTMLBRElement"
+      "interface": "HTMLBRElement",
+      "categories": [
+        "flow",
+        "phrasing"
+      ]
     },
     {
       "tag": "button",
@@ -501,7 +564,17 @@
         }
       ],
       "text": true,
-      "interface": "HTMLButtonElement"
+      "interface": "HTMLButtonElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "interactive",
+        "labelable",
+        "listed",
+        "palpable",
+        "phrasing",
+        "submittable"
+      ]
     },
     {
       "tag": "canvas",
@@ -519,7 +592,13 @@
         }
       ],
       "text": true,
-      "interface": "HTMLCanvasElement"
+      "interface": "HTMLCanvasElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "caption",
@@ -531,13 +610,23 @@
       "tag": "cite",
       "description": "The cite element represents the title of a work (e.g. a book, a paper, an essay, a poem, a score, a song, a script, a film, a TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an exhibition, a legal case report, a computer program,  etc.). This can be a work that is being quoted or referenced in detail (i.e., a citation), or it can just be a work that is mentioned in passing.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "code",
       "description": "The code element represents a fragment of computer code. This could be an XML element name, a filename, a computer program, or any other string that a computer would recognize.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "col",
@@ -575,13 +664,22 @@
         }
       ],
       "text": true,
-      "interface": "HTMLDataElement"
+      "interface": "HTMLDataElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "datalist",
       "description": "The datalist element represents a set of option elements that represent predefined options for other controls. In the rendering, the datalist element represents nothing and it, along with its children, should be hidden.",
       "text": true,
-      "interface": "HTMLDataListElement"
+      "interface": "HTMLDataListElement",
+      "categories": [
+        "flow",
+        "phrasing"
+      ]
     },
     {
       "tag": "dd",
@@ -606,7 +704,12 @@
         }
       ],
       "text": true,
-      "interface": "HTMLModElement"
+      "interface": "HTMLModElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "details",
@@ -624,13 +727,23 @@
         }
       ],
       "text": true,
-      "interface": "HTMLDetailsElement"
+      "interface": "HTMLDetailsElement",
+      "categories": [
+        "flow",
+        "interactive",
+        "palpable"
+      ]
     },
     {
       "tag": "dfn",
       "description": "The dfn element represents the defining instance of a term. The paragraph, description list group, or section that is the nearest ancestor of the dfn element must also contain the definition(s) for the term given by the dfn element.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "dialog",
@@ -655,18 +768,29 @@
         }
       ],
       "text": true,
-      "interface": "HTMLDialogElement"
+      "interface": "HTMLDialogElement",
+      "categories": [
+        "flow"
+      ]
     },
     {
       "tag": "div",
       "description": "The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements. It can also be used in a dl element, wrapping groups of dt and dd elements.",
       "text": true,
-      "interface": "HTMLDivElement"
+      "interface": "HTMLDivElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "dl",
       "description": "The dl element represents an association list consisting of zero or more name-value groups (a description list). A name-value group consists of one or more names (dt elements, possibly as children of a div element child) followed by one or more values (dd elements, possibly as children of a div element child), ignoring any nodes other than dt and dd element children, and dt and dd elements that are children of div element children. Within a single dl element, there should not be more than one dt element for each name.",
-      "interface": "HTMLDListElement"
+      "interface": "HTMLDListElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "dt",
@@ -678,12 +802,21 @@
       "tag": "em",
       "description": "The em element represents stress emphasis of its contents.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "embed",
       "description": "The embed element provides an integration point for an external application or interactive content.",
       "attributes": [
+        {
+          "name": "any",
+          "attribute_type": "AttributeTypeString"
+        },
         {
           "name": "height",
           "description": "Vertical dimension",
@@ -707,7 +840,14 @@
         }
       ],
       "void": true,
-      "interface": "HTMLEmbedElement"
+      "interface": "HTMLEmbedElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "fieldset",
@@ -730,7 +870,13 @@
         }
       ],
       "text": true,
-      "interface": "HTMLFieldSetElement"
+      "interface": "HTMLFieldSetElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "listed",
+        "palpable"
+      ]
     },
     {
       "tag": "figcaption",
@@ -742,13 +888,21 @@
       "tag": "figure",
       "description": "The figure element represents some flow content, optionally with a caption, that is self-contained (like a complete sentence) and is typically referenced as a single unit from the main flow of the document.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "footer",
       "description": "The footer element represents a footer for its nearest ancestor sectioning content element, or for the body element if there is no such ancestor. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "form",
@@ -822,43 +976,77 @@
         }
       ],
       "text": true,
-      "interface": "HTMLFormElement"
+      "interface": "HTMLFormElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "h1",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "h2",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "h3",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "h4",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "h5",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "h6",
       "description": "These elements represent headings for their sections.",
       "text": true,
-      "interface": "HTMLHeadingElement"
+      "interface": "HTMLHeadingElement",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ]
     },
     {
       "tag": "head",
@@ -869,18 +1057,29 @@
       "tag": "header",
       "description": "The header element represents a group of introductory or navigational aids.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "hgroup",
       "description": "The hgroup element represents a heading and related content. The element may be used to group an h1–h6 element with one or more p elements containing content representing a subheading, alternative title, or tagline.",
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "hr",
       "description": "The hr element represents a paragraph-level thematic break, e.g., a scene change in a story, or a transition to another topic within a section of a reference book; alternatively, it represents a separator between a set of options of a select element.",
       "void": true,
-      "interface": "HTMLHRElement"
+      "interface": "HTMLHRElement",
+      "categories": [
+        "flow"
+      ]
     },
     {
       "tag": "html",
@@ -891,7 +1090,12 @@
       "tag": "i",
       "description": "The i element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought, or a ship name in Western texts.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "iframe",
@@ -967,7 +1171,14 @@
           "attribute_type": "AttributeTypeNumber"
         }
       ],
-      "interface": "HTMLIFrameElement"
+      "interface": "HTMLIFrameElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "img",
@@ -980,6 +1191,7 @@
         },
         {
           "name": "controls",
+          "description": "Show user agent controls",
           "attribute_type": "AttributeTypeBool"
         },
         {
@@ -1083,7 +1295,15 @@
         }
       ],
       "void": true,
-      "interface": "HTMLImageElement"
+      "interface": "HTMLImageElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "form-associated",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "input",
@@ -1281,7 +1501,7 @@
         {
           "name": "step",
           "description": "Granularity to be matched by the form control's value",
-          "attribute_type": "AttributeTypeString"
+          "attribute_type": "AttributeTypeFloat"
         },
         {
           "name": "type",
@@ -1330,7 +1550,18 @@
         }
       ],
       "void": true,
-      "interface": "HTMLInputElement"
+      "interface": "HTMLInputElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "interactive",
+        "labelable",
+        "listed",
+        "palpable",
+        "phrasing",
+        "resettable",
+        "submittable"
+      ]
     },
     {
       "tag": "ins",
@@ -1349,13 +1580,23 @@
         }
       ],
       "text": true,
-      "interface": "HTMLModElement"
+      "interface": "HTMLModElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "kbd",
       "description": "The kbd element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "label",
@@ -1368,7 +1609,13 @@
         }
       ],
       "text": true,
-      "interface": "HTMLLabelElement"
+      "interface": "HTMLLabelElement",
+      "categories": [
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "legend",
@@ -1402,6 +1649,11 @@
           "name": "blocking",
           "description": "Whether the element is potentially render-blocking",
           "attribute_type": "AttributeTypeSST"
+        },
+        {
+          "name": "color",
+          "description": "Color to use when customizing a site's icon (for rel=\"mask-icon\")",
+          "attribute_type": "AttributeTypeString"
         },
         {
           "name": "crossorigin",
@@ -1496,13 +1748,22 @@
         }
       ],
       "void": true,
-      "interface": "HTMLLinkElement"
+      "interface": "HTMLLinkElement",
+      "categories": [
+        "flow",
+        "metadata",
+        "phrasing"
+      ]
     },
     {
       "tag": "main",
       "description": "The main element represents the dominant contents of the document.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "map",
@@ -1515,18 +1776,32 @@
         }
       ],
       "text": true,
-      "interface": "HTMLMapElement"
+      "interface": "HTMLMapElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "mark",
       "description": "The mark element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context. When used in a quotation or other block of text referred to from the prose, it indicates a highlight that was not originally present but which has been added to bring the reader's attention to a part of the text that might not have been considered important by the original author when the block was originally written, but which is now under previously unexpected scrutiny. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its likely relevance to the user's current activity.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "menu",
       "description": "The menu element represents a toolbar consisting of its contents, in the form of an unordered list of items (represented by li elements), each of which represents a command that the user can perform or activate.",
-      "interface": "HTMLMenuElement"
+      "interface": "HTMLMenuElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "meta",
@@ -1535,7 +1810,12 @@
         {
           "name": "charset",
           "description": "Character encoding declaration",
-          "attribute_type": "AttributeTypeString"
+          "allowed": {
+            "utf-8": {}
+          },
+          "allow_empty": false,
+          "allow_custom": false,
+          "attribute_type": "AttributeTypeEnum"
         },
         {
           "name": "content",
@@ -1570,7 +1850,12 @@
         }
       ],
       "void": true,
-      "interface": "HTMLMetaElement"
+      "interface": "HTMLMetaElement",
+      "categories": [
+        "flow",
+        "metadata",
+        "phrasing"
+      ]
     },
     {
       "tag": "meter",
@@ -1608,19 +1893,35 @@
         }
       ],
       "text": true,
-      "interface": "HTMLMeterElement"
+      "interface": "HTMLMeterElement",
+      "categories": [
+        "flow",
+        "labelable",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "nav",
       "description": "The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "sectioning"
+      ]
     },
     {
       "tag": "noscript",
       "description": "The noscript element represents nothing if scripting is enabled, and represents its children if scripting is disabled. It is used to present different markup to user agents that support scripting and those that don't support scripting, by affecting how the document is parsed.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "metadata",
+        "phrasing"
+      ]
     },
     {
       "tag": "object",
@@ -1659,7 +1960,16 @@
         }
       ],
       "text": true,
-      "interface": "HTMLObjectElement"
+      "interface": "HTMLObjectElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "form-associated",
+        "interactive",
+        "listed",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "ol",
@@ -1681,7 +1991,11 @@
           "attribute_type": "AttributeTypeChar"
         }
       ],
-      "interface": "HTMLOListElement"
+      "interface": "HTMLOListElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "optgroup",
@@ -1749,24 +2063,47 @@
         }
       ],
       "text": true,
-      "interface": "HTMLOutputElement"
+      "interface": "HTMLOutputElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "labelable",
+        "listed",
+        "palpable",
+        "phrasing",
+        "resettable"
+      ]
     },
     {
       "tag": "p",
       "description": "The p element represents a paragraph.",
       "text": true,
-      "interface": "HTMLParagraphElement"
+      "interface": "HTMLParagraphElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "picture",
       "description": "The picture element is a container which provides multiple sources to its contained img element to allow authors to declaratively control or give hints to the user agent about which image resource to use, based on the screen pixel density, viewport size, image format, and other factors. It represents its children.",
-      "interface": "HTMLPictureElement"
+      "interface": "HTMLPictureElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "pre",
       "description": "The pre element represents a block of preformatted text, in which structure is represented by typographic conventions rather than by elements.",
       "text": true,
-      "interface": "HTMLPreElement"
+      "interface": "HTMLPreElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "progress",
@@ -1784,7 +2121,13 @@
         }
       ],
       "text": true,
-      "interface": "HTMLProgressElement"
+      "interface": "HTMLProgressElement",
+      "categories": [
+        "flow",
+        "labelable",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "q",
@@ -1798,7 +2141,12 @@
         }
       ],
       "text": true,
-      "interface": "HTMLQuoteElement"
+      "interface": "HTMLQuoteElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "rp",
@@ -1816,19 +2164,34 @@
       "tag": "ruby",
       "description": "The ruby element allows one or more spans of phrasing content to be marked with ruby annotations. Ruby annotations are short runs of text presented alongside base text, primarily used in East Asian typography as a guide for pronunciation or to include other annotations. In Japanese, this form of typography is also known as furigana.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "s",
       "description": "The s element represents contents that are no longer accurate or no longer relevant.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "samp",
       "description": "The samp element represents sample or quoted output from another program or computing system.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "script",
@@ -1908,24 +2271,47 @@
         {
           "name": "type",
           "description": "Type of script",
-          "attribute_type": "AttributeTypeString"
+          "allowed": {
+            "a valid MIME type string that is not a JavaScript MIME type essence match": {},
+            "importmap": {},
+            "module": {},
+            "speculationrules": {}
+          },
+          "allow_empty": false,
+          "allow_custom": false,
+          "attribute_type": "AttributeTypeEnum"
         }
       ],
       "text": true,
       "raw_text": true,
-      "interface": "HTMLScriptElement"
+      "interface": "HTMLScriptElement",
+      "categories": [
+        "flow",
+        "metadata",
+        "phrasing",
+        "script-supporting"
+      ]
     },
     {
       "tag": "search",
       "description": "The search element represents a part of a document or application that contains a set of form controls or other content related to performing a search or filtering operation. This could be a search of the web site or application; a way of searching or filtering search results on the current web page; or a global or Internet-wide search function.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "section",
       "description": "The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "sectioning"
+      ]
     },
     {
       "tag": "select",
@@ -1967,7 +2353,18 @@
           "attribute_type": "AttributeTypeNumber"
         }
       ],
-      "interface": "HTMLSelectElement"
+      "interface": "HTMLSelectElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "interactive",
+        "labelable",
+        "listed",
+        "palpable",
+        "phrasing",
+        "resettable",
+        "submittable"
+      ]
     },
     {
       "tag": "selectedcontent",
@@ -1986,13 +2383,22 @@
         }
       ],
       "text": true,
-      "interface": "HTMLSlotElement"
+      "interface": "HTMLSlotElement",
+      "categories": [
+        "flow",
+        "phrasing"
+      ]
     },
     {
       "tag": "small",
       "description": "The small element represents side comments such as small print.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "source",
@@ -2042,13 +2448,23 @@
       "tag": "span",
       "description": "The span element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. class, lang, or dir. It represents its children.",
       "text": true,
-      "interface": "HTMLSpanElement"
+      "interface": "HTMLSpanElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "strong",
       "description": "The strong element represents strong importance, seriousness, or urgency for its contents.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "style",
@@ -2067,13 +2483,22 @@
       ],
       "text": true,
       "raw_text": true,
-      "interface": "HTMLStyleElement"
+      "interface": "HTMLStyleElement",
+      "categories": [
+        "flow",
+        "metadata"
+      ]
     },
     {
       "tag": "sub",
       "description": "The sup element represents a superscript and the sub element represents a subscript.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "summary",
@@ -2083,13 +2508,23 @@
     },
     {
       "tag": "sup",
+      "description": "Superscript",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "table",
       "description": "The table element represents data with more than one dimension, in the form of a table.",
-      "interface": "HTMLTableElement"
+      "interface": "HTMLTableElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "tbody",
@@ -2102,6 +2537,7 @@
       "attributes": [
         {
           "name": "colspan",
+          "description": "Number of columns that the cell is to span",
           "attribute_type": "AttributeTypeNumber"
         },
         {
@@ -2124,6 +2560,7 @@
       "attributes": [
         {
           "name": "for",
+          "description": "Updates existing content",
           "attribute_type": "AttributeTypeString"
         },
         {
@@ -2134,10 +2571,11 @@
         {
           "name": "shadowrootcustomelementregistry",
           "description": "Enables declarative shadow roots to indicate they will use a custom element registry\n",
-          "attribute_type": "AttributeTypeString"
+          "attribute_type": "AttributeTypeBool"
         },
         {
           "name": "shadowrootdelegatesfocus",
+          "description": "Sets delegates focus on a declarative shadow root",
           "attribute_type": "AttributeTypeBool"
         },
         {
@@ -2158,11 +2596,24 @@
         },
         {
           "name": "shadowrootslotassignment",
-          "attribute_type": "AttributeTypeString"
+          "description": "Sets slot assignment on a declarative shadow root",
+          "allowed": {
+            "manual": {},
+            "named": {}
+          },
+          "allow_empty": false,
+          "allow_custom": false,
+          "attribute_type": "AttributeTypeEnum"
         }
       ],
       "text": true,
-      "interface": "HTMLTemplateElement"
+      "interface": "HTMLTemplateElement",
+      "categories": [
+        "flow",
+        "metadata",
+        "phrasing",
+        "script-supporting"
+      ]
     },
     {
       "tag": "textarea",
@@ -2241,7 +2692,18 @@
         }
       ],
       "text": true,
-      "interface": "HTMLTextAreaElement"
+      "interface": "HTMLTextAreaElement",
+      "categories": [
+        "flow",
+        "form-associated",
+        "interactive",
+        "labelable",
+        "listed",
+        "palpable",
+        "phrasing",
+        "resettable",
+        "submittable"
+      ]
     },
     {
       "tag": "tfoot",
@@ -2259,6 +2721,7 @@
         },
         {
           "name": "colspan",
+          "description": "Number of columns that the cell is to span",
           "attribute_type": "AttributeTypeNumber"
         },
         {
@@ -2286,7 +2749,10 @@
         }
       ],
       "text": true,
-      "interface": "HTMLTableCellElement"
+      "interface": "HTMLTableCellElement",
+      "categories": [
+        "interactive"
+      ]
     },
     {
       "tag": "thead",
@@ -2300,17 +2766,25 @@
         {
           "name": "datetime",
           "description": "Machine-readable value",
-          "attribute_type": "AttributeTypeString"
+          "attribute_type": "AttributeTypeNumber"
         }
       ],
       "text": true,
-      "interface": "HTMLTimeElement"
+      "interface": "HTMLTimeElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "title",
       "description": "The title element represents the document's title or name. Authors should use titles that identify their documents even when they are used out of context, for example in a user's history or bookmarks, or in search results. The document's title is often different from its first heading, since the first heading does not have to stand alone when taken out of context.",
       "text": true,
-      "interface": "HTMLTitleElement"
+      "interface": "HTMLTitleElement",
+      "categories": [
+        "metadata"
+      ]
     },
     {
       "tag": "tr",
@@ -2364,18 +2838,32 @@
       "tag": "u",
       "description": "The u element represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "ul",
       "description": "The ul element represents a list of items, where the order of the items is not important — that is, where changing the order would not materially change the meaning of the document.",
-      "interface": "HTMLUListElement"
+      "interface": "HTMLUListElement",
+      "categories": [
+        "flow",
+        "palpable"
+      ]
     },
     {
       "tag": "var",
       "description": "The var element represents a variable. This could be an actual variable in a mathematical expression or programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just be a term used as a placeholder in prose.",
       "text": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "video",
@@ -2421,6 +2909,7 @@
         },
         {
           "name": "loading",
+          "description": "Used when determining loading deferral",
           "allowed": {
             "eager": {},
             "lazy": {}
@@ -2475,13 +2964,24 @@
         }
       ],
       "text": true,
-      "interface": "HTMLVideoElement"
+      "interface": "HTMLVideoElement",
+      "categories": [
+        "embedded",
+        "flow",
+        "interactive",
+        "palpable",
+        "phrasing"
+      ]
     },
     {
       "tag": "wbr",
       "description": "The wbr element represents a line break opportunity.",
       "void": true,
-      "interface": "HTMLElement"
+      "interface": "HTMLElement",
+      "categories": [
+        "flow",
+        "phrasing"
+      ]
     }
   ],
   "attributes": [
@@ -2591,10 +3091,12 @@
     },
     {
       "name": "headingoffset",
+      "description": "Offsets heading levels for descendants",
       "attribute_type": "AttributeTypeNumber"
     },
     {
       "name": "headingreset",
+      "description": "Prevents a heading offset computation from traversing beyond the element with the attribute",
       "attribute_type": "AttributeTypeBool"
     },
     {
@@ -2637,6 +3139,7 @@
     },
     {
       "name": "is",
+      "description": "Creates a customized built-in element",
       "attribute_type": "AttributeTypeString"
     },
     {

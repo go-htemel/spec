@@ -20,8 +20,12 @@ type WHATWGElement struct {
 	Interface   string
 }
 
-// Void reports whether the element's content model is empty.
-func (e WHATWGElement) Void() bool { return strings.EqualFold(strings.TrimSpace(e.Children), "empty") }
+// EmptyContentModel reports whether the Children column says "empty" (content model: nothing).
+// That is wider than the HTML syntax's void elements: iframe, template and selectedcontent have an
+// empty content model but still take an end tag, so this must not be used to set spec.Element.Void.
+func (e WHATWGElement) EmptyContentModel() bool {
+	return strings.EqualFold(strings.TrimSpace(e.Children), "empty")
+}
 
 // WHATWGAttribute is one row of the "List of attributes" table.
 type WHATWGAttribute struct {

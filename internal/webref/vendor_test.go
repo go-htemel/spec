@@ -96,3 +96,17 @@ func TestFetchWHATWGRejectsBadSHA(t *testing.T) {
 		t.Error("expected an error for a non-hash revision")
 	}
 }
+
+func TestPinnedCommit(t *testing.T) {
+	const sha = "404b3eb14a7a936dddefb2d78e224dbeb01d2358"
+	cases := map[string]string{
+		`<a id="commit-snapshot-link" href="/commit-snapshots/` + sha + `/" class="changes">`: sha,
+		`<a href="https://github.com/whatwg/html/commit/` + sha + `">`:                        sha,
+		`<a href="https://github.com/whatwg/html/commits" class="changes">`:                   "",
+	}
+	for page, want := range cases {
+		if got := pinnedCommit([]byte(page)); got != want {
+			t.Errorf("pinnedCommit(%q) = %q, want %q", page, got, want)
+		}
+	}
+}

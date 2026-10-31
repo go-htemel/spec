@@ -234,11 +234,6 @@ func TestBuildWithWHATWG(t *testing.T) {
 	if src.WHATWG, err = ParseIndices(f); err != nil {
 		t.Fatal(err)
 	}
-	// Drop the overlay's stand-ins so the index is what decides.
-	ov := *src.Overlays["html"]
-	ov.Void = nil
-	src.Overlays["html"] = &ov
-
 	cfg, _ := ConfigByName("html")
 	sp, prov, err := Build(cfg, src, Options{})
 	if err != nil {
@@ -247,14 +242,16 @@ func TestBuildWithWHATWG(t *testing.T) {
 	if !prov.WHATWG {
 		t.Error("provenance does not record the index")
 	}
+	// The void flag stays with the overlay's syntax list: the index's Children column is "empty"
+	// for iframe and template too, which are not void.
 	br, a := element(sp, "br"), element(sp, "a")
 	if !br.Void || a.Void {
-		t.Errorf("void from index: br=%v a=%v", br.Void, a.Void)
+		t.Errorf("void: br=%v a=%v", br.Void, a.Void)
 	}
 	if !reflect.DeepEqual(a.Categories, []string{"flow", "interactive", "palpable", "phrasing"}) {
 		t.Errorf("a categories = %v", a.Categories)
 	}
-	if p := prov.Elements["br"]; p.FlagsSrc != "whatwg" {
+	if p := prov.Elements["br"]; p.FlagsSrc != "overlay" {
 		t.Errorf("br flags source = %q", p.FlagsSrc)
 	}
 	// target is a reflected DOMString; the index's free-text value must not override it.

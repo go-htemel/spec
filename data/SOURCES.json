@@ -51,9 +51,14 @@
     },
     {
       "name": "whatwg-html-indices",
-      "url": "https://html.spec.whatwg.org/commit-snapshots/\u003ccommit-sha\u003e/multipage/indices.html",
-      "status": "pending",
-      "note": "Not vendored yet: run `go run ./cmd/specgen2 fetch -sha \u003ccommit\u003e` from a machine that can reach html.spec.whatwg.org. Until then element categories, void/text flags and enumerated values come from overlay/html.json."
+      "version": "404b3eb14a7a936dddefb2d78e224dbeb01d2358",
+      "url": "https://html.spec.whatwg.org/commit-snapshots/404b3eb14a7a936dddefb2d78e224dbeb01d2358/",
+      "integrity": "sha256-5aa6749f93bbbb85ae8dd766f999cf3c27473da036e04520817156dc114c74db",
+      "retrieved": "2026-10-31",
+      "license": "CC-BY-4.0 (WHATWG HTML Living Standard)",
+      "files": [
+        "whatwg/indices.html"
+      ]
     }
   ]
 }

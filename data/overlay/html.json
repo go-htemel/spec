@@ -1,5 +1,5 @@
 {
-  "comment": "Judgment calls for the HTML document that no vendored source makes. Every attribute entry has a reason. Entries with \"pending\": \"whatwg-index\" restate what the WHATWG attribute index (data/whatwg/indices.html) says and become redundant once that snapshot is vendored; the rest are deliberate choices. void/no_text stand in for the index's Children column until then.",
+  "comment": "Judgment calls for the HTML document that no vendored source makes. Every attribute entry has a reason. Entries with \"pending\": \"whatwg-index\" restate what the WHATWG attribute index (data/whatwg/indices.html) says and become redundant once that snapshot is vendored; the rest are deliberate choices. void is the HTML syntax's void element list, which no table states; no_text stands in for the index's Children column.",
   "void": ["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"],
   "no_text": ["colgroup", "dl", "head", "hgroup", "html", "iframe", "menu", "ol", "optgroup", "picture", "select", "table", "tbody", "tfoot", "thead", "tr", "ul"],
   "raw_text": ["script", "style"],

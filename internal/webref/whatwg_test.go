@@ -25,8 +25,8 @@ func TestParseIndicesSynthetic(t *testing.T) {
 	if !reflect.DeepEqual(a.Attributes, []string{"href", "target", "download"}) {
 		t.Errorf("a attributes = %v", a.Attributes)
 	}
-	if a.Void() || !idx.Elements["br"].Void() {
-		t.Errorf("void: a=%v br=%v", a.Void(), idx.Elements["br"].Void())
+	if a.EmptyContentModel() || !idx.Elements["br"].EmptyContentModel() {
+		t.Errorf("empty content model: a=%v br=%v", a.EmptyContentModel(), idx.Elements["br"].EmptyContentModel())
 	}
 	if idx.Elements["h2"].Description != "Heading" {
 		t.Errorf("multi-element row not expanded: %+v", idx.Elements["h2"])

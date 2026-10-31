@@ -22,8 +22,8 @@ instead of scraping the live HTML standard:
   `@webref/idl` (reflected IDL attributes give content attribute names and types).
 - `data/bcd`: the html/svg/mathml part of `@mdn/browser-compat-data` (deprecation, attributes not
   reflected in IDL, global attributes).
-- `data/whatwg/indices.html`: a pinned commit snapshot of the HTML standard's index tables
-  (categories, content models, attribute value types). Not vendored yet.
+- `data/whatwg/indices.html`: the element and attribute index tables of the HTML standard, extracted
+  from a pinned commit snapshot (categories, content models, attribute value types).
 - `data/overlay/<spec>.json`: hand-maintained judgment calls, each with a reason.
 - `data/SOURCES.json`: package versions, integrity hashes and retrieval dates.
 

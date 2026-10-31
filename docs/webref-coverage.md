@@ -10,13 +10,13 @@ and the committed `specs/*.json`. Everything outside the notes block is regenera
 | @mdn/browser-compat-data | 8.1.7 | sha512-TJ+rX530bFoE8678P… | 2026-10-31 | vendored |
 | @webref/elements | 2.9.2 | sha512-NjGr2/UMDsHc4yBYT… | 2026-10-31 | vendored |
 | @webref/idl | 3.86.0 | sha512-cfBKahe5RlvgVnOII… | 2026-10-31 | vendored |
-| whatwg-html-indices |  |  |  | pending |
+| whatwg-html-indices | 404b3eb14a7a936dddefb2d78e224dbeb01d2358 | sha256-5aa6749f93bbbb85a… | 2026-10-31 | vendored |
 
 ## Headline numbers
 
 | spec | elements old/new | only old | only new | attrs only old | attrs only new | type disagreements | of which evidence / overlay / pending / weak | all new attrs: evidence / overlay / pending / weak |
 |---|---|---|---|---|---|---|---|---|
-| html | 112/113 | 0 | 1 | 5 | 22 | 23 | 8 / 10 / 5 / 0 | 198 / 24 / 73 / 20 |
+| html | 112/113 | 0 | 1 | 4 | 23 | 26 | 11 / 10 / 5 / 0 | 218 / 24 / 73 / 2 |
 | svg | 63/63 | 0 | 0 | 7 | 41 | 18 | 12 / 6 / 0 / 0 | 277 / 149 / 27 / 76 |
 
 <!-- notes:begin -->
@@ -71,10 +71,11 @@ Attributes from other W3C specs that BCD lists as standard-track (`capture`, `we
 - **20 attribute types are String fallbacks** (`weak`); most are genuinely free text (id, style,
   slot, form, nonce, meta charset, srcdoc), the rest (link `as`, `shadowrootslotassignment`, option
   `label`/`value` setters, `exportparts`, `is`) will be checked against the index's Value column.
-- **Void/text flags and categories** come from the overlay `void`/`no_text` lists until the index's
-  Children and Categories columns are available; `categories` is empty in every candidate. The text
-  flag changes in the details are corrections of the old hand lists (details, fieldset, form, ruby
-  and transparent elements accept text; colgroup and hgroup do not; h2–h6 were stale).
+- **Void/text flags** come from the overlay `void`/`no_text` lists. The index's Children column
+  cannot supply `void`: it says "empty" for iframe, template and selectedcontent too, which still take
+  end tags. `categories` now comes from the index's Categories column. The text flag changes in the
+  details are corrections of the old hand lists (details, fieldset, form, ruby and transparent
+  elements accept text; colgroup and hgroup do not; h2–h6 were stale).
 
 ### SVG
 
@@ -122,7 +123,7 @@ Each difference carries a class:
 
 ## html
 
-Comparing `specs/html.json` (old) with `specs/candidates/html.json` (new). WHATWG index used: false.
+Comparing `specs/html.json` (old) with `specs/candidates/html.json` (new). WHATWG index used: true.
 
 | | count |
 |---|---|
@@ -130,23 +131,23 @@ Comparing `specs/html.json` (old) with `specs/candidates/html.json` (new). WHATW
 | elements only in old | 0 |
 | elements only in new | 1 |
 | global attributes old / new | 31 / 36 |
-| element attributes on both sides (incl. globals) | 262 (agree on type: 240) |
-| attributes only in old (elements + globals) | 5 |
-| attributes only in new (elements + globals) | 22 |
-| type disagreements (elements + globals) | 23 |
+| element attributes on both sides (incl. globals) | 263 (agree on type: 238) |
+| attributes only in old (elements + globals) | 4 |
+| attributes only in new (elements + globals) | 23 |
+| type disagreements (elements + globals) | 26 |
 | URL-flagged attributes in new | 23 |
 | deprecated-flagged attributes in new | 0 |
-| all new attributes by type source: evidence / overlay / pending / weak | 198 / 24 / 73 / 20 |
+| all new attributes by type source: evidence / overlay / pending / weak | 218 / 24 / 73 / 2 |
 
 By class:
 
 | class | meaning | only in new | type disagreements | only in old |
 |---|---|---|---|---|
-| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 9 | 8 | 0 |
+| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 11 | 11 | 0 |
 | overlay | new value from an overlay judgment call | 8 | 10 | 0 |
 | pending | overlay stand-in for data a not-yet-vendored source would supply (WHATWG index for HTML, @webref/css for SVG presentation attributes) | 2 | 5 | 0 |
-| weak | new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML) | 3 | 0 | 0 |
-| not-in-source | no source lists it for this element | 0 | 0 | 5 |
+| weak | new type is a String fallback: no source states the value syntax (WHATWG index would fill for HTML) | 2 | 0 | 0 |
+| not-in-source | no source lists it for this element | 0 | 0 | 4 |
 
 Elements only in new: `sup`
 
@@ -157,7 +158,7 @@ Elements only in new: `sup`
 |---|---|---|---|---|
 | `popover` | String | Enum{auto,hint,manual}+empty | pending | exists: idl; type: overlay-pending; Enumerated attribute (bare = auto). The legacy document typed it as String. |
 
-- only in new: [evidence] `headingoffset` Number, `headingreset` Bool; [overlay] `part` SST; [weak] `exportparts` String, `is` String
+- only in new: [evidence] `headingoffset` Number, `headingreset` Bool, `is` String; [overlay] `part` SST; [weak] `exportparts` String
 
 #### `<a>`
 
@@ -199,6 +200,10 @@ Elements only in new: `sup`
 #### `<details>`
 
 - flags: text false -> true (source: overlay)
+
+#### `<embed>`
+
+- only in new: [weak] `any` String
 
 #### `<fieldset>`
 
@@ -262,6 +267,7 @@ Elements only in new: `sup`
 | `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | pending | exists: idl; type: overlay-pending; Enumerated attribute limited to known values; the legacy document typed it as String. |
 | `max` | Number | String | evidence | exists: idl; type: idl |
 | `min` | Number | String | evidence | exists: idl; type: idl |
+| `step` | String | Float | evidence | exists: idl; type: whatwg |
 
 - only in new: [overlay] `capture` Enum{environment,user}+empty, `webkitdirectory` Bool
 
@@ -270,14 +276,21 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `blocking` | Enum{render} | SST | evidence | exists: idl; type: idl |
+| `blocking` | Enum{render} | SST | evidence | exists: idl; type: whatwg |
 | `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
 
-- only in old: [not-in-source] `color` String
 
 #### `<map>`
 
 - flags: text false -> true (source: overlay)
+
+#### `<meta>`
+
+
+| type disagreement | old | new | class | provenance |
+|---|---|---|---|---|
+| `charset` | String | Enum{utf-8} | evidence | exists: bcd; type: whatwg |
+
 
 #### `<object>`
 
@@ -288,7 +301,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `for` | String | SST | evidence | exists: idl; type: idl |
+| `for` | String | SST | evidence | exists: idl; type: whatwg |
 
 
 #### `<ruby>`
@@ -300,8 +313,9 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `blocking` | Enum{render} | SST | evidence | exists: idl; type: idl |
+| `blocking` | Enum{render} | SST | evidence | exists: idl; type: whatwg |
 | `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
+| `type` | String | Enum{a valid MIME type string that is not a JavaScript MIME type essence match,importmap,module,speculationrules} | evidence | exists: idl; type: whatwg |
 
 
 #### `<select>`
@@ -317,7 +331,7 @@ Elements only in new: `sup`
 
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
-| `blocking` | String | SST | evidence | exists: idl; type: idl |
+| `blocking` | String | SST | evidence | exists: idl; type: whatwg |
 
 
 #### `<td>`
@@ -327,12 +341,7 @@ Elements only in new: `sup`
 
 #### `<template>`
 
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `shadowrootcustomelementregistry` | Bool | String | evidence | exists: idl; type: idl |
-
-- only in new: [evidence] `for` String, `shadowrootdelegatesfocus` Bool; [weak] `shadowrootslotassignment` String
+- only in new: [evidence] `for` String, `shadowrootdelegatesfocus` Bool, `shadowrootslotassignment` Enum{manual,named}
 - only in old: [not-in-source] `shadowrootdelegatefocus` Bool
 
 #### `<textarea>`
@@ -341,7 +350,7 @@ Elements only in new: `sup`
 | type disagreement | old | new | class | provenance |
 |---|---|---|---|---|
 | `autocomplete` | String | SST | overlay | exists: idl; type: overlay; Autofill detail tokens ("shipping street-address"), typed consistently on input/select/textarea; the legacy document mixed SST and String. form overrides this with on/off. |
-| `rows` | String | Number | evidence | exists: idl; type: idl |
+| `rows` | String | Number | evidence | exists: idl; type: whatwg |
 
 
 #### `<th>`
@@ -353,6 +362,14 @@ Elements only in new: `sup`
 
 - only in new: [evidence] `colspan` Number
 - only in old: [not-in-source] `span` Number
+
+#### `<time>`
+
+
+| type disagreement | old | new | class | provenance |
+|---|---|---|---|---|
+| `datetime` | String | Number | evidence | exists: idl; type: whatwg |
+
 
 #### `<video>`
 

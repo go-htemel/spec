@@ -46,8 +46,9 @@ type AttrOverride struct {
 type Overlay struct {
 	Comment string `json:"comment,omitempty"`
 
-	// Element flags. Void and NoText are stand-ins for the WHATWG elements table's Children column
-	// and are only used while that table is not vendored; RawText is not in any table.
+	// Element flags. Void is the HTML syntax's void element list, which no vendored table states
+	// (the WHATWG index's Children column is "empty" for iframe and template too). NoText is a
+	// stand-in for that Children column; RawText is not in any table.
 	Void   []string `json:"void,omitempty"`
 	NoText []string `json:"no_text,omitempty"`
 	// Text, when set, is an allow-list instead: only these elements accept text children
