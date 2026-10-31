@@ -131,6 +131,9 @@ type AttrProvenance struct {
 type ElementProvenance struct {
 	Source   string `json:"source"`
 	FlagsSrc string `json:"flags_source"`
+	// ContentModelSrc is "whatwg" (derived from the index's Children column) or "overlay".
+	ContentModelSrc    string `json:"content_model_source,omitempty"`
+	ContentModelReason string `json:"content_model_reason,omitempty"`
 }
 
 // Provenance is written next to each candidate document.
@@ -228,9 +231,22 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 		// states it. The index's Children column only says whether the content model is empty, which
 		// is also true of iframe, template and selectedcontent, so it can only cross-check one way.
 		e.Void = contains(b.ov.Void, d.tag)
+		prov := ElementProvenance{Source: "webref:" + d.file, FlagsSrc: "overlay"}
 		if b.whatwg != nil {
 			if w, ok := b.whatwg.Elements[d.tag]; ok {
-				e.Categories = w.Categories
+				var unmapped []string
+				e.Categories, unmapped = normalizeCategories(w.Categories)
+				for _, c := range unmapped {
+					b.warn("<%s>: index category %q is not in the category vocabulary; dropped", d.tag, c)
+				}
+				cm, problems := DeriveContentModel(w, b.isIndexElement)
+				if _, overridden := b.ov.ContentModel[d.tag]; overridden {
+					problems = nil // the overlay replaces the model; its reason says why
+				}
+				for _, p := range problems {
+					b.warn("<%s>: cannot map %q from the index's Children column %q", d.tag, p, w.ChildrenNote)
+				}
+				e.ContentModel, prov.ContentModelSrc = cm, srcWHATWG
 				if e.Description == "" {
 					e.Description = w.Description
 				}
@@ -245,7 +261,17 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 			e.Text = !e.Void && !contains(b.ov.NoText, d.tag)
 		}
 		e.RawText = contains(b.ov.RawText, d.tag)
-		b.prov.Elements[d.tag] = ElementProvenance{Source: "webref:" + d.file, FlagsSrc: "overlay"}
+		if o, ok := b.ov.ContentModel[d.tag]; ok {
+			note := o.Note
+			if note == "" && e.ContentModel != nil {
+				note = e.ContentModel.Note
+			}
+			e.ContentModel = &spec.ContentModel{Kind: o.Kind, Categories: sortedCopy(o.Categories),
+				Elements: sortedCopy(o.Elements), Text: o.Text, Note: note}
+			prov.ContentModelSrc, prov.ContentModelReason = srcOverlay, o.Reason
+		}
+		b.checkContentModel(e)
+		b.prov.Elements[d.tag] = prov
 
 		for _, name := range sortedKeys(attrs) {
 			a := attrs[name]
@@ -262,6 +288,11 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 			b.warn("overlay names unknown element <%s>", tag)
 		}
 	}
+	for _, tag := range sortedKeys(b.ov.ContentModel) {
+		if !seen[tag] {
+			b.warn("overlay has a content model for unknown element <%s>", tag)
+		}
+	}
 	for _, scope := range b.ov.Scopes() {
 		if scope != "@global" && scope != "*" && !seen[scope] {
 			b.warn("overlay has attributes for unknown element <%s>", scope)
@@ -274,6 +305,43 @@ func (b *builder) build() (*spec.Spec, *Provenance, error) {
 	}
 
 	return out, b.prov, nil
+}
+
+// isIndexElement reports whether name is an element of the WHATWG index (used to tell element
+// names from category words in the Children column).
+func (b *builder) isIndexElement(name string) bool {
+	_, ok := b.whatwg.Elements[name]
+	return ok
+}
+
+// checkContentModel annotates empty-but-not-void models and cross-checks the model against the
+// void flag and the elements it names.
+func (b *builder) checkContentModel(e *spec.Element) {
+	cm := e.ContentModel
+	if cm == nil {
+		return
+	}
+	if e.Void && cm.Kind != spec.ContentKindEmpty {
+		b.warn("<%s>: void, but its content model is %q", e.Tag, cm.Kind)
+	}
+	if cm.Kind == spec.ContentKindEmpty && !e.Void {
+		cm.Note += " (Content model nothing, but not a void element: it takes an end tag.)"
+	}
+	for _, c := range cm.Elements {
+		if b.whatwg != nil && !b.isIndexElement(c) {
+			b.warn("<%s>: content model names unknown element <%s>", e.Tag, c)
+		}
+	}
+}
+
+func sortedCopy(in []string) []string {
+	if len(in) == 0 {
+		return nil
+	}
+	out := append([]string(nil), in...)
+	sort.Strings(out)
+
+	return out
 }
 
 func (b *builder) warn(format string, args ...any) {

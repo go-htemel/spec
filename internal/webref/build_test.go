@@ -322,3 +322,139 @@ func TestCompare(t *testing.T) {
 		t.Errorf("markdown:\n%s", md)
 	}
 }
+
+// TestContentModels pins the content models derived from the vendored WHATWG index (plus the two
+// overlay entries), so a re-vendor that rewords the Children column shows up here.
+func TestContentModels(t *testing.T) {
+	src := loadTestSources(t)
+	cfg, _ := ConfigByName("html")
+	sp, prov, err := Build(cfg, src, Options{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	cm := func(kind string, cats, els []string, text bool) *spec.ContentModel {
+		return &spec.ContentModel{Kind: kind, Categories: cats, Elements: els, Text: text}
+	}
+	ss := func(s ...string) []string { return s }
+	for tag, want := range map[string]*spec.ContentModel{
+		"ul":       cm(spec.ContentKindChildren, ss("script-supporting"), ss("li"), false),
+		"ol":       cm(spec.ContentKindChildren, ss("script-supporting"), ss("li"), false),
+		"menu":     cm(spec.ContentKindChildren, ss("script-supporting"), ss("li"), false),
+		"p":        cm(spec.ContentKindChildren, ss("phrasing"), nil, true),
+		"div":      cm(spec.ContentKindChildren, ss("flow"), nil, true),
+		"table":    cm(spec.ContentKindChildren, ss("script-supporting"), ss("caption", "colgroup", "tbody", "tfoot", "thead", "tr"), false),
+		"tbody":    cm(spec.ContentKindChildren, ss("script-supporting"), ss("tr"), false),
+		"tr":       cm(spec.ContentKindChildren, ss("script-supporting"), ss("td", "th"), false),
+		"colgroup": cm(spec.ContentKindChildren, nil, ss("col", "template"), false),
+		"select":   cm(spec.ContentKindChildren, ss("script-supporting"), ss("button", "div", "hr", "noscript", "optgroup", "option"), false),
+		"optgroup": cm(spec.ContentKindChildren, ss("script-supporting"), ss("div", "legend", "noscript", "option"), false),
+		"option":   cm(spec.ContentKindChildren, ss("phrasing"), ss("div"), true),
+		"datalist": cm(spec.ContentKindChildren, ss("phrasing", "script-supporting"), ss("option"), true),
+		"dl":       cm(spec.ContentKindChildren, ss("script-supporting"), ss("dd", "div", "dt"), false),
+		"details":  cm(spec.ContentKindChildren, ss("flow"), ss("summary"), true),
+		"fieldset": cm(spec.ContentKindChildren, ss("flow"), ss("legend"), true),
+		"figure":   cm(spec.ContentKindChildren, ss("flow"), ss("figcaption"), true),
+		"hgroup":   cm(spec.ContentKindChildren, ss("script-supporting"), ss("h1", "h2", "h3", "h4", "h5", "h6", "p"), false),
+		"legend":   cm(spec.ContentKindChildren, ss("heading", "phrasing"), nil, true),
+		"summary":  cm(spec.ContentKindChildren, ss("heading", "phrasing"), nil, true),
+		"ruby":     cm(spec.ContentKindChildren, ss("phrasing"), ss("rp", "rt"), true),
+		"picture":  cm(spec.ContentKindChildren, ss("script-supporting"), ss("img", "source"), false),
+		"html":     cm(spec.ContentKindChildren, nil, ss("body", "head"), false),
+		"head":     cm(spec.ContentKindChildren, ss("metadata"), nil, false),
+		"a":        cm(spec.ContentKindTransparent, nil, nil, false),
+		"video":    cm(spec.ContentKindTransparent, nil, ss("source", "track"), false),
+		"audio":    cm(spec.ContentKindTransparent, nil, ss("source", "track"), false),
+		"map":      cm(spec.ContentKindTransparent, nil, ss("area"), false),
+		"noscript": cm(spec.ContentKindTransparent, nil, ss("link", "meta", "style"), false),
+		"img":      cm(spec.ContentKindEmpty, nil, nil, false),
+		"br":       cm(spec.ContentKindEmpty, nil, nil, false),
+		"iframe":   cm(spec.ContentKindEmpty, nil, nil, false),
+		"script":   cm(spec.ContentKindText, nil, nil, true),
+		"style":    cm(spec.ContentKindText, nil, nil, true),
+		"title":    cm(spec.ContentKindText, nil, nil, true),
+		"textarea": cm(spec.ContentKindText, nil, nil, true),
+		"rp":       cm(spec.ContentKindText, nil, nil, true),
+		"template": cm(spec.ContentKindUnknown, nil, nil, false),
+	} {
+		e := element(sp, tag)
+		if e == nil || e.ContentModel == nil {
+			t.Errorf("<%s>: no content model", tag)
+			continue
+		}
+		got := *e.ContentModel
+		got.Note = ""
+		if !reflect.DeepEqual(&got, want) {
+			t.Errorf("<%s>: content model = %+v, want %+v", tag, got, *want)
+		}
+	}
+
+	// Every standard element has a model; only the overlay's template is unknown; empty matches
+	// void except for the elements whose content model is nothing but which take an end tag.
+	var emptyNotVoid []string
+	for _, e := range sp.Elements {
+		m := e.ContentModel
+		if m == nil {
+			t.Errorf("<%s>: no content model", e.Tag)
+			continue
+		}
+		if m.Kind == spec.ContentKindUnknown && e.Tag != "template" {
+			t.Errorf("<%s>: unknown content model (%s)", e.Tag, m.Note)
+		}
+		if e.Void && m.Kind != spec.ContentKindEmpty {
+			t.Errorf("<%s>: void but content model %q", e.Tag, m.Kind)
+		}
+		if m.Kind == spec.ContentKindEmpty && !e.Void {
+			emptyNotVoid = append(emptyNotVoid, e.Tag)
+			if !strings.Contains(m.Note, "not a void element") {
+				t.Errorf("<%s>: note does not explain empty-but-not-void: %q", e.Tag, m.Note)
+			}
+		}
+		if m.Note == "" {
+			t.Errorf("<%s>: content model without note", e.Tag)
+		}
+		for _, c := range append(append([]string{}, m.Categories...), e.Categories...) {
+			if !categoryVocab[c] {
+				t.Errorf("<%s>: category %q outside the vocabulary", e.Tag, c)
+			}
+		}
+		for _, c := range m.Elements {
+			if element(sp, c) == nil {
+				t.Errorf("<%s>: content model names <%s>, which the document does not have", e.Tag, c)
+			}
+		}
+	}
+	if !reflect.DeepEqual(emptyNotVoid, []string{"iframe", "selectedcontent"}) {
+		t.Errorf("empty but not void = %v", emptyNotVoid)
+	}
+	if p := prov.Elements["template"]; p.ContentModelSrc != srcOverlay || p.ContentModelReason == "" {
+		t.Errorf("template content model provenance = %+v", p)
+	}
+	if p := prov.Elements["ul"]; p.ContentModelSrc != srcWHATWG {
+		t.Errorf("ul content model provenance = %+v", p)
+	}
+	for _, name := range []string{"svg", "mathml"} {
+		cfg, _ := ConfigByName(name)
+		sp, _, err := Build(cfg, src, Options{})
+		if err != nil {
+			t.Fatal(err)
+		}
+		for _, e := range sp.Elements {
+			if e.ContentModel != nil {
+				t.Errorf("%s <%s>: content model without an index", name, e.Tag)
+			}
+		}
+	}
+}
+
+func TestContentModelOverlayValidation(t *testing.T) {
+	for _, tc := range []struct{ doc, want string }{
+		{`{"content_model":{"p":{"kind":"empty"}}}`, "needs a reason"},
+		{`{"content_model":{"p":{"kind":"nothing","reason":"r"}}}`, "unknown kind"},
+		{`{"content_model":{"p":{"kind":"children","categories":["Flow content"],"reason":"r"}}}`, "unknown category"},
+	} {
+		_, err := ParseOverlay([]byte(tc.doc))
+		if err == nil || !strings.Contains(err.Error(), tc.want) {
+			t.Errorf("%s: got %v, want error containing %q", tc.doc, err, tc.want)
+		}
+	}
+}

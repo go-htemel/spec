@@ -42,6 +42,18 @@ type AttrOverride struct {
 	Reason  string `json:"reason"`
 }
 
+// ContentModelOverride replaces the content model the WHATWG index gives one element. Like
+// attribute overrides it must carry a Reason; use it only where the index is wrong or unparseable.
+type ContentModelOverride struct {
+	Kind       string   `json:"kind"`
+	Categories []string `json:"categories,omitempty"`
+	Elements   []string `json:"elements,omitempty"`
+	Text       bool     `json:"text,omitempty"`
+	// Note replaces the index's prose in the generated model; empty keeps the index's prose.
+	Note   string `json:"note,omitempty"`
+	Reason string `json:"reason"`
+}
+
 // Overlay holds the hand-maintained part of one spec's inputs.
 type Overlay struct {
 	Comment string `json:"comment,omitempty"`
@@ -76,6 +88,9 @@ type Overlay struct {
 	// attributes, or "*" for an entry that applies to every element that already has an attribute
 	// of that name (it never adds one). Element-specific entries win over "*".
 	Attributes map[string]map[string]AttrOverride `json:"attributes,omitempty"`
+
+	// ContentModel overrides the content model derived from the WHATWG index, keyed by tag.
+	ContentModel map[string]ContentModelOverride `json:"content_model,omitempty"`
 
 	scoped map[string]map[string]AttrOverride // Attributes with comma-separated keys expanded
 }
@@ -131,6 +146,22 @@ func ParseOverlay(b []byte) (*Overlay, error) {
 			}
 			if ov.Type == KindEnum && len(ov.Allowed) == 0 && !ov.AllowEmpty && !ov.AllowCustom {
 				return nil, fmt.Errorf("%s: Enum without any allowed value", where)
+			}
+		}
+	}
+
+	for _, tag := range sortedKeys(o.ContentModel) {
+		cm := o.ContentModel[tag]
+		where := "content_model/" + tag
+		if cm.Reason == "" {
+			return nil, fmt.Errorf("%s: overlay entry needs a reason", where)
+		}
+		if !contentKinds[cm.Kind] {
+			return nil, fmt.Errorf("%s: unknown kind %q", where, cm.Kind)
+		}
+		for _, c := range cm.Categories {
+			if !categoryVocab[c] {
+				return nil, fmt.Errorf("%s: unknown category %q", where, c)
 			}
 		}
 	}

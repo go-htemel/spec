@@ -130,3 +130,57 @@ func TestParseIndicesRejectsOtherPages(t *testing.T) {
 		t.Error("expected an error for a page without the index tables")
 	}
 }
+
+func TestNormalizeCategory(t *testing.T) {
+	for in, want := range map[string]string{
+		"flow": "flow", "Flow content": "flow", "phrasing*": "phrasing", "metadata content*": "metadata",
+		"heading content": "heading", "script-supporting elements": "script-supporting",
+		"script-supporting": "script-supporting", "sectioning root": "sectioning-root",
+		"Form-associated elements": "form-associated", "autocapitalize-inheriting elements": "autocapitalize-inheriting",
+		"palpable content": "palpable", "transparent": "", "li": "", "none": "",
+	} {
+		if got := NormalizeCategory(in); got != want {
+			t.Errorf("NormalizeCategory(%q) = %q, want %q", in, got, want)
+		}
+	}
+}
+
+// TestVendoredChildren maps every Children cell of the vendored index and pins which ones need the
+// overlay: a re-vendor that introduces new wording fails here instead of yielding unknown models.
+func TestVendoredChildren(t *testing.T) {
+	f, err := os.Open("../../data/whatwg/indices.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer f.Close()
+	idx, err := ParseIndices(f)
+	if err != nil {
+		t.Fatal(err)
+	}
+	isEl := func(s string) bool { _, ok := idx.Elements[s]; return ok }
+	var unmapped []string
+	for _, tag := range sortedKeys(idx.Elements) {
+		w := idx.Elements[tag]
+		cm, problems := DeriveContentModel(w, isEl)
+		if len(problems) > 0 {
+			unmapped = append(unmapped, tag)
+			if cm.Kind != "unknown" {
+				t.Errorf("<%s>: problems %v but kind %q", tag, problems, cm.Kind)
+			}
+		}
+		if cm.Note != w.ChildrenNote {
+			t.Errorf("<%s>: note %q, want the index text %q", tag, cm.Note, w.ChildrenNote)
+		}
+		if _, unmappedCats := normalizeCategories(w.Categories); len(unmappedCats) > 0 {
+			t.Errorf("<%s>: unmapped categories %v", tag, unmappedCats)
+		}
+	}
+	// noscript ("varies") is covered by the overlay; math and svg ("per [MATHML]", "per [SVG]") are
+	// not HTML-document elements.
+	if !reflect.DeepEqual(unmapped, []string{"math", "noscript", "svg"}) {
+		t.Errorf("unmapped Children cells: %v", unmapped)
+	}
+	if got := idx.Elements["a"].ChildrenNote; got != "transparent*" {
+		t.Errorf("a ChildrenNote = %q", got)
+	}
+}

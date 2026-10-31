@@ -3,6 +3,7 @@ package webref
 import (
 	"fmt"
 	"os"
+	"reflect"
 	"strings"
 
 	"github.com/go-htemel/spec"
@@ -67,6 +68,14 @@ type Diff struct {
 	// TypeSources counts every attribute of the new document (globals and element-specific) by
 	// how its type was determined: evidence, overlay, pending or weak.
 	TypeSources map[string]int
+
+	// Content models of the new document (HTML only).
+	ContentKinds       map[string]int // elements by ContentModel.Kind
+	ContentChanged     int            // elements whose content_model differs from the old document
+	CategoriesChanged  []string       // elements whose categories differ from the old document
+	ContentUnknown     []string       // elements with Kind unknown
+	ContentOverlay     []string       // elements whose model comes from the overlay
+	ContentEmptyNoVoid []string       // Kind empty but not void
 }
 
 // NamedDiff labels a Diff for the combined report.
@@ -131,8 +140,34 @@ func Compare(oldSp, newSp *spec.Spec, prov *Provenance) *Diff {
 		if !ed.empty() {
 			d.Elements = append(d.Elements, ed.ElementDiff)
 		}
+		if !reflect.DeepEqual(oe.ContentModel, ne.ContentModel) && ne.ContentModel != nil {
+			d.ContentChanged++
+		}
+		if strings.Join(oe.Categories, ";") != strings.Join(ne.Categories, ";") {
+			d.CategoriesChanged = append(d.CategoriesChanged, t)
+		}
 		d.Compared += ed.compared
 		d.Agree += ed.agree
+	}
+
+	for _, t := range d.NewElements {
+		ne := newEl[t]
+		if ne.ContentModel == nil {
+			continue
+		}
+		if d.ContentKinds == nil {
+			d.ContentKinds = map[string]int{}
+		}
+		d.ContentKinds[ne.ContentModel.Kind]++
+		switch {
+		case ne.ContentModel.Kind == spec.ContentKindUnknown:
+			d.ContentUnknown = append(d.ContentUnknown, t)
+		case ne.ContentModel.Kind == spec.ContentKindEmpty && !ne.Void:
+			d.ContentEmptyNoVoid = append(d.ContentEmptyNoVoid, t)
+		}
+		if prov != nil && prov.Elements[t].ContentModelSrc == srcOverlay {
+			d.ContentOverlay = append(d.ContentOverlay, t)
+		}
 	}
 
 	count := func(a spec.Attribute) {
@@ -330,6 +365,25 @@ func (d *Diff) Markdown(oldPath, newPath string) string {
 	fmt.Fprintf(&b, "| deprecated-flagged attributes in new | %d |\n", d.Deprecated)
 	fmt.Fprintf(&b, "| all new attributes by type source: evidence / overlay / pending / weak | %d / %d / %d / %d |\n\n",
 		d.TypeSources[ClassEvidence], d.TypeSources[ClassOverlay], d.TypeSources[ClassPending], d.TypeSources[ClassWeak])
+
+	if d.ContentKinds != nil {
+		fmt.Fprintf(&b, "Content models (new): ")
+		var parts []string
+		for _, k := range []string{spec.ContentKindChildren, spec.ContentKindEmpty, spec.ContentKindTransparent, spec.ContentKindText, spec.ContentKindUnknown} {
+			parts = append(parts, fmt.Sprintf("%s %d", k, d.ContentKinds[k]))
+		}
+		fmt.Fprintf(&b, "%s; changed from old: %d; categories changed: %d.", strings.Join(parts, ", "), d.ContentChanged, len(d.CategoriesChanged))
+		if len(d.ContentUnknown) > 0 {
+			b.WriteString(" Unknown: " + codeList(d.ContentUnknown) + ".")
+		}
+		if len(d.ContentOverlay) > 0 {
+			b.WriteString(" From the overlay: " + codeList(d.ContentOverlay) + ".")
+		}
+		if len(d.ContentEmptyNoVoid) > 0 {
+			b.WriteString(" Empty but not void: " + codeList(d.ContentEmptyNoVoid) + ".")
+		}
+		b.WriteString("\n\n")
+	}
 
 	classes := []string{ClassEvidence, ClassOverlay, ClassPending, ClassWeak, ClassSkipped, ClassNoSource}
 	fmt.Fprintf(&b, "By class:\n\n| class | meaning | only in new | type disagreements | only in old |\n|---|---|---|---|---|\n")

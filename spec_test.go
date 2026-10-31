@@ -154,3 +154,67 @@ func TestOldConsumerCompat(t *testing.T) {
 		t.Errorf("discriminator changed: %+v", old)
 	}
 }
+
+func TestContentModelRoundTrip(t *testing.T) {
+	in := &Spec{Name: "T", Elements: []*Element{
+		{Tag: "ul", Categories: []string{"flow", "palpable"}, ContentModel: &ContentModel{
+			Kind: ContentKindChildren, Categories: []string{"script-supporting"}, Elements: []string{"li"},
+			Note: "li; script-supporting elements"}},
+		{Tag: "p", ContentModel: &ContentModel{Kind: ContentKindChildren, Categories: []string{"phrasing"}, Text: true}},
+		{Tag: "br", Void: true, ContentModel: &ContentModel{Kind: ContentKindEmpty}},
+		{Tag: "x"},
+	}}
+	b, err := json.Marshal(in)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, frag := range []string{
+		`"content_model":{"kind":"children","categories":["script-supporting"],"elements":["li"],"note":"li; script-supporting elements"}`,
+		`"content_model":{"kind":"children","categories":["phrasing"],"text":true}`,
+		`"content_model":{"kind":"empty"}`,
+		`{"tag":"x"}`,
+	} {
+		if !strings.Contains(string(b), frag) {
+			t.Errorf("missing %s in %s", frag, b)
+		}
+	}
+	out := &Spec{}
+	if err := json.Unmarshal(b, out); err != nil {
+		t.Fatal(err)
+	}
+	for i, e := range out.Elements {
+		if !reflect.DeepEqual(e.ContentModel, in.Elements[i].ContentModel) {
+			t.Errorf("<%s>: content model %+v, want %+v", e.Tag, e.ContentModel, in.Elements[i].ContentModel)
+		}
+	}
+	again, err := json.Marshal(out)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(b, again) {
+		t.Errorf("re-marshal differs:\n%s\n%s", b, again)
+	}
+}
+
+// TestOldDocumentWithoutContentModel loads a document written before content_model existed.
+func TestOldDocumentWithoutContentModel(t *testing.T) {
+	doc := `{"name":"HTML","elements":[{"tag":"ul","categories":["flow","palpable"],"attributes":[{"name":"compact","description":"","attribute_type":"AttributeTypeBool"}]}]}`
+	sp := &Spec{}
+	if err := json.Unmarshal([]byte(doc), sp); err != nil {
+		t.Fatal(err)
+	}
+	if e := sp.Elements[0]; e.ContentModel != nil || len(e.Attributes) != 1 {
+		t.Errorf("old document decoded as %+v", e)
+	}
+}
+
+func TestContentCategoriesVocabulary(t *testing.T) {
+	if len(ContentCategories) != 16 {
+		t.Errorf("ContentCategories has %d entries", len(ContentCategories))
+	}
+	for _, c := range ContentCategories {
+		if c != strings.ToLower(c) || strings.Contains(c, " ") {
+			t.Errorf("category %q is not lower-case and hyphenated", c)
+		}
+	}
+}

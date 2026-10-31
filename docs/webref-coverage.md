@@ -16,8 +16,8 @@ and the committed `specs/*.json`. Everything outside the notes block is regenera
 
 | spec | elements old/new | only old | only new | attrs only old | attrs only new | type disagreements | of which evidence / overlay / pending / weak | all new attrs: evidence / overlay / pending / weak |
 |---|---|---|---|---|---|---|---|---|
-| html | 112/113 | 0 | 1 | 4 | 22 | 25 | 17 / 8 / 0 / 0 | 294 / 22 / 0 / 0 |
-| svg | 63/63 | 0 | 0 | 7 | 41 | 18 | 12 / 6 / 0 / 0 | 277 / 149 / 27 / 76 |
+| html | 113/113 | 0 | 0 | 0 | 0 | 0 | 0 / 0 / 0 / 0 | 294 / 22 / 0 / 0 |
+| svg | 63/63 | 0 | 0 | 0 | 0 | 0 | 0 / 0 / 0 / 0 | 277 / 149 / 27 / 76 |
 
 <!-- notes:begin -->
 ## Analysis (hand-written; preserved across `report` runs)
@@ -28,6 +28,11 @@ commit 404b3eb1… of whatwg/html); all are pinned in `data/SOURCES.json` and `w
 the HTML provenance file. Precedence is overlay > WHATWG index > IDL > BCD default. No HTML overlay entry
 is a stand-in any more: every one is a deliberate judgment call with a permanent reason, and no HTML
 attribute falls back to an unexamined String (0 weak, 0 pending).
+
+The attribute analysis below was written for the v0.3.0 promotion and compares the candidates with the
+documents committed before it; those candidates are now the committed specs, so the generated tables
+further down show no attribute differences. What changed since v0.3.0 is the content model data
+(next-to-last section).
 
 ### HTML: where the new pipeline is right
 
@@ -75,7 +80,8 @@ attribute falls back to an unexamined String (0 weak, 0 pending).
   `GlobalEventHandlers`; `raw_text` on script and style.
 - **Void/text flags** come from the overlay `void`/`no_text` lists. The index's Children column
   cannot supply `void`: it says "empty" for iframe, template and selectedcontent too, which still take
-  end tags. `categories` comes from the index's Categories column. The text flag changes in the
+  end tags. `categories` comes from the index's Categories column; `content_model` from its Children column (see
+Content models). The text flag changes in the
   details are corrections of the old hand lists (details, fieldset, form, ruby and transparent
   elements accept text; colgroup and hgroup do not; h2-h6 were stale).
 
@@ -110,6 +116,28 @@ classify as String instead of the first number-like word in them (`time datetime
 - SVG has no attribute index, so keyword lists for SVGAnimatedEnumeration attributes and
   presentation-attribute types are overlay entries seeded from the hand-curated svg.json (149
   overlay, 27 marked `pending: webref-css`, 76 String fallbacks).
+
+### Content models
+
+Every HTML element now carries `content_model`, derived from the Children column of the vendored
+index (`DeriveContentModel` in `internal/webref/content.go`); SVG and MathML have no index and no
+model. The cell is split on `;` and each part maps mechanically: `empty` -> kind empty; `text` and
+script's `script, data, or script documentation` -> kind text; `transparent` -> kind transparent, with
+any element names beside it (audio/video `source; track`, map `area`) in `elements`; `flow`,
+`phrasing`, `metadata content`, `heading content` and `script-supporting elements` -> `categories`
+(flow and phrasing also set `text`); element names (and picture's `one img`) -> `elements`. The column
+never states order or conditions, so every model is the union of its parts, which can only be more
+permissive than the prose in the element definitions (footnote markers stay in `note`). Counts: 82
+children, 15 empty, 10 transparent, 5 text, 1 unknown. Two cells have no mechanical mapping and are
+overlay entries with reasons: `noscript` ("varies": transparent plus link/meta/style for the head case)
+and `template`, whose index model is "empty" because its parsed content goes into the template
+contents fragment, not its children; reading that as "no children" would reject every template's
+contents, so it is the one `unknown` (treat as unchecked). `iframe` and `selectedcontent` have kind
+empty but are not void (they take an end tag; the note says so); `selectedcontent` still has
+`text: true` from the overlay's text flag, left unchanged here. `option` is not text-only in this
+snapshot: `text; div; phrasing` (customizable select) gives kind children with text, `div` and
+phrasing. `categories` is normalized onto the 16-word vocabulary in `spec.ContentCategories`; the
+index already uses those words, so no element's categories changed.
 
 ### Verification against htemel
 
@@ -151,240 +179,24 @@ Comparing `specs/html.json` (old) with `specs/candidates/html.json` (new). WHATW
 
 | | count |
 |---|---|
-| elements old / new | 112 / 113 |
+| elements old / new | 113 / 113 |
 | elements only in old | 0 |
-| elements only in new | 1 |
-| global attributes old / new | 31 / 36 |
-| element attributes on both sides (incl. globals) | 263 (agree on type: 239) |
-| attributes only in old (elements + globals) | 4 |
-| attributes only in new (elements + globals) | 22 |
-| type disagreements (elements + globals) | 25 |
+| elements only in new | 0 |
+| global attributes old / new | 36 / 36 |
+| element attributes on both sides (incl. globals) | 280 (agree on type: 280) |
+| attributes only in old (elements + globals) | 0 |
+| attributes only in new (elements + globals) | 0 |
+| type disagreements (elements + globals) | 0 |
 | URL-flagged attributes in new | 23 |
 | deprecated-flagged attributes in new | 0 |
 | all new attributes by type source: evidence / overlay / pending / weak | 294 / 22 / 0 / 0 |
+
+Content models (new): children 82, empty 15, transparent 10, text 5, unknown 1; changed from old: 113; categories changed: 0. Unknown: `template`. From the overlay: `noscript`, `template`. Empty but not void: `iframe`, `selectedcontent`.
 
 By class:
 
 | class | meaning | only in new | type disagreements | only in old |
 |---|---|---|---|---|
-| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 13 | 17 | 0 |
-| overlay | new value from an overlay judgment call | 9 | 8 | 0 |
-| not-in-source | no source lists it for this element | 0 | 0 | 4 |
-
-Elements only in new: `sup`
-
-#### Global attributes
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `popover` | String | Enum{auto,hint,manual}+empty | evidence | exists: idl; type: whatwg |
-
-- only in new: [evidence] `headingoffset` Number, `headingreset` Bool, `is` String; [overlay] `exportparts` String, `part` SST
-
-#### `<a>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `download` | Bool | Enum{}+empty+custom | overlay | exists: idl; type: overlay; Bare attribute (download) or a suggested file name: generated as an Enum with only the empty value plus custom values. The legacy document typed it as Bool, which cannot express a file name. |
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-
-
-#### `<area>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `download` | Bool | Enum{}+empty+custom | overlay | exists: idl; type: overlay; Bare attribute (download) or a suggested file name: generated as an Enum with only the empty value plus custom values. The legacy document typed it as Bool, which cannot express a file name. |
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-
-- only in new: [evidence] `hreflang` String, `type` String
-
-#### `<audio>`
-
-- flags: text false -> true (source: overlay)
-- only in new: [evidence] `loading` Enum{eager,lazy}; [overlay] `controlslist` SST, `disableremoteplayback` Bool
-- only in old: [not-in-source] `playsinline` Bool
-
-#### `<button>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
-
-
-#### `<colgroup>`
-
-- flags: text true -> false (source: overlay)
-
-#### `<details>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<fieldset>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<form>`
-
-- flags: text false -> true (source: overlay)
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `enctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
-
-
-#### `<h2>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<h3>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<h4>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<h5>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<h6>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<hgroup>`
-
-- flags: text true -> false (source: overlay)
-
-#### `<iframe>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-
-
-#### `<img>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-
-- only in new: [evidence] `controls` Bool
-
-#### `<input>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `formenctype` | String | Enum{application/x-www-form-urlencoded,multipart/form-data,text/plain} | evidence | exists: idl; type: whatwg |
-| `max` | Number | String | evidence | exists: idl; type: idl |
-| `min` | Number | String | evidence | exists: idl; type: idl |
-
-- only in new: [overlay] `capture` Enum{environment,user}+empty, `webkitdirectory` Bool
-
-#### `<link>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `blocking` | Enum{render} | SST | evidence | exists: idl; type: whatwg |
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-
-
-#### `<map>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<meta>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `charset` | String | Enum{utf-8} | evidence | exists: bcd; type: whatwg |
-| `http-equiv` | Enum{content-language,content-security-policy,content-type,default-style,refresh,set-cookie,x-ua-compatible} | Enum{content-security-policy,content-type,default-style,refresh,x-ua-compatible} | evidence | exists: idl; type: whatwg |
-
-
-#### `<object>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<output>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `for` | String | SST | evidence | exists: idl; type: whatwg |
-
-
-#### `<ruby>`
-
-- flags: text false -> true (source: overlay)
-
-#### `<script>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `blocking` | Enum{render} | SST | evidence | exists: idl; type: whatwg |
-| `referrerpolicy` | String | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens. The WHATWG index only says "Referrer policy", so this stays a judgment call; the legacy document typed it as String. |
-| `type` | String | Enum{importmap,module,speculationrules}+custom | evidence | exists: idl; type: whatwg |
-
-
-#### `<select>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `autocomplete` | String | SST | evidence | exists: idl; type: whatwg |
-
-
-#### `<style>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `blocking` | String | SST | evidence | exists: idl; type: whatwg |
-
-
-#### `<td>`
-
-- only in new: [evidence] `colspan` Number
-- only in old: [not-in-source] `span` Number
-
-#### `<template>`
-
-- only in new: [evidence] `for` String, `shadowrootdelegatesfocus` Bool, `shadowrootslotassignment` Enum{manual,named}
-- only in old: [not-in-source] `shadowrootdelegatefocus` Bool
-
-#### `<textarea>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `autocomplete` | String | SST | evidence | exists: idl; type: whatwg |
-| `rows` | String | Number | evidence | exists: idl; type: whatwg |
-
-
-#### `<th>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `scope` | String | Enum{col,colgroup,row,rowgroup} | evidence | exists: idl; type: whatwg |
-
-- only in new: [evidence] `colspan` Number
-- only in old: [not-in-source] `span` Number
-
-#### `<video>`
-
-- flags: text false -> true (source: overlay)
-- only in new: [evidence] `loading` Enum{eager,lazy}; [overlay] `controlslist` SST, `disablepictureinpicture` Bool, `disableremoteplayback` Bool
 
 ## svg
 
@@ -395,11 +207,11 @@ Comparing `specs/svg.json` (old) with `specs/candidates/svg.json` (new). WHATWG 
 | elements old / new | 63 / 63 |
 | elements only in old | 0 |
 | elements only in new | 0 |
-| global attributes old / new | 62 / 73 |
-| element attributes on both sides (incl. globals) | 464 (agree on type: 446) |
-| attributes only in old (elements + globals) | 7 |
-| attributes only in new (elements + globals) | 41 |
-| type disagreements (elements + globals) | 18 |
+| global attributes old / new | 73 / 73 |
+| element attributes on both sides (incl. globals) | 456 (agree on type: 456) |
+| attributes only in old (elements + globals) | 0 |
+| attributes only in new (elements + globals) | 0 |
+| type disagreements (elements + globals) | 0 |
 | URL-flagged attributes in new | 25 |
 | deprecated-flagged attributes in new | 23 |
 | all new attributes by type source: evidence / overlay / pending / weak | 277 / 149 / 27 / 76 |
@@ -408,210 +220,4 @@ By class:
 
 | class | meaning | only in new | type disagreements | only in old |
 |---|---|---|---|---|
-| evidence | new value backed by reflected IDL / SVG IDL types (pipeline evidence) | 0 | 12 | 0 |
-| overlay | new value from an overlay judgment call | 0 | 6 | 0 |
-| weak | new type is a String fallback: no source states the value syntax | 41 | 0 | 0 |
-| skipped | dropped on purpose (obsolete, not standard-track, or overlay removal) | 0 | 0 | 1 |
-| not-in-source | no source lists it for this element | 0 | 0 | 6 |
-
-#### Global attributes
-
-- only in new: [weak] `baseline-shift` String, `clip` String, `font-size-adjust` String, `font-stretch` String, `font-variant` String, `glyph-orientation-horizontal` String, `glyph-orientation-vertical` String, `requiredExtensions` String, `text-overflow` String, `transform` String, `transform-origin` String
-
-#### `<a>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `ping` | String | SST | overlay | exists: idl; type: overlay; Set of space-separated URLs, as in HTML; IDL type is a plain USVString. |
-| `referrerpolicy` | Enum{,no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | Enum{no-referrer,no-referrer-when-downgrade,origin,origin-when-cross-origin,same-origin,strict-origin,strict-origin-when-cross-origin,unsafe-url}+empty | overlay | exists: idl; type: overlay; Referrer Policy tokens, as in HTML. |
-
-- only in new: [weak] `systemLanguage` String, `xlink:actuate` String, `xlink:show` String, `xlink:title` String
-
-#### `<animate>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `fill` | String | Enum{freeze,remove} | overlay | exists: bcd; type: overlay; On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute. |
-
-- only in new: [weak] `systemLanguage` String
-- only in old: [not-in-source] `xlink:href` String
-
-#### `<animateMotion>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `fill` | String | Enum{freeze,remove} | overlay | exists: bcd; type: overlay; On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute. |
-
-- only in new: [weak] `origin` String, `systemLanguage` String
-- only in old: [not-in-source] `xlink:href` String
-
-#### `<animateTransform>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `fill` | String | Enum{freeze,remove} | overlay | exists: bcd; type: overlay; On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute. |
-
-- only in new: [weak] `systemLanguage` String
-- only in old: [not-in-source] `xlink:href` String
-
-#### `<circle>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<clipPath>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<defs>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<ellipse>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<feConvolveMatrix>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `preserveAlpha` | Bool | Enum{false,true} | evidence | exists: idl; type: idl |
-
-
-#### `<feDropShadow>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `dx` | String | Float | evidence | exists: idl; type: idl |
-| `dy` | String | Float | evidence | exists: idl; type: idl |
-
-
-#### `<feOffset>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `dx` | String | Float | evidence | exists: idl; type: idl |
-| `dy` | String | Float | evidence | exists: idl; type: idl |
-
-
-#### `<filter>`
-
-- only in old: [not-in-source] `href` String
-
-#### `<foreignObject>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<g>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<image>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<line>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<mask>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<path>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<pattern>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<polygon>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<polyline>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<rect>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `pathLength` | String | Float | evidence | exists: idl; type: idl |
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<set>`
-
-
-| type disagreement | old | new | class | provenance |
-|---|---|---|---|---|
-| `fill` | String | Enum{freeze,remove} | overlay | exists: bcd; type: overlay; On animation elements fill means freeze/remove, not paint; overrides the global presentation attribute. |
-
-- only in new: [weak] `systemLanguage` String
-- only in old: [not-in-source] `xlink:href` String
-
-#### `<svg>`
-
-- only in new: [weak] `baseProfile` String, `systemLanguage` String
-- only in old: [not-in-source] `xmlns` String
-
-#### `<switch>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<text>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<textPath>`
-
-- only in new: [weak] `systemLanguage` String
-- only in old: [skipped] `path` String (browser-compat-data: experimental and not in the spec's IDL)
-
-#### `<tspan>`
-
-- only in new: [weak] `systemLanguage` String
-
-#### `<use>`
-
-- only in new: [weak] `systemLanguage` String
 

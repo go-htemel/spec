@@ -65,6 +65,9 @@ attribute override is an entry under `attributes` (keyed by element, or `@global
 `reason`. The code rejects an override without a reason, so the file doubles as the record of why
 each decision was made. The other keys are lists (for example `void`, `no_text`, `raw_text`, `text`,
 `ignore_bcd`) or maps (`idl_renames`); the `comment` key at the top of each file explains them.
+`content_model` (keyed by tag; `kind`, `categories`, `elements`, `text`, `note`, `reason`) replaces the
+model derived from the index's Children column, for cells with no mechanical mapping (noscript's
+"varies") or where the index's model would mislead generators (template).
 
 ## Legacy generator: `cmd/specgen`
 
@@ -100,7 +103,26 @@ Element fields:
 | `raw_text` | bool | optional; text is raw (script, style): it is not entity-decoded, so it must not be HTML-escaped when rendered |
 | `deprecated` | bool | optional; obsolete or deprecated in the source specification |
 | `interface` | string | optional; DOM interface, e.g. `HTMLAnchorElement` |
-| `categories` | array of strings | optional; content categories such as `flow`, `phrasing`, `interactive`; sorted |
+| `categories` | array of strings | optional; content categories such as `flow`, `phrasing`, `interactive`; sorted; vocabulary below |
+| `content_model` | object | optional; the children the element accepts (HTML only, from the WHATWG index); see below |
+
+`content_model` fields:
+
+| field | type | notes |
+|---|---|---|
+| `kind` | string | `empty` (no children; not the same as `void`: iframe and selectedcontent are empty but take an end tag), `text` (text only), `transparent` (the parent's content model, plus `elements`), `children` (the union of `categories`, `elements` and `text`), `unknown` (not expressible; treat as unchecked: template) |
+| `categories` | array of strings | optional; permitted child categories, sorted; a child is permitted if it has any of them |
+| `elements` | array of strings | optional; explicitly permitted child tags, sorted (`["li"]` for ul) |
+| `text` | bool | optional; text nodes permitted (inter-element whitespace always is) |
+| `note` | string | optional; the index's Children prose (a `*` means the element definition adds conditions) and any mapping note |
+
+Ordering and conditional rules ("one summary element followed by flow content", "if the element has a
+src attribute ...") are not expressed: models list the union of everything permitted, so checks built
+from them can miss invalid markup but never reject valid markup.
+
+Category vocabulary (`spec.ContentCategories`): `metadata`, `flow`, `sectioning`, `heading`,
+`phrasing`, `embedded`, `interactive`, `palpable`, `script-supporting`, `form-associated`, `listed`,
+`labelable`, `submittable`, `resettable`, `autocapitalize-inheriting`, `sectioning-root`.
 
 Attribute fields. Every attribute has `name` and `attribute_type`; the rest are optional.
 
@@ -115,7 +137,7 @@ Attribute fields. Every attribute has `name` and `attribute_type`; the rest are 
 | `allow_empty` | bool | `AttributeTypeEnum` only |
 | `allow_custom` | bool | `AttributeTypeEnum` only; values beyond `allowed` are permitted |
 
-Consumers should ignore unknown keys. The `raw_text`, `deprecated`, `interface`, `categories` and `url`
+Consumers should ignore unknown keys. The `raw_text`, `deprecated`, `interface`, `categories`, `content_model` and `url`
 fields are omitted when empty, so documents that do not use them are unchanged.
 
 ## Development

@@ -16,8 +16,10 @@ type WHATWGElement struct {
 	Description string
 	Categories  []string // e.g. flow, phrasing, interactive; footnote markers removed; "none" -> empty
 	Children    string   // the Children column as text, e.g. "empty", "phrasing", "transparent"
-	Attributes  []string // the Attributes column without "globals"
-	Interface   string
+	// ChildrenNote is the Children column as written, footnote markers included ("transparent*").
+	ChildrenNote string
+	Attributes   []string // the Attributes column without "globals"
+	Interface    string
 }
 
 // EmptyContentModel reports whether the Children column says "empty" (content model: nothing).
@@ -69,9 +71,10 @@ func ParseIndices(r io.Reader) (*WHATWGIndex, error) {
 			continue
 		}
 		e := WHATWGElement{
-			Description: cellText(cell(row, col["description"])),
-			Children:    stripMarks(cellText(cell(row, col["children"]))),
-			Interface:   strings.Join(codeTexts(cell(row, col["interface"])), " "),
+			Description:  cellText(cell(row, col["description"])),
+			Children:     stripMarks(cellText(cell(row, col["children"]))),
+			ChildrenNote: cellText(cell(row, col["children"])),
+			Interface:    strings.Join(codeTexts(cell(row, col["interface"])), " "),
 		}
 		for _, c := range splitList(cellText(cell(row, col["categories"]))) {
 			if c != "none" {

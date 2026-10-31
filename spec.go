@@ -130,22 +130,69 @@ type Element struct {
 	// Interface is the DOM interface implemented by the element (e.g. HTMLAnchorElement).
 	Interface string `json:"interface,omitempty"`
 	// Categories lists the content categories of the element (e.g. "flow", "phrasing",
-	// "interactive"), as given by the specification's element index, sorted.
+	// "interactive"), as given by the specification's element index, normalized to the
+	// ContentCategories vocabulary and sorted.
 	Categories []string `json:"categories,omitempty"`
+	// ContentModel describes which children the element accepts, from the specification's element
+	// index (HTML only; nil where no index exists, e.g. SVG and MathML). Added after v0.3.0.
+	ContentModel *ContentModel `json:"content_model,omitempty"`
+}
+
+// Content model kinds (ContentModel.Kind).
+const (
+	// ContentKindEmpty: no children (content model "nothing"). This is not the same as Void: some
+	// elements with an empty content model (iframe, selectedcontent) still take an end tag.
+	ContentKindEmpty = "empty"
+	// ContentKindText: text only (script, style, title, textarea, rp).
+	ContentKindText = "text"
+	// ContentKindTransparent: the element takes the content model of its parent. Elements lists
+	// tags allowed in addition (audio/video: source, track; map: area). Text and Categories are
+	// inherited from the parent and are not set.
+	ContentKindTransparent = "transparent"
+	// ContentKindChildren: children drawn from Categories and Elements, plus text if Text is set.
+	// Ordering and conditional rules are not expressed: the permitted set is the union of every
+	// alternative, so checks built from it never reject valid markup.
+	ContentKindChildren = "children"
+	// ContentKindUnknown: the model could not be expressed; Note explains. Treat as unchecked.
+	ContentKindUnknown = "unknown"
+)
+
+// ContentCategories is the vocabulary used by Element.Categories and ContentModel.Categories.
+var ContentCategories = []string{
+	"metadata", "flow", "sectioning", "heading", "phrasing", "embedded", "interactive", "palpable",
+	"script-supporting", "form-associated", "listed", "labelable", "submittable", "resettable",
+	"autocapitalize-inheriting", "sectioning-root",
+}
+
+// ContentModel describes the children an element accepts.
+type ContentModel struct {
+	// Kind is one of the ContentKind* constants.
+	Kind string `json:"kind"`
+	// Categories are the permitted child content categories (ContentCategories vocabulary), sorted.
+	// A child is permitted if any of its Element.Categories is listed here.
+	Categories []string `json:"categories,omitempty"`
+	// Elements are explicitly permitted child tags, sorted.
+	Elements []string `json:"elements,omitempty"`
+	// Text reports whether text nodes are permitted (inter-element whitespace is always allowed and
+	// does not count).
+	Text bool `json:"text,omitempty"`
+	// Note is the index's original Children prose, plus any explanation of how it was mapped.
+	Note string `json:"note,omitempty"`
 }
 
 // UnmarshalJSON handles converting the marshaled json back into an Element struct.
 func (e *Element) UnmarshalJSON(b []byte) error {
 	var tmp struct {
-		Tag         string            `json:"tag"`
-		Description string            `json:"description,omitempty"`
-		Attributes  []json.RawMessage `json:"attributes,omitempty"`
-		Void        bool              `json:"void,omitempty"`
-		Text        bool              `json:"text,omitempty"`
-		RawText     bool              `json:"raw_text,omitempty"`
-		Deprecated  bool              `json:"deprecated,omitempty"`
-		Interface   string            `json:"interface,omitempty"`
-		Categories  []string          `json:"categories,omitempty"`
+		Tag          string            `json:"tag"`
+		Description  string            `json:"description,omitempty"`
+		Attributes   []json.RawMessage `json:"attributes,omitempty"`
+		Void         bool              `json:"void,omitempty"`
+		Text         bool              `json:"text,omitempty"`
+		RawText      bool              `json:"raw_text,omitempty"`
+		Deprecated   bool              `json:"deprecated,omitempty"`
+		Interface    string            `json:"interface,omitempty"`
+		Categories   []string          `json:"categories,omitempty"`
+		ContentModel *ContentModel     `json:"content_model,omitempty"`
 	}
 
 	if err := json.Unmarshal(b, &tmp); err != nil {
@@ -160,6 +207,7 @@ func (e *Element) UnmarshalJSON(b []byte) error {
 	e.Deprecated = tmp.Deprecated
 	e.Interface = tmp.Interface
 	e.Categories = tmp.Categories
+	e.ContentModel = tmp.ContentModel
 	attrs, err := attrUnmarshal(tmp.Attributes)
 	if err != nil {
 		return err

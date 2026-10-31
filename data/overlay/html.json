@@ -1,10 +1,14 @@
 {
-  "comment": "Judgment calls for the HTML document that the vendored sources (webref, browser-compat-data, the WHATWG index in data/whatwg/indices.html) do not make. Every attribute entry has a reason. void is the HTML syntax's void element list, which no table states; no_text stands in for the index's Children column.",
+  "comment": "Judgment calls for the HTML document that the vendored sources (webref, browser-compat-data, the WHATWG index in data/whatwg/indices.html) do not make. Every attribute entry has a reason. void is the HTML syntax's void element list, which no table states; no_text stands in for the index's Children column. content_model replaces the model derived from the index's Children column for the elements whose cell has no mechanical mapping.",
   "void": ["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"],
   "no_text": ["colgroup", "dl", "head", "hgroup", "html", "iframe", "menu", "ol", "optgroup", "picture", "select", "table", "tbody", "tfoot", "thead", "tr", "ul"],
   "raw_text": ["script", "style"],
   "event_handler_mixins": ["WindowEventHandlers"],
   "bcd_value_keys": ["input/type"],
+  "content_model": {
+    "noscript": {"kind": "transparent", "elements": ["link", "meta", "style"], "note": "varies* (index). When scripting is disabled: in head, zero or more link, style and meta elements; elsewhere transparent (with no noscript descendants). When scripting is enabled: text that would parse as described.", "reason": "The index's Children column says only \"varies\", which has no mechanical mapping. Union of both cases: transparent (body) plus link/meta/style (head)."},
+    "template": {"kind": "unknown", "note": "empty (index). The template element itself has no children (content model nothing), but markup written inside it in the HTML syntax becomes the template contents (a DocumentFragment), which may hold any content, including elements such as tr or li that are invalid elsewhere. Treat as unchecked.", "reason": "The index's \"empty\" describes the DOM children, not what may be written between <template> and </template>; using it would forbid every template's contents."}
+  },
   "attributes": {
     "@global": {
       "accesskey": {"type": "Char", "reason": "Kept as a single key (as in the legacy document) for API ergonomics; the spec allows a space-separated list of single code points."},

@@ -4,455 +4,570 @@
   "elements": {
     "a": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "abbr": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "address": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "area": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "article": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "aside": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "audio": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "b": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "base": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "bdi": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "bdo": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "blockquote": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "body": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "br": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "button": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "canvas": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "caption": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "cite": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "code": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "col": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "colgroup": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "data": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "datalist": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "dd": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "del": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "details": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "dfn": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "dialog": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "div": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "dl": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "dt": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "em": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "embed": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "fieldset": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "figcaption": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "figure": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "footer": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "form": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h1": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h2": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h3": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h4": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h5": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "h6": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "head": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "header": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "hgroup": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "hr": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "html": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "i": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "iframe": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "img": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "input": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "ins": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "kbd": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "label": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "legend": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "li": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "link": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "main": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "map": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "mark": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "menu": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "meta": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "meter": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "nav": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "noscript": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "overlay",
+      "content_model_reason": "The index's Children column says only \"varies\", which has no mechanical mapping. Union of both cases: transparent (body) plus link/meta/style (head)."
     },
     "object": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "ol": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "optgroup": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "option": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "output": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "p": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "picture": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "pre": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "progress": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "q": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "rp": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "rt": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "ruby": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "s": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "samp": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "script": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "search": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "section": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "select": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "selectedcontent": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "slot": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "small": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "source": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "span": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "strong": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "style": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "sub": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "summary": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "sup": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "table": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "tbody": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "td": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "template": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "overlay",
+      "content_model_reason": "The index's \"empty\" describes the DOM children, not what may be written between \u003ctemplate\u003e and \u003c/template\u003e; using it would forbid every template's contents."
     },
     "textarea": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "tfoot": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "th": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "thead": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "time": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "title": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "tr": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "track": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "u": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "ul": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "var": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "video": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     },
     "wbr": {
       "source": "webref:html",
-      "flags_source": "overlay"
+      "flags_source": "overlay",
+      "content_model_source": "whatwg"
     }
   },
   "attributes": {
