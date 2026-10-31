@@ -346,7 +346,9 @@ func WHATWGSnapshotURL(sha string) string {
 	return "https://html.spec.whatwg.org/commit-snapshots/" + sha + "/"
 }
 
-var commitLinkRE = regexp.MustCompile(`github\.com/whatwg/html/commit/([0-9a-f]{40})`)
+// commitLinkRE finds the deployed commit in the live page: either a commit-snapshot link or a
+// link to the commit on GitHub.
+var commitLinkRE = regexp.MustCompile(`(?:commit-snapshots|github\.com/whatwg/html/commit)/([0-9a-f]{40})`)
 
 // FetchWHATWG downloads the HTML standard, extracts its element and attribute index tables into
 // data/whatwg/indices.html, and records the pinned commit in SOURCES.json.
@@ -375,12 +377,16 @@ func FetchWHATWG(client *http.Client, dataDir, sha string, today time.Time) erro
 	if err != nil {
 		return err
 	}
+	version := sha
 	if sha == "" {
-		m := commitLinkRE.FindSubmatch(b)
-		if m == nil {
-			return fmt.Errorf("%s: could not find the whatwg/html commit link in the page; pass -sha explicitly", url)
+		if m := commitLinkRE.FindSubmatch(b); m != nil {
+			version = string(m[1])
+		} else {
+			// The live page does not always expose its commit. Pin by date instead; the vendored
+			// extract is still reproducible from the committed file, just not re-fetchable by hash.
+			version = "live-" + today.UTC().Format("2006-01-02")
+			fmt.Fprintf(os.Stderr, "specgen2: warning: %s does not expose its commit hash; pinning as %s (pass -sha to pin a commit snapshot)\n", url, version)
 		}
-		sha = string(m[1])
 	}
 	tables, err := ExtractIndexTables(bytes.NewReader(b))
 	if err != nil {
@@ -406,7 +412,7 @@ func FetchWHATWG(client *http.Client, dataDir, sha string, today time.Time) erro
 	sum := sha256.Sum256(b)
 	m.Set(Source{
 		Name:      "whatwg-html-indices",
-		Version:   sha,
+		Version:   version,
 		URL:       url,
 		Integrity: "sha256-" + hex.EncodeToString(sum[:]),
 		Retrieved: today.UTC().Format("2006-01-02"),
